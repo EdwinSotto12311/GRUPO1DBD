@@ -6,7 +6,7 @@ Grupo 1 Diseño de Base de Datos
 1.1 DATOS DE LA EMPRESA
 
 1.2 DESCRIPCIÓN DEL PROCESO DE NEGOCIO
-   El proceso de negocio elegido es todo el proceso de cobranzas de deuda consumo y deuda AFP, desde la automatización de los procesos de cargas de datos y la reportaría manual,  ya que estos procesos generan mucho tiempo de retraso en todo el proceso. 
+   El proceso de negocio elegido es todo el proceso de cobranzas de deuda consumo y deuda AFP, desde la automatización de los procesos de cargas de datos y la reportaría manual, ya que estos procesos generan mucho tiempo de retraso en todo el proceso. 
 
 1.2.1 PROCESO DE COBRANZA (AS-IS)
 
