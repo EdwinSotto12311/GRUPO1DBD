@@ -20,8 +20,15 @@ Se finaliza la campaña con un reporte total del comportamiento de la cartera, c
 
 1.3 MOTIVACIÓN
 
-3. REQUERIMIENTOS
+2. REQUERIMIENTOS
 2.1 USUARIOS DEL SISTEMA
+   Deudor  
+Este rol es el que va a validar por su propia cuenta en la página web si figura 		como deudor, en caso se encuentre podrá visualizar la información de su deuda, 		gestionarla él mismo, solicitar compromisos o excepciones de pago o ser 			atendido por un asesor, realizar el pago mediante los diferentes métodos y 		formas de pago, y por último confirmar el pago cargando su comprobante de 		pago.   
+   Asesor 
+Este rol es el encargado de dar un soporte a todos los deudores que tengan un rango de deuda entre <1000, mas>, que se encuentre en un rango de edad de <22,45> y que tengan números de contactos, aquellos que no tienen número de contacto y si tienen correo, se gestionan por este último medio.
+Una vez se envían correos masivos a todos los deudores sin excepción, los asesores realizan llamadas a través del sistema y guardan la gestión obtenida por la llamada, en caso tengan una llamada con contacto exitoso y el deudor acepta un compromiso, se procede a generar un compromiso de pago en el sistema, para que luego se genere un recordatorio de pago en la fecha prometida, en caso el deudor requiera una excepción el asesor lo derivara con su supervisor. 
+   Supervisor 
+Este rol es el encargado que podrá aprobar  las solicitudes de los deudores, asignar los deudores que generaron compromisos a asesores y los deudores que no generaron ninguna solicitud también asignarla a los asesores ,ya que se registró con un numero de contacto, se tipifica dentro del sistema como pagado y su supervisor valida el pago, y se cambia de estado al deudor para que ya no reciba gestión tecnológica, se solicita la carta de no adeudo y luego de 7 días se hace entrega de la carta de no adeudo mediante correo electrónico.
 2.1 REQUERIMIENTOS FUNCIONALES
 2.2 REQUERIMIENTOS DE ATRIBUTOS DE CALIDAD
 2.3 RESTRICCIONES 
