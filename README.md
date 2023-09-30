@@ -2,8 +2,23 @@
 Grupo 1 Diseño de Base de Datos 
 
 1. DESCRIPCIÓN DE LA EMPRESA
-
+   La empresa está conformada por un sólido equipo humano con amplia trayectoria, brindando servicios de gestión en cobranzas en el sector público y privado. El éxito de la empresa se debe a la inteligencia financiera implementada que les permite clasificar a los clientes como buenos o malos pagadores, con el objetivo de la concreción de pago, maximizando y garantizando los resultados en la recuperación de deudas. Además, que cuenta con una gran variedad de canales de contacto, como el call center, SMS, WhatsApp, boots, email y redes sociales, los cuales son seleccionados de acuerdo al tipo de cliente. 
 1.1 DATOS DE LA EMPRESA
+	Nombre de la empresa: GI CORONADO CONTACT CENTER
+	RUC: 20609129922
+	Razón social: GI CORONADO CONTACT CENTER S.A.C.
+	Tipo de empresa: Sociedad Anónima Cerrada
+1.1.2.	Misión
+Satisfacer las necesidades y expectativas de nuestros clientes, colocando a su disposición todo un equipo de trabajo, integrado por recursos humanos, físicos y técnicos en pro de la defensa, protección y recuperación de sus intereses patrimoniales.
+1.1.3.	Visión
+Ser una empresa líder en el sector de cobranzas, ventas, ferias internacionales y contact center en constante innovación de su proceso, tecnología y equipo humano.
+1.1.4.	Valores
+	Compromiso
+	Eficiencia
+	Servicio
+	Honestidad
+	Transparencia
+	Solidaridad
 
 1.2.	DESCRIPCION DEL PROCESO DE NEGOCIO (AS-IS)
 El proceso de negocio elegido es todo el proceso de cobranzas de deuda consumo desde la preparación de la información recibida por la entidad tercerizadora, pasando por la gestión de llamadas y gestión masivas, hasta el cierre de la cobranza con la emisión de reportes y la emisión y envío de la carta de no adeudo.
@@ -25,6 +40,8 @@ La gestión de llamadas inicia y los asesores deben posicionar en el filtro indi
 El supervisor valida el pago y en caso de ser cancelación total aprueba la emisión y el envío de la carta de no adeudo.
 Finaliza la campaña con el reporte de cierre, donde además muestra una lista de los deudores que tienen compromisos y negociaciones de pago.
 Se identificaron 3 actores o usuarios: Asistente de TI, Asesor y Supervisor. 
+, los clientes pueden pagar sus deudas de manera conveniente y recibir recordatorios automáticos. Esto nos ayuda a recuperar deudas más rápido y a dar un mejor servicio a los clientes.
+
 ACTIVIDADES
 1.	Creación Entidad, Cartera y Campaña:
 Iniciamos con la creación de una nueva entidad(origen) de cuentas por cobrar, luego la cartera relacionada con la entidad para finalmente crear la campaña del mes correspondiente. En caso la entidad y la cartera ya estén creadas solo se creará la campaña.
@@ -75,6 +92,7 @@ Al finalizar la campaña el supervisor solicitará el reporte de cierre donde po
 
 
 1.5 MOTIVACIÓN
+Estamos emocionados de hacer esta mejora en la empresa de cobranza porque creemos que hará que la vida de los clientes morosos sea más fácil ya que, a pesar de ser deudores, no se sentirán tan acosados o presionados para pagar su deuda; por otro lado, la empresa será más eficiente y ayudará a reducir los costos tantos en llamadas como en otros servicios que realizan para esta gestión de cobranza. Con un portal web, los clientes pueden pagar sus deudas de manera conveniente y recibir recordatorios automáticos. Esto nos ayuda a recuperar deudas más rápido y a dar un mejor servicio a los clientes.
 
 2. REQUERIMIENTOS
 2.1 USUARIOS DEL SISTEMA
