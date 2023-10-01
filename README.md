@@ -104,6 +104,19 @@ Una vez se envían correos masivos a todos los deudores sin excepción, los ases
    Supervisor 
 Este rol es el encargado que podrá aprobar  las solicitudes de los deudores, asignar los deudores que generaron compromisos a asesores y los deudores que no generaron ninguna solicitud también asignarla a los asesores ,ya que se registró con un numero de contacto, se tipifica dentro del sistema como pagado y su supervisor valida el pago, y se cambia de estado al deudor para que ya no reciba gestión tecnológica, se solicita la carta de no adeudo y luego de 7 días se hace entrega de la carta de no adeudo mediante correo electrónico.
 2.1 REQUERIMIENTOS FUNCIONALES
+REQ-01: Creación de registros de información para la gestión 
+
+REQ-02: Cargas masivas de información de la campaña y del deudor 
+
+REQ-03: Generación de reportes 
+
+REQ-04: Asignación y generación de estrategias 
+
+REQ-05: Gestión tecnológica masiva 
+
+REQ-06: Gestión telefónica por deudor 
+
+REQ-07: Validación de excepciones, pagos y finalización del proceso de cobranza
 2.2 REQUERIMIENTOS DE ATRIBUTOS DE CALIDAD
 Disponibilidad: El sistema estará siempre disponible para que así el deudor pueda validar su deuda y gestionar su compromiso en cualquier momento del día. 
 Seguridad: El sistema solo permitirá acceso a usuarios que se han registrado al portal web con sus datos correspondientes como nombres, apellidos y DNI.  
