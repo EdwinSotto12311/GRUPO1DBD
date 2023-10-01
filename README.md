@@ -179,6 +179,7 @@ Escalabilidad: El sistema tendrá la capacidad de trabajar con una gran cantidad
 * REQ-02: Cargas masivas de información de la campaña y del deudor 
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/23de51aa-cca5-44b8-9cc1-d14b2c268fde)
 
+
 9. MODELAMIENTO CONCEPTUAL
 10. DOCUMENTACIÓN DE RELACIONES Y REGLAS DE NEGOCIO
 11. DICCIONARIO DE DATOS
