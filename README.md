@@ -104,19 +104,63 @@ Una vez se envían correos masivos a todos los deudores sin excepción, los ases
    Supervisor 
 Este rol es el encargado que podrá aprobar  las solicitudes de los deudores, asignar los deudores que generaron compromisos a asesores y los deudores que no generaron ninguna solicitud también asignarla a los asesores ,ya que se registró con un numero de contacto, se tipifica dentro del sistema como pagado y su supervisor valida el pago, y se cambia de estado al deudor para que ya no reciba gestión tecnológica, se solicita la carta de no adeudo y luego de 7 días se hace entrega de la carta de no adeudo mediante correo electrónico.
 2.1 REQUERIMIENTOS FUNCIONALES
-REQ-01: Creación de registros de información para la gestión 
+* REQ-01: Creación de registros de información para la gestión 
 
-REQ-02: Cargas masivas de información de la campaña y del deudor 
+* REQ-02: Cargas masivas de información de la campaña y del deudor 
+1. Caso de Uso 
+Cargas masivas de información de la campaña y del deudor 
+2. Descripción del Caso de Uso 
+El sistema permite subir distintas cargas de información de los deudores, formas de contacto y las campañas con sus respectivos datos relacionados desde los Excel iniciales que proveen los clientes al sistema, modificando que encajen los datos principales. 
+3. Actor 
+Soporte 
+4. Flujo Regular 
+Paso 1 
+Acción del actor:
+El soporte ingresa con su usuario y contraseña al sistema. 
+Respuesta:
+El sistema muestra el menú de tareas que corresponde al usuario soporte. 
 
-REQ-03: Generación de reportes 
+Paso 2 
+Acción del actor:
+El soporte ingresa al módulo de carga de datos 
+Respuesta:
+El sistema muestra opciones de carga de datos de deudores, carga de formas de contacto y cargas de campañas 
 
-REQ-04: Asignación y generación de estrategias 
+Paso 3 
+Acción del actor:
+El soporte selecciona el tipo de carga de datos a subir 
+Respuesta:
+El sistema mostrara un botón a subir la carga de datos 
 
-REQ-05: Gestión tecnológica masiva 
+Paso 4 
+Acción del actor:
+El soporte sube la carga de datos seleccionada 
+Respuesta:
+El sistema mostrara una sección con los datos subidos en columnas ya establecidas. 
 
-REQ-06: Gestión telefónica por deudor 
+Paso 5 
+Acción del actor:
+El soporte revisa si los datos cargaron correctamente según las columnas, si esta todo conforme presiona el botón guardar 
+Respuesta:
+El sistema finaliza la operación, guarda los datos cargados y muestra la pantalla de opciones del soporte 
 
-REQ-07: Validación de excepciones, pagos y finalización del proceso de cobranza
+5. Flujo Alternativo 
+Paso 5 
+Acción del actor:
+El soporte revisa si los datos cargaron correctamente según las columnas, si no está todo conforme selecciona el botón de cancelar, para modificar el Excel que iba a subir. 
+Respuesta:
+El sistema cancela la carga de datos y regresa a la pantalla de opciones del soporte 
+
+
+* REQ-03: Generación de reportes 
+
+* REQ-04: Asignación y generación de estrategias 
+
+* REQ-05: Gestión tecnológica masiva 
+
+* REQ-06: Gestión telefónica por deudor 
+
+* REQ-07: Validación de excepciones, pagos y finalización del proceso de cobranza
 2.2 REQUERIMIENTOS DE ATRIBUTOS DE CALIDAD
 Disponibilidad: El sistema estará siempre disponible para que así el deudor pueda validar su deuda y gestionar su compromiso en cualquier momento del día. 
 Seguridad: El sistema solo permitirá acceso a usuarios que se han registrado al portal web con sus datos correspondientes como nombres, apellidos y DNI.  
