@@ -163,41 +163,33 @@ El sistema permitirá segmentar la cartera para gestión por llamadas o gestión
 Supervisor
 4. Flujo Regular 
 Paso 1 
-Acción del actor:
-
-Respuesta:
+Acción del actor: El Supervisor ingresa con su usuario y contraseña al sistema. 
+Respuesta: El sistema muestra el menú de tareas que corresponde al módulo Supervisor. 
 
 Paso 2 
-Acción del actor:
-
-Respuesta:
-
+Acción del actor: El Supervisor ingresa al módulo de Generación de Estrategias. 
+Respuesta: El sistema muestra un menú vertical donde están las opciones de Reporte de Estado y Reporte de Gestión para elegir.  
 
 Paso 3 
-Acción del actor:
-
-Respuesta:
-
+Acción del actor: El Supervisor selecciona el tipo de Reporte que desea analizar. 
+Respuesta: El sistema nos muestra una lista de elementos donde están las opciones en cual se segmento la cartera en general.  
 
 Paso 4 
-Acción del actor:
-Respuesta:
+Acción del actor: El Supervisor selecciona una opción de segmentación de cartera.
+Respuesta: El sistema nos muestra una tabla en donde está clasificado la cartera según la opción de segmentación seleccionada y en cada clase se indica la cantidad de deudores, recorrido, monto y cantidad de pagos. 
 
 Paso 5 
-Acción del actor:
-
-Respuesta:
+Acción del actor: El supervisor selecciona con los checkbox las clases en donde desea definir una estrategia de cobranza. 
+Respuesta: El sistema muestra en la parte superior derecha un menú vertical y dos campos de textos en donde se selecciona el tipo de gestión, se ingresa el nombre de estrategia y su fecha y hora programada correspondientemente. 
 
 Paso 6
-Acción del actor:
-
-Respuesta:
+Acción del actor: El supervisor ingresa lo pedido y hace clic en el botón Asignar.  
+Respuesta: El sistema guarda las estrategias generadas, finaliza la tarea. 
 
 5. Flujo Alternativo 
-Paso 5 
-Acción del actor:
-
-Respuesta:
+Paso 6
+Acción del actor: El Supervisor no ingresa los datos solicitados. Presiona botón Atrás.
+Respuesta: El sistema no realiza ningún guardado, finaliza la tarea. 
 
 
 * REQ-05: Gestión tecnológica masiva 
