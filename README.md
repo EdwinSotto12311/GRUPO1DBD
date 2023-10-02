@@ -92,7 +92,7 @@ Al finalizar la campaña el supervisor solicitará el reporte de cierre donde po
 
 
 1.5 MOTIVACIÓN
-Estamos emocionados de hacer esta mejora en la empresa de cobranza porque creemos que hará que la vida de los clientes morosos sea más fácil ya que, a pesar de ser deudores, no se sentirán tan acosados o presionados para pagar su deuda; por otro lado, la empresa será más eficiente y ayudará a reducir los costos tantos en llamadas como en otros servicios que realizan para esta gestión de cobranza. Con un portal web, los clientes pueden pagar sus deudas de manera conveniente y recibir recordatorios automáticos. Esto nos ayuda a recuperar deudas más rápido y a dar un mejor servicio a los clientes.
+La elección de la empresa de cobranzas se dio porque no había otra propuesta donde nos brinden toda la información relacionada; se llego a contactar con Oscar Cuba que laboro en el año 2022 por un periodo de 6 meses y tuvo la predisposición de brindarnos la entrevista, la información del proceso de cobranzas nos genero mayor curiosidad y nos animamos por el proceso de cobranzas de cartera consumo.
 
 2. REQUERIMIENTOS
 2.1 USUARIOS DEL SISTEMA
@@ -106,7 +106,45 @@ Este rol es el encargado de ejecutar la gestión por llamadas, sigue las indicac
 Este rol es el encargado de preparar toda la información para iniciar la gestión inicial de una nueva entidad, desde la creación de personas y entidades, además atenderá a las solicitudes del supervisor y de preparar la información para realizar la gestión masiva mediante correos y para finalizar genera los reportes necesarios para el análisis del supervisor. 
 
 2.1 REQUERIMIENTOS FUNCIONALES
-* REQ-01: Creación de registros de información para la gestión 
+* REQ-01: Creación de registros de información para la gestión
+1. Caso de Uso	Gestionar la campaña por llamadas siguiendo los filtros que el supervisor generó en su análisis
+2. Descripción del Caso de Uso
+El sistema permitirá ingresar el usuario de ejecutor donde le mostrará solo las opciones que le permite su rol, por el que podrá movilizarse entre las campañas asignadas y colocarse en el filtro que por indicación del supervisor podrá gestionar llamada tras llamada por cada deudor, permitiéndole registrar el tipo de respuesta que le brindo su gestión, los compromisos y registrar pagos que indican los deudores.
+3. Actor
+Soporte
+4. Flujo Regular		
+Paso 1
+Acción del actor
+El ejecutor ingresa con su usuario y contraseña al sistema.
+Respuesta
+El sistema muestra el menú de tareas que corresponde al usuario ejecutor.
+Paso 2
+Acción del actor
+El ejecutor ingresa al módulo de gestión de campañas.
+Respuesta
+El sistema muestra una lista desplegable con las campañas activas asignadas al ejecutor.
+Paso 3
+Acción del actor
+El ejecutor selecciona la campaña, coloca el filtro a posicionarse y da clic en el botón iniciar gestión
+Respuesta
+El sistema muestra los datos de la deuda con la información del deudor, permitiendo llenar datos de respuesta de la gestión. El sistema activa el botón registrar gestión.
+Paso 4
+Acción del actor
+El ejecutor da clic en el botón de registrar gestión.
+Respuesta
+El sistema guarda la información registrada y notifica el registro exitoso y automáticamente avanza al siguiente deudor.
+
+6. Flujo Alternativo	
+Paso 3
+Acción del actor
+El Ejecutor podrá registrar un compromiso, excepción o un pago.
+Respuesta
+El sistema muestra las casillas a rellenar dependiendo del tipo de registro.
+Paso 4
+Acción del actor
+El ejecutor realiza el registro y da en el botón aceptar.
+Respuesta
+El sistema notifica el registro con éxito y finaliza la gestión, automáticamente avanza al siguiente deudor.
 
 * REQ-02: Cargas masivas de información de la campaña y del deudor 
 1. Caso de Uso 
