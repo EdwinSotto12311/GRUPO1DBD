@@ -180,7 +180,7 @@ Respuesta: El sistema nos muestra una tabla en donde está clasificado la carter
 
 Paso 5 
 Acción del actor: El supervisor selecciona con los checkbox las clases en donde desea definir una estrategia de cobranza. 
-Respuesta: El sistema muestra en la parte superior derecha un menú vertical y dos campos de textos en donde se selecciona el tipo de gestión, se ingresa el nombre de estrategia y su fecha y hora programada correspondientemente. 
+Respuesta: El sistema habilita en la parte superior derecha el menú vertical y los dos campos de textos, y en donde se podrá seleccionar el tipo de gestión, ingresar el nombre de estrategia y su fecha y hora programada correspondientemente. 
 
 Paso 6
 Acción del actor: El supervisor ingresa lo pedido y hace clic en el botón Asignar.  
