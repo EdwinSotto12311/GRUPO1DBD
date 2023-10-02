@@ -419,6 +419,8 @@ Interacción:
 -Módulo de Generación de Reportes
 
 4. PROTOTIPOS
+* REQ-06: Gestión telefónica por deudor
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966974/9c6383fa-688f-469c-b782-6916b00029ab)
 
 * REQ-02: Cargas masivas de información de la campaña y del deudor 
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/23de51aa-cca5-44b8-9cc1-d14b2c268fde)
