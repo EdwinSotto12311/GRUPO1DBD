@@ -97,12 +97,21 @@ Estamos emocionados de hacer esta mejora en la empresa de cobranza porque creemo
 2. REQUERIMIENTOS
 2.1 USUARIOS DEL SISTEMA
    Deudor  
-Este rol es el que va a validar por su propia cuenta en la página web si figura 		como deudor, en caso se encuentre podrá visualizar la información de su deuda, 		gestionarla él mismo, solicitar compromisos o excepciones de pago o ser 			atendido por un asesor, realizar el pago mediante los diferentes métodos y 		formas de pago, y por último confirmar el pago cargando su comprobante de 		pago.   
+Este rol es el que va a validar por su propia cuenta en la página web si figura 		como deudor, en caso se encuentre podrá visualizar la información de su deuda, 		gestionarla él mismo, solicitar compromisos o excepciones de pago o ser 			atendido por un asesor, realizar el pago mediante los diferentes métodos y 		formas de pago, y por último confirmar el pago cargando su comprobante de 		pago.
+
    Asesor 
 Este rol es el encargado de dar un soporte a todos los deudores que tengan un rango de deuda entre <1000, mas>, que se encuentre en un rango de edad de <22,45> y que tengan números de contactos, aquellos que no tienen número de contacto y si tienen correo, se gestionan por este último medio.
-Una vez se envían correos masivos a todos los deudores sin excepción, los asesores realizan llamadas a través del sistema y guardan la gestión obtenida por la llamada, en caso tengan una llamada con contacto exitoso y el deudor acepta un compromiso, se procede a generar un compromiso de pago en el sistema, para que luego se genere un recordatorio de pago en la fecha prometida, en caso el deudor requiera una excepción el asesor lo derivara con su supervisor. 
+Una vez se envían correos masivos a todos los deudores sin excepción, los asesores realizan llamadas a través del sistema y guardan la gestión obtenida por la llamada, en caso tengan una llamada con contacto exitoso y el deudor acepta un compromiso, se procede a generar un compromiso de pago en el sistema, para que luego se genere un recordatorio de pago en la fecha prometida, en caso el deudor requiera una excepción el asesor lo derivara con su supervisor.
+
    Supervisor 
 Este rol es el encargado que podrá aprobar  las solicitudes de los deudores, asignar los deudores que generaron compromisos a asesores y los deudores que no generaron ninguna solicitud también asignarla a los asesores ,ya que se registró con un numero de contacto, se tipifica dentro del sistema como pagado y su supervisor valida el pago, y se cambia de estado al deudor para que ya no reciba gestión tecnológica, se solicita la carta de no adeudo y luego de 7 días se hace entrega de la carta de no adeudo mediante correo electrónico.
+
+   Administrador
+ Administrador tiene la capacidad de configurar las vacantes, lo que sugiere que tiene funciones administrativas y de configuración en el sistema. Su rol  incluye la administración general del sistema, la gestión de usuarios y permisos, y la configuración de parámetros clave.
+
+    Miembro del área de TI
+Tienen la responsabilidad de cargar archivos CSV para programar llamadas automáticas y correos masivos. Sus actividades se centran en la automatización de las actividades tecnológicas relacionadas con la gestion tecnologica de la empresa.
+
 2.1 REQUERIMIENTOS FUNCIONALES
 * REQ-01: Creación de registros de información para la gestión 
 
@@ -193,6 +202,41 @@ Respuesta: El sistema no realiza ningún guardado, finaliza la tarea.
 
 
 * REQ-05: Gestión tecnológica masiva 
+Caso de Uso: Gestión Tecnológica Masiva
+Descripción del Caso de Uso: Este caso de uso permite a los miembros del área de TI gestionar de manera masiva las llamadas automáticas y el envío de correos masivos a los deudores de la empresa de cobranzas. El proceso implica la carga de archivos CSV específicos que contienen información detallada para programar las llamadas y los correos masivos.
+Actor: Miembros del área de TI de la empresa de cobranzas.
+Flujo Regular:
+
+Paso 1: El actor (miembro del área de TI) inicia sesión en el módulo de gestión tecnológica masiva.
+
+Acción del actor: Inicia sesión en el sistema.
+Respuesta: El sistema muestra el menú de opciones de gestión tecnológica masiva.
+Paso 2: El actor selecciona la opción de cargar un archivo CSV para las llamadas automáticas.
+
+Acción del actor: Selecciona la carga de llamadas automáticas y carga el archivo CSV.
+Respuesta: El sistema procesa el archivo CSV y muestra una vista previa de las llamadas programadas.
+Paso 3: El actor selecciona la opción de cargar un archivo CSV para el envío de correos masivos.
+
+Acción del actor: Selecciona la carga de correos masivos y carga el archivo CSV.
+Respuesta: El sistema procesa el archivo CSV y muestra una vista previa de los correos masivos programados.
+Paso 4: El actor revisa las programaciones y verifica que los datos sean correctos.
+
+Acción del actor: Verifica las programaciones de llamadas y correos masivos.
+Respuesta: El sistema muestra las programaciones verificadas.
+Paso 5: El actor confirma las programaciones para la ejecución.
+
+Acción del actor: Confirma las programaciones para su ejecución.
+Respuesta: El sistema programa automáticamente las llamadas y envía los correos masivos según lo programado.
+Flujo Alternativo:
+
+Paso 4: En caso de que los archivos CSV no sean válidos o contengan datos incorrectos, el sistema mostrará un mensaje de error.
+
+Acción del actor: Verifica los mensajes de error y ajusta los archivos CSV según sea necesario.
+Respuesta: El sistema muestra un mensaje de error y no realiza ninguna programación hasta que los archivos sean válidos.
+Paso 5: Si los miembros del área de TI identifican problemas en las programaciones, pueden realizar ajustes y volver a verificar antes de la ejecución.
+
+Acción del actor: Realiza ajustes en las programaciones y verifica nuevamente.
+Respuesta: El sistema muestra las programaciones ajustadas para su revisión.
 
 * REQ-06: Gestión telefónica por deudor 
 
