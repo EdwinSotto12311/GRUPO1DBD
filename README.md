@@ -210,6 +210,17 @@ Escalabilidad: El sistema tendrá la capacidad de trabajar con una gran cantidad
 3.MÓDULOS
 3.1 Arquitectura de módulos
 3.2 Especificación de módulos
+
+3.2.2Módulo Cargas Masivas 
+Descripción: Es el módulo asignado a los de soporte para subir al sistema las distintas cargas de datos (deudor, contacto y campaña) junto con su respectivo chequeo si lo datos concuerdan con las columnas ya establecidas. 
+Responsabilidad: 
+Realiza la carga de datos (deudor, contacto y campaña) al sistema 
+Realiza el chequeo al subir los datos en las columnas respectivas que muestra el sistema 
+Realiza las modificaciones en el Excel que muestra errores de datos para volver a subirlo al sistema 
+Interacción: 
+-Modulo Registros Nuevos 
+-Modulo Generación de Reportes 
+
 4. PROTOTIPOS
 
 * REQ-02: Cargas masivas de información de la campaña y del deudor 
