@@ -277,6 +277,17 @@ Realiza las modificaciones en el Excel que muestra errores de datos para volver 
 Interacción: 
 -Modulo Registros Nuevos 
 -Modulo Generación de Reportes 
+3.2.4. Módulo Creación de estrategias 
+Descripción: 
+Es el módulo asignado al supervisor donde se muestra segmentado el reporte de estado y reporte de gestión de la campaña y, donde gracias a esto, el supervisor analizara y generara estrategias 
+Responsabilidad: 
+Permite visualizar el reporte de estado y el reporte de gestión segmentado de la actual campaña 
+Permite el desarrollo, nombramiento y programación de estrategias de cobranza 
+Permite el guardado de estrategias en el sistema 
+Interacción: 
+-Modulo Generación de Reportes  
+-Modulo Gestión Masiva 
+-Modulo Gestión Unitaria 
 3.2.7.	Módulo Validación
 Descripción: 
 Es el módulo asignado al supervisor para la validación de excepciones de pago, aprobar pagos realizados por los deudores y gestionar la finalización del proceso de cobranza.
