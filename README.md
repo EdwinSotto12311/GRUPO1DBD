@@ -235,6 +235,25 @@ Respuesta: El sistema muestra las programaciones ajustadas para su revisión.
 * REQ-06: Gestión telefónica por deudor 
 
 * REQ-07: Validación de excepciones, pagos y finalización del proceso de cobranza
+1. Caso de Uso	Validación de excepciones, pagos y finalización del proceso de cobranza
+2. Descripción del Caso de Uso
+El sistema permite ingresar a la opción de validación de excepciones de pago y verificación del pago realizado por el deudor; si el pago realizado ha cancelado la deuda en su totalidad, se emite la carta de no adeudo.
+3. Actor
+Supervisor
+4. Flujo Regular
+Paso 	Acción del actor	Respuesta
+Paso 1	El supervisor inicia sesión en el sistema de gestión.	El sistema muestra el menú de opciones correspondiente al supervisor.
+Paso 2	El supervisor selecciona la opción “Validación de Excepciones y Pagos” en el menú.	El sistema muestra las solicitudes pendientes de excepciones y pagos.
+Paso 3	El supervisor selecciona una solicitud de excepción o pago para revisión.	El sistema muestra los detalles de la solicitud seleccionada.
+Paso 4	El supervisor aprueba/rechaza la excepción de pago o estado de pago.	El sistema registra la acción tomada y actualiza el estado de solicitud.
+Paso 5	El supervisor selecciona la aprobación de la excepción / El supervisor selecciona la opción de finalización del pago. 	El sistema actualiza el estado de solicitud y registra la fecha del cambio del estado de solicitud.
+Paso 6	El supervisor selecciona la opción de generación de compromiso de pago. / El supervisor selecciona la opción de emisión de carta de no adeudo.	El sistema genera el compromiso y fecha de pago. / El sistema genera la carta de no adeudo del deudor y registra fecha de finalización.
+Paso 7	El supervisor retrocede a la sección anterior al seleccionar la opción de “Validación de Excepciones y Pagos” en el menú	El sistema regresa a la lista de solicitudes.
+Paso 8	El supervisor selecciona la opción “Finalización de campaña” si las deudas están todas pagadas.	El sistema registra la finalización de la campaña y genera un reporte de cierre.
+5. Flujo Alternativo		El sistema mostrara un anuncio de registro exitoso.
+Paso 	Acción del actor	Respuesta
+Paso 5	El supervisor selecciona la opción de rechazo de la excepción de pago. / El supervisor selecciona la opción de no finalización del pago.	El sistema registra y actualiza el estado de la solicitud.
+
 2.2 REQUERIMIENTOS DE ATRIBUTOS DE CALIDAD
 Disponibilidad: El sistema estará siempre disponible para que así el deudor pueda validar su deuda y gestionar su compromiso en cualquier momento del día. 
 Seguridad: El sistema solo permitirá acceso a usuarios que se han registrado al portal web con sus datos correspondientes como nombres, apellidos y DNI.  
