@@ -271,40 +271,44 @@ Respuesta: El sistema no realiza ningún guardado, finaliza la tarea.
 
 * REQ-05: Gestión tecnológica masiva 
 Caso de Uso: Gestión Tecnológica Masiva
-Descripción del Caso de Uso: Este caso de uso permite a los miembros del área de TI gestionar de manera masiva las llamadas automáticas y el envío de correos masivos a los deudores de la empresa de cobranzas. El proceso implica la carga de archivos CSV específicos que contienen información detallada para programar las llamadas y los correos masivos.
-Actor: Miembros del área de TI de la empresa de cobranzas.
+El sistema permitirá al personal de soporte, que cuenta con un rol específico, configurar y gestionar la automatización de la gestión tecnológica masiva mediante la subida de archivos CSV en la página web. Estos archivos CSV se envían automáticamente a proveedores externos seleccionados para ejecutar llamadas automáticas, envío de correos masivos y mensajes SMS a los deudores. El personal de soporte puede definir detalles como el tipo de gestión, el proveedor disponible, el mensaje a enviar, y el nombre de la gestión para su reconocimiento. Además, puede monitorear en tiempo real el estado del servicio proporcionado por el proveedor y descargar los resultados una vez estén disponibles
+Actor: Personal de soporte
 Flujo Regular:
 
-Paso 1: El actor (miembro del área de TI) inicia sesión en el módulo de gestión tecnológica masiva.
+Paso 1:El Personal de Soporte inicia sesión en el sistema.
+Respuesta: El sistema autentica al usuario y muestra el menú de tareas correspondiente.
 
-Acción del actor: Inicia sesión en el sistema.
-Respuesta: El sistema muestra el menú de opciones de gestión tecnológica masiva.
-Paso 2: El actor selecciona la opción de cargar un archivo CSV para las llamadas automáticas.
+Paso 2: El Personal de Soporte selecciona "Opciones y Configuración de Tercerización de Mensajes Automáticos". 
+Respuesta: El sistema muestra las opciones disponibles, incluyendo "Archivos Recibidos". 
 
-Acción del actor: Selecciona la carga de llamadas automáticas y carga el archivo CSV.
-Respuesta: El sistema procesa el archivo CSV y muestra una vista previa de las llamadas programadas.
-Paso 3: El actor selecciona la opción de cargar un archivo CSV para el envío de correos masivos.
+Paso 3: El Personal de Soporte hace clic en "Archivos Recibidos". 
+Respuesta: El sistema proporciona una opción para comprimir los archivos recibidos en formato ZIP. El Personal de Soporte descarga los archivos CSV correspondientes a cada tipo de gestión. 
 
-Acción del actor: Selecciona la carga de correos masivos y carga el archivo CSV.
-Respuesta: El sistema procesa el archivo CSV y muestra una vista previa de los correos masivos programados.
-Paso 4: El actor revisa las programaciones y verifica que los datos sean correctos.
+Paso 4: El Personal de Soporte regresa a la sección de configuración y hace clic en "Configuración de Mensajes". 
+Respuesta:El sistema muestra una interfaz para configurar mensajes automáticos.
 
-Acción del actor: Verifica las programaciones de llamadas y correos masivos.
-Respuesta: El sistema muestra las programaciones verificadas.
-Paso 5: El actor confirma las programaciones para la ejecución.
+Paso 5: El Personal de Soporte carga un archivo CSV y selecciona el tipo de gestión. Luego, elige "Filtros Personalizados" y completa los datos del deudor y del asesor. Se añade la estructura del mensaje predeterminado. 
+Respuesta: El sistema permite agregar el mensaje y guarda la configuración 
 
-Acción del actor: Confirma las programaciones para su ejecución.
-Respuesta: El sistema programa automáticamente las llamadas y envía los correos masivos según lo programado.
+Paso 6: El Personal de Soporte selecciona "Filtros Masivos". Sube archivos de lista de datos de asesores y sus días disponibles. Configura el rango de montos, fecha de envío y días de disponibilidad. Luego, añade la estructura del mensaje predeterminado. 
+Respuesta:El sistema permite generar un documento CSV con los mensajes configurados. 
+
+Paso7: El Personal de Soporte accede a la interfaz de selección de proveedor, carga el documento CSV generado y selecciona el tipo de gestión. Ingresa el nombre del proveedor, fecha de servicio, nombre del personal de soporte, número de servicio e indicaciones adicionales. 
+Respuesta: El sistema envía el archivo CSV y las indicaciones al proveedor externo. 
+
+Paso 8: El Personal de Soporte hace clic en "Monitoreo" y proporciona el número de servicio y fecha 
+Respuesta: El sistema muestra los resultados del proveedor en tiempo real. 
+
+Paso 9: Cuando el proveedor finaliza, el Personal de Soporte descarga los archivos de resultados haciendo clic en un botón correspondiente en la página de monitoreo. 
+Respuesta: Se descarga correctamente el archivo csv con los resultados. 
+
 Flujo Alternativo:
 
-Paso 4: En caso de que los archivos CSV no sean válidos o contengan datos incorrectos, el sistema mostrará un mensaje de error.
+Paso 5: El Personal de Soporte carga un archivo CSV incorrecto o ingresa información incorrecta en la configuración de mensajes automáticos 
+Respuesta: El sistema detecta que el archivo CSV subido no cumple con los requisitos o que la información ingresada es incorrecta 
 
-Acción del actor: Verifica los mensajes de error y ajusta los archivos CSV según sea necesario.
-Respuesta: El sistema muestra un mensaje de error y no realiza ninguna programación hasta que los archivos sean válidos.
-Paso 5: Si los miembros del área de TI identifican problemas en las programaciones, pueden realizar ajustes y volver a verificar antes de la ejecución.
-
-Acción del actor: Realiza ajustes en las programaciones y verifica nuevamente.
-Respuesta: El sistema muestra las programaciones ajustadas para su revisión.
+Paso 6: Descargar Archivos de Resultados sin haber terminado el servicio.
+Respuesta: El sistema notifica la falta de documento csv debido a que el proveedor aun no envia resultados.
 
 * REQ-06: Gestión telefónica por deudor 
 
