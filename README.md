@@ -156,11 +156,11 @@ El sistema cancela la carga de datos y regresa a la pantalla de opciones del sop
 
 * REQ-04: Asignación y generación de estrategias 
 1. Caso de Uso 
-
+Asignación y generación de estrategias
 2. Descripción del Caso de Uso 
-
+El sistema permitirá segmentar la cartera para gestión por llamadas o gestión masiva a través del reporte de Estado y reporte de Gestión.
 3. Actor 
-
+Supervisor
 4. Flujo Regular 
 Paso 1 
 Acción del actor:
@@ -181,15 +181,17 @@ Respuesta:
 
 Paso 4 
 Acción del actor:
-
 Respuesta:
-
 
 Paso 5 
 Acción del actor:
 
 Respuesta:
 
+Paso 6
+Acción del actor:
+
+Respuesta:
 
 5. Flujo Alternativo 
 Paso 5 
