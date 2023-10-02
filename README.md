@@ -310,7 +310,46 @@ Respuesta: El sistema detecta que el archivo CSV subido no cumple con los requis
 Paso 6: Descargar Archivos de Resultados sin haber terminado el servicio.
 Respuesta: El sistema notifica la falta de documento csv debido a que el proveedor aun no envia resultados.
 
-* REQ-06: Gestión telefónica por deudor 
+* REQ-06: Gestión telefónica por deudor
+  1. Caso de Uso	Gestionar la campaña por llamadas siguiendo los filtros que el supervisor generó en su análisis
+2. Descripción del Caso de Uso
+El sistema permitirá ingresar el usuario de ejecutor donde le mostrará solo las opciones que le permite su rol, por el que podrá movilizarse entre las campañas asignadas y colocarse en el filtro que por indicación del supervisor podrá gestionar llamada tras llamada por cada deudor, permitiéndole registrar el tipo de respuesta que le brindo su gestión, los compromisos y registrar pagos que indican los deudores.
+3. Actor
+Soporte
+4. Flujo Regular	
+Paso 1		
+Acción del actor
+El ejecutor ingresa con su usuario y contraseña al sistema.
+Respuesta
+El sistema muestra el menú de tareas que corresponde al usuario ejecutor.
+Paso 2		
+Acción del actor
+El ejecutor ingresa al módulo de gestión de campañas.
+Respuesta
+El sistema muestra una lista desplegable con las campañas activas asignadas al ejecutor.
+Paso 3		
+Acción del actor
+El ejecutor selecciona la campaña, coloca el filtro a posicionarse y da clic en el botón iniciar gestión
+Respuesta
+El sistema muestra los datos de la deuda con la información del deudor, permitiendo llenar datos de respuesta de la gestión. El sistema activa el botón registrar gestión.
+Paso 4	
+Acción del actor	
+El ejecutor da clic en el botón de registrar gestión.
+Respuesta
+El sistema guarda la información registrada y notifica el registro exitoso y automáticamente avanza al siguiente deudor.
+Acción del actor
+
+5. Flujo Alternativo
+Paso 3		
+Acción del actor
+El Ejecutor podrá registrar un compromiso, excepción o un pago.
+Respuesta
+El sistema muestra las casillas a rellenar dependiendo del tipo de registro.
+Paso 4		
+Acción del actor
+El ejecutor realiza el registro y da en el botón aceptar.
+Respuesta
+El sistema notifica el registro con éxito y finaliza la gestión, automáticamente avanza al siguiente deudor.
 
 * REQ-07: Validación de excepciones, pagos y finalización del proceso de cobranza
 1. Caso de Uso	Validación de excepciones, pagos y finalización del proceso de cobranza
