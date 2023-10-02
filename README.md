@@ -419,8 +419,9 @@ Interacción:
 -Módulo de Generación de Reportes
 
 4. PROTOTIPOS
-* REQ-06: Gestión telefónica por deudor
-![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966974/9c6383fa-688f-469c-b782-6916b00029ab)
+* REQ-01: Creación de registros de información para la gestión
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966974/2afbcfc5-efba-4610-96d2-23fef66b8161)
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966974/3955199d-1d49-4d1e-b0b9-a73f62d1a841)
 
 * REQ-02: Cargas masivas de información de la campaña y del deudor 
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/23de51aa-cca5-44b8-9cc1-d14b2c268fde)
@@ -434,6 +435,8 @@ Interacción:
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/719f3e85-8cc5-495d-a50c-62585c0ddb41)
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/022ea929-55aa-43cc-8d10-517eb3e0cce2)
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/9430fdb9-73b2-4b5c-994d-25b27326eb79)
+* REQ-06: Gestión telefónica por deudor
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966974/9c6383fa-688f-469c-b782-6916b00029ab)
 
 9. MODELAMIENTO CONCEPTUAL
 10. DOCUMENTACIÓN DE RELACIONES Y REGLAS DE NEGOCIO
