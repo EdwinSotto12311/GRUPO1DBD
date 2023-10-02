@@ -96,15 +96,14 @@ Estamos emocionados de hacer esta mejora en la empresa de cobranza porque creemo
 
 2. REQUERIMIENTOS
 2.1 USUARIOS DEL SISTEMA
-   Deudor  
-Este rol es el que va a validar por su propia cuenta en la página web si figura 		como deudor, en caso se encuentre podrá visualizar la información de su deuda, 		gestionarla él mismo, solicitar compromisos o excepciones de pago o ser 			atendido por un asesor, realizar el pago mediante los diferentes métodos y 		formas de pago, y por último confirmar el pago cargando su comprobante de 		pago.
+   Supervisor  
+Este rol es el encargado de validar que el proceso de gestión por parte de los asesores se realice de manera correcta, analiza los reportes para asignar la gestión adecuada según los criterios que valide en los reportes, toda esta información es enviada a los asistentes de ti y a los asesores, podrá aprobar estados de excepciones y de pago y aceptara la emisión de la carta de no adeudo, además que el también podrá gestionar a los deudores que no puedan gestionar los asesores. 
 
-   Asesor 
-Este rol es el encargado de dar un soporte a todos los deudores que tengan un rango de deuda entre <1000, mas>, que se encuentre en un rango de edad de <22,45> y que tengan números de contactos, aquellos que no tienen número de contacto y si tienen correo, se gestionan por este último medio.
-Una vez se envían correos masivos a todos los deudores sin excepción, los asesores realizan llamadas a través del sistema y guardan la gestión obtenida por la llamada, en caso tengan una llamada con contacto exitoso y el deudor acepta un compromiso, se procede a generar un compromiso de pago en el sistema, para que luego se genere un recordatorio de pago en la fecha prometida, en caso el deudor requiera una excepción el asesor lo derivara con su supervisor.
+   Ejecutor 
+Este rol es el encargado de ejecutar la gestión por llamadas, sigue las indicaciones del supervisor y puede visualizar la información de los deudores, llamarlos hasta generar el pago o en tal caso un compromiso de pago, es intermediario del deudor con el supervisor para poder aprobar las excepciones solicitadas 
 
-   Supervisor 
-Este rol es el encargado que podrá aprobar  las solicitudes de los deudores, asignar los deudores que generaron compromisos a asesores y los deudores que no generaron ninguna solicitud también asignarla a los asesores ,ya que se registró con un numero de contacto, se tipifica dentro del sistema como pagado y su supervisor valida el pago, y se cambia de estado al deudor para que ya no reciba gestión tecnológica, se solicita la carta de no adeudo y luego de 7 días se hace entrega de la carta de no adeudo mediante correo electrónico.
+   Soporte 
+Este rol es el encargado de preparar toda la información para iniciar la gestión inicial de una nueva entidad, desde la creación de personas y entidades, además atenderá a las solicitudes del supervisor y de preparar la información para realizar la gestión masiva mediante correos y para finalizar genera los reportes necesarios para el análisis del supervisor. 
 
 2.1 REQUERIMIENTOS FUNCIONALES
 * REQ-01: Creación de registros de información para la gestión 
@@ -156,7 +155,44 @@ El sistema cancela la carga de datos y regresa a la pantalla de opciones del sop
 
 
 * REQ-03: Generación de reportes 
+1. Caso de Uso 
+Generación de reportes 
+2. Descripción del Caso de Uso 
+El sistema permite generar reportes del estado de la campaña, de la cartera y del recaudo de los asesores, de la cantidad de llamadas realizadas por los asesores y de la gestión con los datos del contacto de cada deudor. 
+3. Actor 
+Soporte 
+4. Flujo Regular 
+Paso 1 
+Acción del actor:
+El soporte ingresa con su usuario y contraseña al sistema. 
+Respuesta:
+El sistema muestra el menú de tareas que corresponde al usuario soporte. 
 
+Paso 2 
+Acción del actor:
+El soporte ingresa al módulo de generación de reportes. 
+Respuesta:
+El sistema muestra opciones de generación de reportes del estado de la campaña, de la cartera y del recaudo de los asesores, de la cantidad de llamadas realizadas por los asesores y de la gestión con los datos del contacto de cada deudor. 
+
+Paso 3 
+Acción del actor:
+El soporte selecciona el tipo de reporte para descargar. 
+Respuesta:
+El sistema mostrará el reporte que se desea descargar. 
+
+Paso 4 
+Acción del actor:
+El soporte visualizará el reporte y presionará el botón de descargar. 
+Respuesta:
+El sistema descargará el reporte en formato de excel. Finaliza la tarea.  
+
+5. Flujo Alternativo 
+Paso 3 
+Acción del actor:
+El soporte presiona el botón Imprimir.  
+Respuesta:
+El sistema descarga el reporte en formato PDF, finalizando la tarea
+ 
 * REQ-04: Asignación y generación de estrategias 
 1. Caso de Uso 
 Asignación y generación de estrategias
@@ -305,6 +341,7 @@ Interacción:
 
 * REQ-02: Cargas masivas de información de la campaña y del deudor 
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/23de51aa-cca5-44b8-9cc1-d14b2c268fde)
+* REQ-03: Generación de reportes
 
 
 9. MODELAMIENTO CONCEPTUAL
