@@ -384,6 +384,11 @@ Interacción:
 * REQ-04: Asignación y generación de estrategias
 ![PROTOTIPO1](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/04225d18-c61c-4716-937c-d9aa012ece07)
 ![PROTOTIPO2](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/24b268fb-c2f5-433c-8179-3c93e98e6cb9)
+* REQ-07: Validación de excepciones, pagos y finalización del proceso de cobranza
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/12478357-9dff-432c-9ed5-e5b2f6dcdf67)
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/719f3e85-8cc5-495d-a50c-62585c0ddb41)
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/022ea929-55aa-43cc-8d10-517eb3e0cce2)
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/9430fdb9-73b2-4b5c-994d-25b27326eb79)
 
 9. MODELAMIENTO CONCEPTUAL
 10. DOCUMENTACIÓN DE RELACIONES Y REGLAS DE NEGOCIO
