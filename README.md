@@ -277,6 +277,18 @@ Realiza las modificaciones en el Excel que muestra errores de datos para volver 
 Interacción: 
 -Modulo Registros Nuevos 
 -Modulo Generación de Reportes 
+3.2.7.	Módulo Validación
+Descripción: 
+Es el módulo asignado al supervisor para la validación de excepciones de pago, aprobar pagos realizados por los deudores y gestionar la finalización del proceso de cobranza.
+Responsabilidad:
+Revisa, evalúa y decide las solicitudes de excepciones de pagos pendientes.
+Valida y actualiza que los pagos de los deudores sean correctos correspondiente a su deuda.
+Comprueba si el deudor completó su deuda para aprobar su emisión de carta de no adeudo
+Registra la finalización del proceso de cobranza para el deudor y genera un reporte
+Interacción:
+-Módulo de Gestión de Cobranza Masiva
+-Módulo de Creación de Registros de Información
+-Módulo de Generación de Reportes
 
 4. PROTOTIPOS
 
