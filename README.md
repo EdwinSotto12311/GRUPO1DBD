@@ -343,6 +343,9 @@ Interacción:
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/23de51aa-cca5-44b8-9cc1-d14b2c268fde)
 * REQ-03: Generación de reportes
 ![Reportes](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966392/80c66e28-cfe5-4a34-8626-47ef589b8388)
+* REQ-03: Asignación y generación de estrategias
+![PROTOTIPO1](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/04225d18-c61c-4716-937c-d9aa012ece07)
+![PROTOTIPO2](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/24b268fb-c2f5-433c-8179-3c93e98e6cb9)
 
 9. MODELAMIENTO CONCEPTUAL
 10. DOCUMENTACIÓN DE RELACIONES Y REGLAS DE NEGOCIO
