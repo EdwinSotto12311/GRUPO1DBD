@@ -155,6 +155,48 @@ El sistema cancela la carga de datos y regresa a la pantalla de opciones del sop
 * REQ-03: Generación de reportes 
 
 * REQ-04: Asignación y generación de estrategias 
+1. Caso de Uso 
+
+2. Descripción del Caso de Uso 
+
+3. Actor 
+
+4. Flujo Regular 
+Paso 1 
+Acción del actor:
+
+Respuesta:
+
+Paso 2 
+Acción del actor:
+
+Respuesta:
+
+
+Paso 3 
+Acción del actor:
+
+Respuesta:
+
+
+Paso 4 
+Acción del actor:
+
+Respuesta:
+
+
+Paso 5 
+Acción del actor:
+
+Respuesta:
+
+
+5. Flujo Alternativo 
+Paso 5 
+Acción del actor:
+
+Respuesta:
+
 
 * REQ-05: Gestión tecnológica masiva 
 
