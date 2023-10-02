@@ -106,12 +106,6 @@ Una vez se envían correos masivos a todos los deudores sin excepción, los ases
    Supervisor 
 Este rol es el encargado que podrá aprobar  las solicitudes de los deudores, asignar los deudores que generaron compromisos a asesores y los deudores que no generaron ninguna solicitud también asignarla a los asesores ,ya que se registró con un numero de contacto, se tipifica dentro del sistema como pagado y su supervisor valida el pago, y se cambia de estado al deudor para que ya no reciba gestión tecnológica, se solicita la carta de no adeudo y luego de 7 días se hace entrega de la carta de no adeudo mediante correo electrónico.
 
-   Administrador
-Tiene la capacidad de configurar las vacantes y las funciones administrativas y de configuración en el sistema. Su rol  incluye la administración general del sistema, la gestión de usuarios y permisos, y la configuración de parámetros clave.
-
-    Miembro del área de TI
-El rol principal sera la de cargar archivos CSV para programar llamadas automáticas y correos masivos. Sus actividades se centran en la automatización de las actividades tecnológicas relacionadas con la gestion tecnologica de la empresa.
-
 2.1 REQUERIMIENTOS FUNCIONALES
 * REQ-01: Creación de registros de información para la gestión 
 
