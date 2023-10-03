@@ -127,10 +127,10 @@ La elección de la empresa de cobranzas se dio porque no había otra propuesta d
 |Paso 4|El ejecutor realiza el registro y da en el botón aceptar.|El sistema notifica el registro con éxito y finaliza la gestión, automáticamente avanza al siguiente deudor.|
 
 #### REQ-02: Cargas masivas de información de la campaña y del deudor 
-1. Caso de Uso: Cargas masivas de información de la campaña y del deudor 
-2. Descripción del Caso de Uso: El sistema permite subir distintas cargas de información de los deudores, formas de contacto y las campañas con sus respectivos datos relacionados desde los Excel iniciales que proveen los clientes al sistema, modificando que encajen los datos principales. 
-3. Actor: Soporte 
-4. Flujo Regular:
+1. Caso de Uso : Cargas masivas de información de la campaña y del deudor 
+2. Descripción del Caso de Uso : El sistema permite subir distintas cargas de información de los deudores, formas de contacto y las campañas con sus respectivos datos relacionados desde los Excel iniciales que proveen los clientes al sistema, modificando que encajen los datos principales. 
+3. Actor : Soporte 
+4. Flujo Regular :
 
 |Paso|Acción del actor|Respuesta|
 |:---:|---|---|
@@ -147,43 +147,23 @@ La elección de la empresa de cobranzas se dio porque no había otra propuesta d
 |Paso 5|El soporte revisa si los datos cargaron correctamente según las columnas, si no está todo conforme selecciona el botón de cancelar, para modificar el Excel que iba a subir.|El sistema cancela la carga de datos y regresa a la pantalla de opciones del soporte.|
 
 #### REQ-03: Generación de reportes 
-1. Caso de Uso 
-Generación de reportes 
-2. Descripción del Caso de Uso 
-El sistema permite generar reportes del estado de la campaña, de la cartera y del recaudo de los asesores, de la cantidad de llamadas realizadas por los asesores y de la gestión con los datos del contacto de cada deudor. 
-3. Actor 
-Soporte 
-4. Flujo Regular 
-Paso 1 
-Acción del actor:
-El soporte ingresa con su usuario y contraseña al sistema. 
-Respuesta:
-El sistema muestra el menú de tareas que corresponde al usuario soporte. 
+1. Caso de Uso : Generación de reportes 
+2. Descripción del Caso de Uso : El sistema permite generar reportes del estado de la campaña, de la cartera y del recaudo de los asesores, de la cantidad de llamadas realizadas por los asesores y de la gestión con los datos del contacto de cada deudor. 
+3. Actor : Soporte 
+4. Flujo Regular :
 
-Paso 2 
-Acción del actor:
-El soporte ingresa al módulo de generación de reportes. 
-Respuesta:
-El sistema muestra opciones de generación de reportes del estado de la campaña, de la cartera y del recaudo de los asesores, de la cantidad de llamadas realizadas por los asesores y de la gestión con los datos del contacto de cada deudor. 
+|Paso|Acción del actor|Respuesta|
+|:---:|---|---|
+|1|El soporte ingresa con su usuario y contraseña al sistema. |El sistema muestra el menú de tareas que corresponde al usuario soporte. |
+|2|El soporte ingresa al módulo de generación de reportes.|El sistema muestra opciones de generación de reportes del estado de la campaña, de la cartera y del recaudo de los asesores, de la cantidad de llamadas realizadas por los asesores y de la gestión con los datos del contacto de cada deudor.|
+|3|El soporte selecciona el tipo de reporte para descargar.|El sistema mostrará el reporte que se desea descargar.|
+|4|El soporte visualizará el reporte y presionará el botón de descargar.|El sistema descargará el reporte en formato de excel. Finaliza la tarea.|
 
-Paso 3 
-Acción del actor:
-El soporte selecciona el tipo de reporte para descargar. 
-Respuesta:
-El sistema mostrará el reporte que se desea descargar. 
+5. Flujo Alternativo :
 
-Paso 4 
-Acción del actor:
-El soporte visualizará el reporte y presionará el botón de descargar. 
-Respuesta:
-El sistema descargará el reporte en formato de excel. Finaliza la tarea.  
-
-5. Flujo Alternativo 
-Paso 3 
-Acción del actor:
-El soporte presiona el botón Imprimir.  
-Respuesta:
-El sistema descarga el reporte en formato PDF, finalizando la tarea
+|Paso|Acción del actor|Respuesta|
+|:---:|---|---|
+|3|El soporte presiona el botón Imprimir.|El sistema descarga el reporte en formato PDF, finalizando la tarea.|
  
 #### REQ-04: Asignación y generación de estrategias 
 1. Caso de Uso 
