@@ -113,40 +113,22 @@ El sistema permitirá ingresar el usuario de ejecutor donde le mostrará solo la
 3. Actor
 Soporte
 4. Flujo Regular		
-Paso 1
-Acción del actor
-El ejecutor ingresa con su usuario y contraseña al sistema.
-Respuesta
-El sistema muestra el menú de tareas que corresponde al usuario ejecutor.
-Paso 2
-Acción del actor
-El ejecutor ingresa al módulo de gestión de campañas.
-Respuesta
-El sistema muestra una lista desplegable con las campañas activas asignadas al ejecutor.
-Paso 3
-Acción del actor
-El ejecutor selecciona la campaña, coloca el filtro a posicionarse y da clic en el botón iniciar gestión
-Respuesta
-El sistema muestra los datos de la deuda con la información del deudor, permitiendo llenar datos de respuesta de la gestión. El sistema activa el botón registrar gestión.
-Paso 4
-Acción del actor
-El ejecutor da clic en el botón de registrar gestión.
-Respuesta
-El sistema guarda la información registrada y notifica el registro exitoso y automáticamente avanza al siguiente deudor.
 
-6. Flujo Alternativo	
-Paso 3
-Acción del actor
-El Ejecutor podrá registrar un compromiso, excepción o un pago.
-Respuesta
-El sistema muestra las casillas a rellenar dependiendo del tipo de registro.
-Paso 4
-Acción del actor
-El ejecutor realiza el registro y da en el botón aceptar.
-Respuesta
-El sistema notifica el registro con éxito y finaliza la gestión, automáticamente avanza al siguiente deudor.
+|Paso|Acción del actor|Respuesta|
+|:---:|---|---|
+|Paso 1|El ejecutor ingresa con su usuario y contraseña al sistema.|El sistema muestra el menú de tareas que corresponde al usuario ejecutor.|
+|Paso 2|El ejecutor ingresa al módulo de gestión de campañas.|El sistema muestra una lista desplegable con las campañas activas asignadas al ejecutor.|
+|Paso 3|El ejecutor selecciona la campaña, coloca el filtro a posicionarse y da clic en el botón iniciar gestión|El sistema muestra los datos de la deuda con la información del deudor, permitiendo llenar datos de respuesta de la gestión. El sistema activa el botón registrar gestión.|
+|Paso 4|El ejecutor da clic en el botón de registrar gestión.|El sistema guarda la información registrada y notifica el registro exitoso y automáticamente avanza al siguiente deudor.|
 
-#### * REQ-02: Cargas masivas de información de la campaña y del deudor 
+6. Flujo Alternativo:
+
+|Paso|Acción del actor|Respuesta|
+|:---:|---|---|
+|Paso 3|El Ejecutor podrá registrar un compromiso, excepción o un pago.|El sistema muestra las casillas a rellenar dependiendo del tipo de registro.|
+|Paso 4|El ejecutor realiza el registro y da en el botón aceptar.|El sistema notifica el registro con éxito y finaliza la gestión, automáticamente avanza al siguiente deudor.|
+
+#### REQ-02: Cargas masivas de información de la campaña y del deudor 
 1. Caso de Uso 
 Cargas masivas de información de la campaña y del deudor 
 2. Descripción del Caso de Uso 
@@ -191,8 +173,7 @@ El soporte revisa si los datos cargaron correctamente según las columnas, si no
 Respuesta:
 El sistema cancela la carga de datos y regresa a la pantalla de opciones del soporte 
 
-
-* REQ-03: Generación de reportes 
+#### REQ-03: Generación de reportes 
 1. Caso de Uso 
 Generación de reportes 
 2. Descripción del Caso de Uso 
@@ -231,7 +212,7 @@ El soporte presiona el botón Imprimir.
 Respuesta:
 El sistema descarga el reporte en formato PDF, finalizando la tarea
  
-* REQ-04: Asignación y generación de estrategias 
+#### REQ-04: Asignación y generación de estrategias 
 1. Caso de Uso 
 Asignación y generación de estrategias
 2. Descripción del Caso de Uso 
@@ -269,7 +250,7 @@ Acción del actor: El Supervisor no ingresa los datos solicitados. Presiona bot�
 Respuesta: El sistema no realiza ningún guardado, finaliza la tarea. 
 
 
-* REQ-05: Gestión tecnológica masiva 
+#### REQ-05: Gestión tecnológica masiva 
 Caso de Uso: Gestión Tecnológica Masiva
 El sistema permitirá al personal de soporte, que cuenta con un rol específico, configurar y gestionar la automatización de la gestión tecnológica masiva mediante la subida de archivos CSV en la página web. Estos archivos CSV se envían automáticamente a proveedores externos seleccionados para ejecutar llamadas automáticas, envío de correos masivos y mensajes SMS a los deudores. El personal de soporte puede definir detalles como el tipo de gestión, el proveedor disponible, el mensaje a enviar, y el nombre de la gestión para su reconocimiento. Además, puede monitorear en tiempo real el estado del servicio proporcionado por el proveedor y descargar los resultados una vez estén disponibles
 Actor: Personal de soporte
@@ -310,7 +291,7 @@ Respuesta: El sistema detecta que el archivo CSV subido no cumple con los requis
 Paso 6: Descargar Archivos de Resultados sin haber terminado el servicio.
 Respuesta: El sistema notifica la falta de documento csv debido a que el proveedor aun no envia resultados.
 
-* REQ-06: Gestión telefónica por deudor
+#### REQ-06: Gestión telefónica por deudor
   1. Caso de Uso	Gestionar la campaña por llamadas siguiendo los filtros que el supervisor generó en su análisis
 2. Descripción del Caso de Uso
 El sistema permitirá ingresar el usuario de ejecutor donde le mostrará solo las opciones que le permite su rol, por el que podrá movilizarse entre las campañas asignadas y colocarse en el filtro que por indicación del supervisor podrá gestionar llamada tras llamada por cada deudor, permitiéndole registrar el tipo de respuesta que le brindo su gestión, los compromisos y registrar pagos que indican los deudores.
@@ -351,7 +332,7 @@ El ejecutor realiza el registro y da en el botón aceptar.
 Respuesta
 El sistema notifica el registro con éxito y finaliza la gestión, automáticamente avanza al siguiente deudor.
 
-* REQ-07: Validación de excepciones, pagos y finalización del proceso de cobranza
+#### REQ-07: Validación de excepciones, pagos y finalización del proceso de cobranza
 1. Caso de Uso	Validación de excepciones, pagos y finalización del proceso de cobranza
 2. Descripción del Caso de Uso
 El sistema permite ingresar a la opción de validación de excepciones de pago y verificación del pago realizado por el deudor; si el pago realizado ha cancelado la deuda en su totalidad, se emite la carta de no adeudo.
@@ -371,52 +352,53 @@ Paso 8	El supervisor selecciona la opción “Finalización de campaña” si la
 Paso 	Acción del actor	Respuesta
 Paso 5	El supervisor selecciona la opción de rechazo de la excepción de pago. / El supervisor selecciona la opción de no finalización del pago.	El sistema registra y actualiza el estado de la solicitud.
 
-2.2 REQUERIMIENTOS DE ATRIBUTOS DE CALIDAD
-Disponibilidad: El sistema estará siempre disponible para que así el deudor pueda validar su deuda y gestionar su compromiso en cualquier momento del día. 
-Seguridad: El sistema solo permitirá acceso a usuarios que se han registrado al portal web con sus datos correspondientes como nombres, apellidos y DNI.  
-Rendimiento: Se usarán eficazmente los recursos para garantizar que el sistema pueda procesar grandes cantidades de datos y generar reportes de manera rápida y eficiente. 
-Adaptabilidad: El sistema debe funcionar principalmente en los siguientes dispositivos electrónicos: Computadora, laptop, Tablet y teléfono inteligente.  
-Usabilidad: El sistema es fácil de usar y comprender, con una interfaz amigable tanto para los usuarios y administradores.  
-Fiabilidad: El sistema continuará operando así se presenten problemas, para lograr eso se pondrá a prueba continuamente el rendimiento del sistema.  
-Escalabilidad: El sistema tendrá la capacidad de trabajar con una gran cantidad de usuarios. 
+### 2.2. REQUERIMIENTOS DE ATRIBUTOS DE CALIDAD
+* Disponibilidad: El sistema estará siempre disponible para que así el deudor pueda validar su deuda y gestionar su compromiso en cualquier momento del día. 
+* Seguridad: El sistema solo permitirá acceso a usuarios que se han registrado al portal web con sus datos correspondientes como nombres, apellidos y DNI.  
+* Rendimiento: Se usarán eficazmente los recursos para garantizar que el sistema pueda procesar grandes cantidades de datos y generar reportes de manera rápida y eficiente. 
+* Adaptabilidad: El sistema debe funcionar principalmente en los siguientes dispositivos electrónicos: Computadora, laptop, Tablet y teléfono inteligente.  
+* Usabilidad: El sistema es fácil de usar y comprender, con una interfaz amigable tanto para los usuarios y administradores.  
+* Fiabilidad: El sistema continuará operando así se presenten problemas, para lograr eso se pondrá a prueba continuamente el rendimiento del sistema.  
+* Escalabilidad: El sistema tendrá la capacidad de trabajar con una gran cantidad de usuarios. 
 
-2.3 RESTRICCIONES 
-3.MÓDULOS
-3.1 Arquitectura de módulos
-3.2 Especificación de módulos
+### 2.3 RESTRICCIONES 
+## 3.MÓDULOS
+### 3.1 Arquitectura de módulos
+### 3.2 Especificación de módulos
 
-3.2.2Módulo Cargas Masivas 
-Descripción: Es el módulo asignado a los de soporte para subir al sistema las distintas cargas de datos (deudor, contacto y campaña) junto con su respectivo chequeo si lo datos concuerdan con las columnas ya establecidas. 
-Responsabilidad: 
+#### 3.2.2. Módulo Cargas Masivas 
+* Descripción: Es el módulo asignado a los de soporte para subir al sistema las distintas cargas de datos (deudor, contacto y campaña) junto con su respectivo chequeo si lo datos concuerdan con las columnas ya establecidas. 
+* Responsabilidad: 
 Realiza la carga de datos (deudor, contacto y campaña) al sistema 
 Realiza el chequeo al subir los datos en las columnas respectivas que muestra el sistema 
 Realiza las modificaciones en el Excel que muestra errores de datos para volver a subirlo al sistema 
-Interacción: 
--Modulo Registros Nuevos 
--Modulo Generación de Reportes 
-3.2.4. Módulo Creación de estrategias 
-Descripción: 
+* Interacción: 
+  - Modulo Registros Nuevos 
+  - Modulo Generación de Reportes 
+#### 3.2.4. Módulo Creación de estrategias 
+* Descripción: 
 Es el módulo asignado al supervisor donde se muestra segmentado el reporte de estado y reporte de gestión de la campaña y, donde gracias a esto, el supervisor analizara y generara estrategias 
-Responsabilidad: 
+* Responsabilidad: 
 Permite visualizar el reporte de estado y el reporte de gestión segmentado de la actual campaña 
 Permite el desarrollo, nombramiento y programación de estrategias de cobranza 
 Permite el guardado de estrategias en el sistema 
-Interacción: 
--Modulo Generación de Reportes  
--Modulo Gestión Masiva 
--Modulo Gestión Unitaria 
-3.2.7.	Módulo Validación
-Descripción: 
+* Interacción: 
+  - Modulo Generación de Reportes  
+  - Modulo Gestión Masiva 
+  - Modulo Gestión Unitaria
+
+#### 3.2.7.	Módulo Validación
+* Descripción: 
 Es el módulo asignado al supervisor para la validación de excepciones de pago, aprobar pagos realizados por los deudores y gestionar la finalización del proceso de cobranza.
-Responsabilidad:
+* Responsabilidad:
 Revisa, evalúa y decide las solicitudes de excepciones de pagos pendientes.
 Valida y actualiza que los pagos de los deudores sean correctos correspondiente a su deuda.
 Comprueba si el deudor completó su deuda para aprobar su emisión de carta de no adeudo
 Registra la finalización del proceso de cobranza para el deudor y genera un reporte
-Interacción:
--Módulo de Gestión de Cobranza Masiva
--Módulo de Creación de Registros de Información
--Módulo de Generación de Reportes
+* Interacción:
+  - Módulo de Gestión de Cobranza Masiva
+  - Módulo de Creación de Registros de Información
+  - Módulo de Generación de Reportes
 
 4. PROTOTIPOS
 * REQ-01: Creación de registros de información para la gestión
