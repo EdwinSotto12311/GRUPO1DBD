@@ -107,12 +107,10 @@ La elección de la empresa de cobranzas se dio porque no había otra propuesta d
 
 ### 2.2. REQUERIMIENTOS FUNCIONALES
 #### REQ-01: Creación de registros de información para la gestión
-1. Caso de Uso	Gestionar la campaña por llamadas siguiendo los filtros que el supervisor generó en su análisis
-2. Descripción del Caso de Uso
-El sistema permitirá ingresar el usuario de ejecutor donde le mostrará solo las opciones que le permite su rol, por el que podrá movilizarse entre las campañas asignadas y colocarse en el filtro que por indicación del supervisor podrá gestionar llamada tras llamada por cada deudor, permitiéndole registrar el tipo de respuesta que le brindo su gestión, los compromisos y registrar pagos que indican los deudores.
-3. Actor
-Soporte
-4. Flujo Regular		
+1. Caso de Uso: Gestionar la campaña por llamadas siguiendo los filtros que el supervisor generó en su análisis
+2. Descripción del Caso de Uso: El sistema permitirá ingresar el usuario de ejecutor donde le mostrará solo las opciones que le permite su rol, por el que podrá movilizarse entre las campañas asignadas y colocarse en el filtro que por indicación del supervisor podrá gestionar llamada tras llamada por cada deudor, permitiéndole registrar el tipo de respuesta que le brindo su gestión, los compromisos y registrar pagos que indican los deudores.
+3. Actor: Soporte
+4. Flujo Regular:
 
 |Paso|Acción del actor|Respuesta|
 |:---:|---|---|
@@ -129,49 +127,24 @@ Soporte
 |Paso 4|El ejecutor realiza el registro y da en el botón aceptar.|El sistema notifica el registro con éxito y finaliza la gestión, automáticamente avanza al siguiente deudor.|
 
 #### REQ-02: Cargas masivas de información de la campaña y del deudor 
-1. Caso de Uso 
-Cargas masivas de información de la campaña y del deudor 
-2. Descripción del Caso de Uso 
-El sistema permite subir distintas cargas de información de los deudores, formas de contacto y las campañas con sus respectivos datos relacionados desde los Excel iniciales que proveen los clientes al sistema, modificando que encajen los datos principales. 
-3. Actor 
-Soporte 
-4. Flujo Regular 
-Paso 1 
-Acción del actor:
-El soporte ingresa con su usuario y contraseña al sistema. 
-Respuesta:
-El sistema muestra el menú de tareas que corresponde al usuario soporte. 
+1. Caso de Uso: Cargas masivas de información de la campaña y del deudor 
+2. Descripción del Caso de Uso: El sistema permite subir distintas cargas de información de los deudores, formas de contacto y las campañas con sus respectivos datos relacionados desde los Excel iniciales que proveen los clientes al sistema, modificando que encajen los datos principales. 
+3. Actor: Soporte 
+4. Flujo Regular:
 
-Paso 2 
-Acción del actor:
-El soporte ingresa al módulo de carga de datos 
-Respuesta:
-El sistema muestra opciones de carga de datos de deudores, carga de formas de contacto y cargas de campañas 
+|Paso|Acción del actor|Respuesta|
+|:---:|---|---|
+|Paso 1|El soporte ingresa con su usuario y contraseña al sistema. |El sistema muestra el menú de tareas que corresponde al usuario soporte. |
+|Paso 2|El soporte ingresa al módulo de carga de datos.|El sistema muestra opciones de carga de datos de deudores, carga de formas de contacto y cargas de campañas.|
+|Paso 3|El soporte selecciona el tipo de carga de datos a subir.|El sistema mostrara un botón a subir la carga de datos.|
+|Paso 4 |El soporte sube la carga de datos seleccionada.|El sistema mostrara una sección con los datos subidos en columnas ya establecidas.|
+|Paso 5|El soporte revisa si los datos cargaron correctamente según las columnas, si esta todo conforme presiona el botón guardar.|El sistema finaliza la operación, guarda los datos cargados y muestra la pantalla de opciones del soporte.|
 
-Paso 3 
-Acción del actor:
-El soporte selecciona el tipo de carga de datos a subir 
-Respuesta:
-El sistema mostrara un botón a subir la carga de datos 
+5. Flujo Alternativo:
 
-Paso 4 
-Acción del actor:
-El soporte sube la carga de datos seleccionada 
-Respuesta:
-El sistema mostrara una sección con los datos subidos en columnas ya establecidas. 
-
-Paso 5 
-Acción del actor:
-El soporte revisa si los datos cargaron correctamente según las columnas, si esta todo conforme presiona el botón guardar 
-Respuesta:
-El sistema finaliza la operación, guarda los datos cargados y muestra la pantalla de opciones del soporte 
-
-5. Flujo Alternativo 
-Paso 5 
-Acción del actor:
-El soporte revisa si los datos cargaron correctamente según las columnas, si no está todo conforme selecciona el botón de cancelar, para modificar el Excel que iba a subir. 
-Respuesta:
-El sistema cancela la carga de datos y regresa a la pantalla de opciones del soporte 
+|Paso|Acción del actor|Respuesta|
+|:---:|---|---|
+|Paso 5|El soporte revisa si los datos cargaron correctamente según las columnas, si no está todo conforme selecciona el botón de cancelar, para modificar el Excel que iba a subir.|El sistema cancela la carga de datos y regresa a la pantalla de opciones del soporte.|
 
 #### REQ-03: Generación de reportes 
 1. Caso de Uso 
