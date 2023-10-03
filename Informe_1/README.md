@@ -1,18 +1,18 @@
 # GRUPO1DBD
 Grupo 1 Diseño de Base de Datos 
 
-## 1. DESCRIPCIÓN DE LA EMPRESA
+# 1. DESCRIPCIÓN DE LA EMPRESA
 La empresa está conformada por un sólido equipo humano con amplia trayectoria, brindando servicios de gestión en cobranzas en el sector público y privado. El éxito de la empresa se debe a la inteligencia financiera implementada que les permite clasificar a los clientes como buenos o malos pagadores, con el objetivo de la concreción de pago, maximizando y garantizando los resultados en la recuperación de deudas. Además, que cuenta con una gran variedad de canales de contacto, como el call center, SMS, WhatsApp, boots, email y redes sociales, los cuales son seleccionados de acuerdo al tipo de cliente. 
-### 1.1. DATOS DE LA EMPRESA
+## 1.1. DATOS DE LA EMPRESA
 	Nombre de la empresa: GI CORONADO CONTACT CENTER
 	RUC: 20609129922
 	Razón social: GI CORONADO CONTACT CENTER S.A.C.
 	Tipo de empresa: Sociedad Anónima Cerrada
-#### 1.1.2.	Misión
+### 1.1.2.	Misión
 Satisfacer las necesidades y expectativas de nuestros clientes, colocando a su disposición todo un equipo de trabajo, integrado por recursos humanos, físicos y técnicos en pro de la defensa, protección y recuperación de sus intereses patrimoniales.
-#### 1.1.3.	Visión
+### 1.1.3.	Visión
 Ser una empresa líder en el sector de cobranzas, ventas, ferias internacionales y contact center en constante innovación de su proceso, tecnología y equipo humano.
-#### 1.1.4.	Valores
+### 1.1.4.	Valores
 	Compromiso
 	Eficiencia
 	Servicio
