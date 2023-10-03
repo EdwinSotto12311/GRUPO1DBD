@@ -106,7 +106,7 @@ La elección de la empresa de cobranzas se dio porque no había otra propuesta d
   Este rol es el encargado de preparar toda la información para iniciar la gestión inicial de una nueva entidad, desde la creación de personas y entidades, además atenderá a las solicitudes del supervisor y de preparar la información para realizar la gestión masiva mediante correos y para finalizar genera los reportes necesarios para el análisis del supervisor. 
 
 ### 2.2. REQUERIMIENTOS FUNCIONALES
-* REQ-01: Creación de registros de información para la gestión
+#### REQ-01: Creación de registros de información para la gestión
 1. Caso de Uso	Gestionar la campaña por llamadas siguiendo los filtros que el supervisor generó en su análisis
 2. Descripción del Caso de Uso
 El sistema permitirá ingresar el usuario de ejecutor donde le mostrará solo las opciones que le permite su rol, por el que podrá movilizarse entre las campañas asignadas y colocarse en el filtro que por indicación del supervisor podrá gestionar llamada tras llamada por cada deudor, permitiéndole registrar el tipo de respuesta que le brindo su gestión, los compromisos y registrar pagos que indican los deudores.
@@ -146,7 +146,7 @@ El ejecutor realiza el registro y da en el botón aceptar.
 Respuesta
 El sistema notifica el registro con éxito y finaliza la gestión, automáticamente avanza al siguiente deudor.
 
-* REQ-02: Cargas masivas de información de la campaña y del deudor 
+#### * REQ-02: Cargas masivas de información de la campaña y del deudor 
 1. Caso de Uso 
 Cargas masivas de información de la campaña y del deudor 
 2. Descripción del Caso de Uso 
