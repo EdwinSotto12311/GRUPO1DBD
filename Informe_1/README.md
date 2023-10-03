@@ -1,5 +1,4 @@
-# GRUPO1DBD
-Grupo 1 Diseño de Base de Datos 
+# **GI CORONADO CONTACT CENTER S.A.C.**
 
 # 1. DESCRIPCIÓN DE LA EMPRESA
 La empresa está conformada por un sólido equipo humano con amplia trayectoria, brindando servicios de gestión en cobranzas en el sector público y privado. El éxito de la empresa se debe a la inteligencia financiera implementada que les permite clasificar a los clientes como buenos o malos pagadores, con el objetivo de la concreción de pago, maximizando y garantizando los resultados en la recuperación de deudas. Además, que cuenta con una gran variedad de canales de contacto, como el call center, SMS, WhatsApp, boots, email y redes sociales, los cuales son seleccionados de acuerdo al tipo de cliente. 
