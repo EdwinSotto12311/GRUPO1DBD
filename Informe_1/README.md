@@ -91,21 +91,21 @@ Cuando el deudor cancela la totalidad de la deuda se valida y se aprueba la emis
 Al finalizar la campaña el supervisor solicitará el reporte de cierre donde podrá revisar el desempeño de la campaña y además generar un reporte de los compromisos a plazos generados para mantenerlos con los asesores que cerraron el compromiso.
 
 
-1.5 MOTIVACIÓN
+### 1.5 MOTIVACIÓN
 La elección de la empresa de cobranzas se dio porque no había otra propuesta donde nos brinden toda la información relacionada; se llego a contactar con Oscar Cuba que laboro en el año 2022 por un periodo de 6 meses y tuvo la predisposición de brindarnos la entrevista, la información del proceso de cobranzas nos genero mayor curiosidad y nos animamos por el proceso de cobranzas de cartera consumo.
 
-2. REQUERIMIENTOS
-2.1 USUARIOS DEL SISTEMA
-   Supervisor  
+## 2. REQUERIMIENTOS
+### 2.1 USUARIOS DEL SISTEMA
+   **Supervisor** 
 Este rol es el encargado de validar que el proceso de gestión por parte de los asesores se realice de manera correcta, analiza los reportes para asignar la gestión adecuada según los criterios que valide en los reportes, toda esta información es enviada a los asistentes de ti y a los asesores, podrá aprobar estados de excepciones y de pago y aceptara la emisión de la carta de no adeudo, además que el también podrá gestionar a los deudores que no puedan gestionar los asesores. 
 
-   Ejecutor 
+   **Ejecutor**
 Este rol es el encargado de ejecutar la gestión por llamadas, sigue las indicaciones del supervisor y puede visualizar la información de los deudores, llamarlos hasta generar el pago o en tal caso un compromiso de pago, es intermediario del deudor con el supervisor para poder aprobar las excepciones solicitadas 
 
-   Soporte 
+   **Soporte**
 Este rol es el encargado de preparar toda la información para iniciar la gestión inicial de una nueva entidad, desde la creación de personas y entidades, además atenderá a las solicitudes del supervisor y de preparar la información para realizar la gestión masiva mediante correos y para finalizar genera los reportes necesarios para el análisis del supervisor. 
 
-2.1 REQUERIMIENTOS FUNCIONALES
+### 2.1 REQUERIMIENTOS FUNCIONALES
 * REQ-01: Creación de registros de información para la gestión
 1. Caso de Uso	Gestionar la campaña por llamadas siguiendo los filtros que el supervisor generó en su análisis
 2. Descripción del Caso de Uso
