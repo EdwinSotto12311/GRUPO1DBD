@@ -254,7 +254,7 @@ La elección de la empresa de cobranzas se dio porque no había otra propuesta d
 |:---:|---|---|
 |5|El supervisor selecciona la opción de rechazo de la excepción de pago. / El supervisor selecciona la opción de no finalización del pago.|El sistema registra y actualiza el estado de la solicitud.|		
 
-### 2.2. REQUERIMIENTOS DE ATRIBUTOS DE CALIDAD
+### 2.3. REQUERIMIENTOS DE ATRIBUTOS DE CALIDAD
 * Disponibilidad: El sistema estará siempre disponible para que así el deudor pueda validar su deuda y gestionar su compromiso en cualquier momento del día. 
 * Seguridad: El sistema solo permitirá acceso a usuarios que se han registrado al portal web con sus datos correspondientes como nombres, apellidos y DNI.  
 * Rendimiento: Se usarán eficazmente los recursos para garantizar que el sistema pueda procesar grandes cantidades de datos y generar reportes de manera rápida y eficiente. 
@@ -263,9 +263,11 @@ La elección de la empresa de cobranzas se dio porque no había otra propuesta d
 * Fiabilidad: El sistema continuará operando así se presenten problemas, para lograr eso se pondrá a prueba continuamente el rendimiento del sistema.  
 * Escalabilidad: El sistema tendrá la capacidad de trabajar con una gran cantidad de usuarios. 
 
-### 2.3 RESTRICCIONES 
+### 2.4. RESTRICCIONES 
+
 ## 3.MÓDULOS
 ### 3.1 Arquitectura de módulos
+
 ### 3.2 Especificación de módulos
 
 #### 3.2.2. Módulo Cargas Masivas 
@@ -276,7 +278,8 @@ Realiza el chequeo al subir los datos en las columnas respectivas que muestra el
 Realiza las modificaciones en el Excel que muestra errores de datos para volver a subirlo al sistema 
 * Interacción: 
   - Modulo Registros Nuevos 
-  - Modulo Generación de Reportes 
+  - Modulo Generación de Reportes
+
 #### 3.2.4. Módulo Creación de estrategias 
 * Descripción: 
 Es el módulo asignado al supervisor donde se muestra segmentado el reporte de estado y reporte de gestión de la campaña y, donde gracias a esto, el supervisor analizara y generara estrategias 
@@ -302,25 +305,30 @@ Registra la finalización del proceso de cobranza para el deudor y genera un rep
   - Módulo de Creación de Registros de Información
   - Módulo de Generación de Reportes
 
-4. PROTOTIPOS
-* REQ-01: Creación de registros de información para la gestión
+## 4. PROTOTIPOS
+### REQ-01: Creación de registros de información para la gestión
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966974/2afbcfc5-efba-4610-96d2-23fef66b8161)
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966974/3955199d-1d49-4d1e-b0b9-a73f62d1a841)
 
-* REQ-02: Cargas masivas de información de la campaña y del deudor 
+### REQ-02: Cargas masivas de información de la campaña y del deudor 
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/23de51aa-cca5-44b8-9cc1-d14b2c268fde)
-* REQ-03: Generación de reportes
+
+### REQ-03: Generación de reportes
 ![Reportes](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966392/80c66e28-cfe5-4a34-8626-47ef589b8388)
-* REQ-04: Asignación y generación de estrategias
+
+### REQ-04: Asignación y generación de estrategias
 ![PROTOTIPO1](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/04225d18-c61c-4716-937c-d9aa012ece07)
 ![PROTOTIPO2](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/24b268fb-c2f5-433c-8179-3c93e98e6cb9)
-* REQ-07: Validación de excepciones, pagos y finalización del proceso de cobranza
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/9430fdb9-73b2-4b5c-994d-25b27326eb79)
+
+### REQ-06: Gestión telefónica por deudor
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966974/9c6383fa-688f-469c-b782-6916b00029ab)
+
+### REQ-07: Validación de excepciones, pagos y finalización del proceso de cobranza
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/12478357-9dff-432c-9ed5-e5b2f6dcdf67)
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/719f3e85-8cc5-495d-a50c-62585c0ddb41)
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/022ea929-55aa-43cc-8d10-517eb3e0cce2)
-![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/9430fdb9-73b2-4b5c-994d-25b27326eb79)
-* REQ-06: Gestión telefónica por deudor
-![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966974/9c6383fa-688f-469c-b782-6916b00029ab)
+
 
 9. MODELAMIENTO CONCEPTUAL
 10. DOCUMENTACIÓN DE RELACIONES Y REGLAS DE NEGOCIO
