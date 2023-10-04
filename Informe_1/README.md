@@ -114,17 +114,17 @@ La elección de la empresa de cobranzas se dio porque no había otra propuesta d
 
 |Paso|Acción del actor|Respuesta|
 |:---:|---|---|
-|Paso 1|El ejecutor ingresa con su usuario y contraseña al sistema.|El sistema muestra el menú de tareas que corresponde al usuario ejecutor.|
-|Paso 2|El ejecutor ingresa al módulo de gestión de campañas.|El sistema muestra una lista desplegable con las campañas activas asignadas al ejecutor.|
-|Paso 3|El ejecutor selecciona la campaña, coloca el filtro a posicionarse y da clic en el botón iniciar gestión|El sistema muestra los datos de la deuda con la información del deudor, permitiendo llenar datos de respuesta de la gestión. El sistema activa el botón registrar gestión.|
+|1|El ejecutor ingresa con su usuario y contraseña al sistema.|El sistema muestra el menú de tareas que corresponde al usuario ejecutor.|
+|2|El ejecutor ingresa al módulo de gestión de campañas.|El sistema muestra una lista desplegable con las campañas activas asignadas al ejecutor.|
+|3|El ejecutor selecciona la campaña, coloca el filtro a posicionarse y da clic en el botón iniciar gestión|El sistema muestra los datos de la deuda con la información del deudor, permitiendo llenar datos de respuesta de la gestión. El sistema activa el botón registrar gestión.|
 |Paso 4|El ejecutor da clic en el botón de registrar gestión.|El sistema guarda la información registrada y notifica el registro exitoso y automáticamente avanza al siguiente deudor.|
 
 6. Flujo Alternativo:
 
 |Paso|Acción del actor|Respuesta|
 |:---:|---|---|
-|Paso 3|El Ejecutor podrá registrar un compromiso, excepción o un pago.|El sistema muestra las casillas a rellenar dependiendo del tipo de registro.|
-|Paso 4|El ejecutor realiza el registro y da en el botón aceptar.|El sistema notifica el registro con éxito y finaliza la gestión, automáticamente avanza al siguiente deudor.|
+|3|El Ejecutor podrá registrar un compromiso, excepción o un pago.|El sistema muestra las casillas a rellenar dependiendo del tipo de registro.|
+|4|El ejecutor realiza el registro y da en el botón aceptar.|El sistema notifica el registro con éxito y finaliza la gestión, automáticamente avanza al siguiente deudor.|
 
 #### REQ-02: Cargas masivas de información de la campaña y del deudor 
 1. Caso de Uso : Cargas masivas de información de la campaña y del deudor 
@@ -134,17 +134,17 @@ La elección de la empresa de cobranzas se dio porque no había otra propuesta d
 
 |Paso|Acción del actor|Respuesta|
 |:---:|---|---|
-|Paso 1|El soporte ingresa con su usuario y contraseña al sistema. |El sistema muestra el menú de tareas que corresponde al usuario soporte. |
-|Paso 2|El soporte ingresa al módulo de carga de datos.|El sistema muestra opciones de carga de datos de deudores, carga de formas de contacto y cargas de campañas.|
-|Paso 3|El soporte selecciona el tipo de carga de datos a subir.|El sistema mostrara un botón a subir la carga de datos.|
-|Paso 4 |El soporte sube la carga de datos seleccionada.|El sistema mostrara una sección con los datos subidos en columnas ya establecidas.|
-|Paso 5|El soporte revisa si los datos cargaron correctamente según las columnas, si esta todo conforme presiona el botón guardar.|El sistema finaliza la operación, guarda los datos cargados y muestra la pantalla de opciones del soporte.|
+|1|El soporte ingresa con su usuario y contraseña al sistema. |El sistema muestra el menú de tareas que corresponde al usuario soporte. |
+|2|El soporte ingresa al módulo de carga de datos.|El sistema muestra opciones de carga de datos de deudores, carga de formas de contacto y cargas de campañas.|
+|3|El soporte selecciona el tipo de carga de datos a subir.|El sistema mostrara un botón a subir la carga de datos.|
+|4|El soporte sube la carga de datos seleccionada.|El sistema mostrara una sección con los datos subidos en columnas ya establecidas.|
+|5|El soporte revisa si los datos cargaron correctamente según las columnas, si esta todo conforme presiona el botón guardar.|El sistema finaliza la operación, guarda los datos cargados y muestra la pantalla de opciones del soporte.|
 
 5. Flujo Alternativo:
 
 |Paso|Acción del actor|Respuesta|
 |:---:|---|---|
-|Paso 5|El soporte revisa si los datos cargaron correctamente según las columnas, si no está todo conforme selecciona el botón de cancelar, para modificar el Excel que iba a subir.|El sistema cancela la carga de datos y regresa a la pantalla de opciones del soporte.|
+|5|El soporte revisa si los datos cargaron correctamente según las columnas, si no está todo conforme selecciona el botón de cancelar, para modificar el Excel que iba a subir.|El sistema cancela la carga de datos y regresa a la pantalla de opciones del soporte.|
 
 #### REQ-03: Generación de reportes 
 1. Caso de Uso : Generación de reportes 
@@ -166,144 +166,93 @@ La elección de la empresa de cobranzas se dio porque no había otra propuesta d
 |3|El soporte presiona el botón Imprimir.|El sistema descarga el reporte en formato PDF, finalizando la tarea.|
  
 #### REQ-04: Asignación y generación de estrategias 
-1. Caso de Uso 
-Asignación y generación de estrategias
-2. Descripción del Caso de Uso 
-El sistema permitirá segmentar la cartera para gestión por llamadas o gestión masiva a través del reporte de Estado y reporte de Gestión.
-3. Actor 
-Supervisor
-4. Flujo Regular 
-Paso 1 
-Acción del actor: El Supervisor ingresa con su usuario y contraseña al sistema. 
-Respuesta: El sistema muestra el menú de tareas que corresponde al módulo Supervisor. 
+1. Caso de Uso : Asignación y generación de estrategias
+2. Descripción del Caso de Uso : El sistema permitirá segmentar la cartera para gestión por llamadas o gestión masiva a través del reporte de Estado y reporte de Gestión.
+3. Actor : Supervisor
+4. Flujo Regular :
 
-Paso 2 
-Acción del actor: El Supervisor ingresa al módulo de Generación de Estrategias. 
-Respuesta: El sistema muestra un menú vertical donde están las opciones de Reporte de Estado y Reporte de Gestión para elegir.  
+|Paso|Acción del actor|Respuesta|
+|:---:|---|---|
+|1|El Supervisor ingresa con su usuario y contraseña al sistema.|El sistema muestra el menú de tareas que corresponde al módulo Supervisor.|
+|2|El Supervisor ingresa al módulo de Generación de Estrategias.|El sistema muestra un menú vertical donde están las opciones de Reporte de Estado y Reporte de Gestión para elegir.|
+|3|El Supervisor selecciona el tipo de Reporte que desea analizar.|El sistema nos muestra una lista de elementos donde están las opciones en cual se segmento la cartera en general.|
+|4|El Supervisor selecciona una opción de segmentación de cartera.|El sistema nos muestra una tabla en donde está clasificado la cartera según la opción de segmentación seleccionada y en cada clase se indica la cantidad de deudores, recorrido, monto y cantidad de pagos.|
+|5|El supervisor selecciona con los checkbox las clases en donde desea definir una estrategia de cobranza.|El sistema habilita en la parte superior derecha el menú vertical y los dos campos de textos, y en donde se podrá seleccionar el tipo de gestión, ingresar el nombre de estrategia y su fecha y hora programada correspondientemente.|
+|6|El supervisor ingresa lo pedido y hace clic en el botón Asignar.|El sistema guarda las estrategias generadas, finaliza la tarea.| 
 
-Paso 3 
-Acción del actor: El Supervisor selecciona el tipo de Reporte que desea analizar. 
-Respuesta: El sistema nos muestra una lista de elementos donde están las opciones en cual se segmento la cartera en general.  
+5. Flujo Alternativo :
 
-Paso 4 
-Acción del actor: El Supervisor selecciona una opción de segmentación de cartera.
-Respuesta: El sistema nos muestra una tabla en donde está clasificado la cartera según la opción de segmentación seleccionada y en cada clase se indica la cantidad de deudores, recorrido, monto y cantidad de pagos. 
-
-Paso 5 
-Acción del actor: El supervisor selecciona con los checkbox las clases en donde desea definir una estrategia de cobranza. 
-Respuesta: El sistema habilita en la parte superior derecha el menú vertical y los dos campos de textos, y en donde se podrá seleccionar el tipo de gestión, ingresar el nombre de estrategia y su fecha y hora programada correspondientemente. 
-
-Paso 6
-Acción del actor: El supervisor ingresa lo pedido y hace clic en el botón Asignar.  
-Respuesta: El sistema guarda las estrategias generadas, finaliza la tarea. 
-
-5. Flujo Alternativo 
-Paso 6
-Acción del actor: El Supervisor no ingresa los datos solicitados. Presiona botón Atrás.
-Respuesta: El sistema no realiza ningún guardado, finaliza la tarea. 
-
+|Paso|Acción del actor|Respuesta|
+|:---:|---|---|
+|6|El Supervisor no ingresa los datos solicitados. Presiona botón Atrás.|El sistema no realiza ningún guardado, finaliza la tarea.|
 
 #### REQ-05: Gestión tecnológica masiva 
-Caso de Uso: Gestión Tecnológica Masiva
-El sistema permitirá al personal de soporte, que cuenta con un rol específico, configurar y gestionar la automatización de la gestión tecnológica masiva mediante la subida de archivos CSV en la página web. Estos archivos CSV se envían automáticamente a proveedores externos seleccionados para ejecutar llamadas automáticas, envío de correos masivos y mensajes SMS a los deudores. El personal de soporte puede definir detalles como el tipo de gestión, el proveedor disponible, el mensaje a enviar, y el nombre de la gestión para su reconocimiento. Además, puede monitorear en tiempo real el estado del servicio proporcionado por el proveedor y descargar los resultados una vez estén disponibles
-Actor: Personal de soporte
-Flujo Regular:
+1. Caso de Uso : Gestión Tecnológica Masiva
+2. Descripción del Caso de Uso : El sistema permitirá al personal de soporte, que cuenta con un rol específico, configurar y gestionar la automatización de la gestión tecnológica masiva mediante la subida de archivos CSV en la página web. Estos archivos CSV se envían automáticamente a proveedores externos seleccionados para ejecutar llamadas automáticas, envío de correos masivos y mensajes SMS a los deudores. El personal de soporte puede definir detalles como el tipo de gestión, el proveedor disponible, el mensaje a enviar, y el nombre de la gestión para su reconocimiento. Además, puede monitorear en tiempo real el estado del servicio proporcionado por el proveedor y descargar los resultados una vez estén disponibles
+3. Actor : Soporte
+4. Flujo Regular :
 
-Paso 1:El Personal de Soporte inicia sesión en el sistema.
-Respuesta: El sistema autentica al usuario y muestra el menú de tareas correspondiente.
+|Paso|Acción del actor|Respuesta|
+|:---:|---|---|
+|1|El Personal de Soporte inicia sesión en el sistema.|El sistema autentica al usuario y muestra el menú de tareas correspondiente.
+|2|El Personal de Soporte selecciona "Opciones y Configuración de Tercerización de Mensajes Automáticos".|El sistema muestra las opciones disponibles, incluyendo "Archivos Recibidos".|
+|3|El Personal de Soporte hace clic en "Archivos Recibidos".|El sistema proporciona una opción para comprimir los archivos recibidos en formato ZIP. El Personal de Soporte descarga los archivos CSV correspondientes a cada tipo de gestión.|
+|4|El Personal de Soporte regresa a la sección de configuración y hace clic en "Configuración de Mensajes".|El sistema muestra una interfaz para configurar mensajes automáticos.|
+|5|El Personal de Soporte carga un archivo CSV y selecciona el tipo de gestión. Luego, elige "Filtros Personalizados" y completa los datos del deudor y del asesor. Se añade la estructura del mensaje predeterminado.|El sistema permite agregar el mensaje y guarda la configuración.|
+|6|El Personal de Soporte selecciona "Filtros Masivos". Sube archivos de lista de datos de asesores y sus días disponibles. Configura el rango de montos, fecha de envío y días de disponibilidad. Luego, añade la estructura del mensaje predeterminado.|El sistema permite generar un documento CSV con los mensajes configurados.|
+|7|El Personal de Soporte accede a la interfaz de selección de proveedor, carga el documento CSV generado y selecciona el tipo de gestión. Ingresa el nombre del proveedor, fecha de servicio, nombre del personal de soporte, número de servicio e indicaciones adicionales.|El sistema envía el archivo CSV y las indicaciones al proveedor externo.
+|8|El Personal de Soporte hace clic en "Monitoreo" y proporciona el número de servicio y fecha.|El sistema muestra los resultados del proveedor en tiempo real.
+|9|Cuando el proveedor finaliza, el Personal de Soporte descarga los archivos de resultados haciendo clic en un botón correspondiente en la página de monitoreo.|Se descarga correctamente el archivo csv con los resultados.|  
 
-Paso 2: El Personal de Soporte selecciona "Opciones y Configuración de Tercerización de Mensajes Automáticos". 
-Respuesta: El sistema muestra las opciones disponibles, incluyendo "Archivos Recibidos". 
+5. Flujo Alternativo :
 
-Paso 3: El Personal de Soporte hace clic en "Archivos Recibidos". 
-Respuesta: El sistema proporciona una opción para comprimir los archivos recibidos en formato ZIP. El Personal de Soporte descarga los archivos CSV correspondientes a cada tipo de gestión. 
-
-Paso 4: El Personal de Soporte regresa a la sección de configuración y hace clic en "Configuración de Mensajes". 
-Respuesta:El sistema muestra una interfaz para configurar mensajes automáticos.
-
-Paso 5: El Personal de Soporte carga un archivo CSV y selecciona el tipo de gestión. Luego, elige "Filtros Personalizados" y completa los datos del deudor y del asesor. Se añade la estructura del mensaje predeterminado. 
-Respuesta: El sistema permite agregar el mensaje y guarda la configuración 
-
-Paso 6: El Personal de Soporte selecciona "Filtros Masivos". Sube archivos de lista de datos de asesores y sus días disponibles. Configura el rango de montos, fecha de envío y días de disponibilidad. Luego, añade la estructura del mensaje predeterminado. 
-Respuesta:El sistema permite generar un documento CSV con los mensajes configurados. 
-
-Paso7: El Personal de Soporte accede a la interfaz de selección de proveedor, carga el documento CSV generado y selecciona el tipo de gestión. Ingresa el nombre del proveedor, fecha de servicio, nombre del personal de soporte, número de servicio e indicaciones adicionales. 
-Respuesta: El sistema envía el archivo CSV y las indicaciones al proveedor externo. 
-
-Paso 8: El Personal de Soporte hace clic en "Monitoreo" y proporciona el número de servicio y fecha 
-Respuesta: El sistema muestra los resultados del proveedor en tiempo real. 
-
-Paso 9: Cuando el proveedor finaliza, el Personal de Soporte descarga los archivos de resultados haciendo clic en un botón correspondiente en la página de monitoreo. 
-Respuesta: Se descarga correctamente el archivo csv con los resultados. 
-
-Flujo Alternativo:
-
-Paso 5: El Personal de Soporte carga un archivo CSV incorrecto o ingresa información incorrecta en la configuración de mensajes automáticos 
-Respuesta: El sistema detecta que el archivo CSV subido no cumple con los requisitos o que la información ingresada es incorrecta 
-
-Paso 6: Descargar Archivos de Resultados sin haber terminado el servicio.
-Respuesta: El sistema notifica la falta de documento csv debido a que el proveedor aun no envia resultados.
+|Paso|Acción del actor|Respuesta|
+|:---:|---|---|
+|5|El Personal de Soporte carga un archivo CSV incorrecto o ingresa información incorrecta en la configuración de mensajes automáticos.|El sistema detecta que el archivo CSV subido no cumple con los requisitos o que la información ingresada es incorrecta.|
+|6|Descargar Archivos de Resultados sin haber terminado el servicio.|El sistema notifica la falta de documento csv debido a que el proveedor aun no envia resultados.|
 
 #### REQ-06: Gestión telefónica por deudor
-  1. Caso de Uso	Gestionar la campaña por llamadas siguiendo los filtros que el supervisor generó en su análisis
-2. Descripción del Caso de Uso
-El sistema permitirá ingresar el usuario de ejecutor donde le mostrará solo las opciones que le permite su rol, por el que podrá movilizarse entre las campañas asignadas y colocarse en el filtro que por indicación del supervisor podrá gestionar llamada tras llamada por cada deudor, permitiéndole registrar el tipo de respuesta que le brindo su gestión, los compromisos y registrar pagos que indican los deudores.
-3. Actor
-Soporte
-4. Flujo Regular	
-Paso 1		
-Acción del actor
-El ejecutor ingresa con su usuario y contraseña al sistema.
-Respuesta
-El sistema muestra el menú de tareas que corresponde al usuario ejecutor.
-Paso 2		
-Acción del actor
-El ejecutor ingresa al módulo de gestión de campañas.
-Respuesta
-El sistema muestra una lista desplegable con las campañas activas asignadas al ejecutor.
-Paso 3		
-Acción del actor
-El ejecutor selecciona la campaña, coloca el filtro a posicionarse y da clic en el botón iniciar gestión
-Respuesta
-El sistema muestra los datos de la deuda con la información del deudor, permitiendo llenar datos de respuesta de la gestión. El sistema activa el botón registrar gestión.
-Paso 4	
-Acción del actor	
-El ejecutor da clic en el botón de registrar gestión.
-Respuesta
-El sistema guarda la información registrada y notifica el registro exitoso y automáticamente avanza al siguiente deudor.
-Acción del actor
+1. Caso de Uso : Gestionar la campaña por llamadas siguiendo los filtros que el supervisor generó en su análisis
+2. Descripción del Caso de Uso : El sistema permitirá ingresar el usuario de ejecutor donde le mostrará solo las opciones que le permite su rol, por el que podrá movilizarse entre las campañas asignadas y colocarse en el filtro que por indicación del supervisor podrá gestionar llamada tras llamada por cada deudor, permitiéndole registrar el tipo de respuesta que le brindo su gestión, los compromisos y registrar pagos que indican los deudores.
+3. Actor : Soporte
+4. Flujo Regular :
 
-5. Flujo Alternativo
-Paso 3		
-Acción del actor
-El Ejecutor podrá registrar un compromiso, excepción o un pago.
-Respuesta
-El sistema muestra las casillas a rellenar dependiendo del tipo de registro.
-Paso 4		
-Acción del actor
-El ejecutor realiza el registro y da en el botón aceptar.
-Respuesta
-El sistema notifica el registro con éxito y finaliza la gestión, automáticamente avanza al siguiente deudor.
+|Paso|Acción del actor|Respuesta|
+|:---:|---|---|
+|1|El ejecutor ingresa con su usuario y contraseña al sistema.|El sistema muestra el menú de tareas que corresponde al usuario ejecutor.|
+|2|El ejecutor ingresa al módulo de gestión de campañas.|El sistema muestra una lista desplegable con las campañas activas asignadas al ejecutor.|
+|3|El ejecutor selecciona la campaña, coloca el filtro a posicionarse y da clic en el botón iniciar gestión.|El sistema muestra los datos de la deuda con la información del deudor, permitiendo llenar datos de respuesta de la gestión. El sistema activa el botón registrar gestión.|
+|4|El ejecutor da clic en el botón de registrar gestión.|El sistema guarda la información registrada y notifica el registro exitoso y automáticamente avanza al siguiente deudor.|
+
+5. Flujo Alternativo :
+
+|Paso|Acción del actor|Respuesta|
+|:---:|---|---|
+|3|El Ejecutor podrá registrar un compromiso, excepción o un pago.|El sistema muestra las casillas a rellenar dependiendo del tipo de registro.|
+|4|El ejecutor realiza el registro y da en el botón aceptar.|El sistema notifica el registro con éxito y finaliza la gestión, automáticamente avanza al siguiente deudor.|
 
 #### REQ-07: Validación de excepciones, pagos y finalización del proceso de cobranza
-1. Caso de Uso	Validación de excepciones, pagos y finalización del proceso de cobranza
-2. Descripción del Caso de Uso
-El sistema permite ingresar a la opción de validación de excepciones de pago y verificación del pago realizado por el deudor; si el pago realizado ha cancelado la deuda en su totalidad, se emite la carta de no adeudo.
-3. Actor
-Supervisor
-4. Flujo Regular
-Paso 	Acción del actor	Respuesta
-Paso 1	El supervisor inicia sesión en el sistema de gestión.	El sistema muestra el menú de opciones correspondiente al supervisor.
-Paso 2	El supervisor selecciona la opción “Validación de Excepciones y Pagos” en el menú.	El sistema muestra las solicitudes pendientes de excepciones y pagos.
-Paso 3	El supervisor selecciona una solicitud de excepción o pago para revisión.	El sistema muestra los detalles de la solicitud seleccionada.
-Paso 4	El supervisor aprueba/rechaza la excepción de pago o estado de pago.	El sistema registra la acción tomada y actualiza el estado de solicitud.
-Paso 5	El supervisor selecciona la aprobación de la excepción / El supervisor selecciona la opción de finalización del pago. 	El sistema actualiza el estado de solicitud y registra la fecha del cambio del estado de solicitud.
-Paso 6	El supervisor selecciona la opción de generación de compromiso de pago. / El supervisor selecciona la opción de emisión de carta de no adeudo.	El sistema genera el compromiso y fecha de pago. / El sistema genera la carta de no adeudo del deudor y registra fecha de finalización.
-Paso 7	El supervisor retrocede a la sección anterior al seleccionar la opción de “Validación de Excepciones y Pagos” en el menú	El sistema regresa a la lista de solicitudes.
-Paso 8	El supervisor selecciona la opción “Finalización de campaña” si las deudas están todas pagadas.	El sistema registra la finalización de la campaña y genera un reporte de cierre.
-5. Flujo Alternativo		El sistema mostrara un anuncio de registro exitoso.
-Paso 	Acción del actor	Respuesta
-Paso 5	El supervisor selecciona la opción de rechazo de la excepción de pago. / El supervisor selecciona la opción de no finalización del pago.	El sistema registra y actualiza el estado de la solicitud.
+1. Caso de Uso : Validación de excepciones, pagos y finalización del proceso de cobranza
+2. Descripción del Caso de Uso : El sistema permite ingresar a la opción de validación de excepciones de pago y verificación del pago realizado por el deudor; si el pago realizado ha cancelado la deuda en su totalidad, se emite la carta de no adeudo.
+3. Actor : Supervisor
+4. Flujo Regular :
+
+|Paso|Acción del actor|Respuesta|
+|:---:|---|---|
+|1|El supervisor inicia sesión en el sistema de gestión.|El sistema muestra el menú de opciones correspondiente al supervisor.
+|2|El supervisor selecciona la opción “Validación de Excepciones y Pagos” en el menú.|El sistema muestra las solicitudes pendientes de excepciones y pagos.|
+|3|El supervisor selecciona una solicitud de excepción o pago para revisión.|El sistema muestra los detalles de la solicitud seleccionada.|
+|4|El supervisor aprueba/rechaza la excepción de pago o estado de pago.|El sistema registra la acción tomada y actualiza el estado de solicitud.|
+|5|El supervisor selecciona la aprobación de la excepción / El supervisor selecciona la opción de finalización del pago.|El sistema actualiza el estado de solicitud y registra la fecha del cambio del estado de solicitud.|
+|6|El supervisor selecciona la opción de generación de compromiso de pago. / El supervisor selecciona la opción de emisión de carta de no adeudo.|El sistema genera el compromiso y fecha de pago. / El sistema genera la carta de no adeudo del deudor y registra fecha de finalización.|
+|7|El supervisor retrocede a la sección anterior al seleccionar la opción de “Validación de Excepciones y Pagos” en el menú.|El sistema regresa a la lista de solicitudes.|
+|8|El supervisor selecciona la opción “Finalización de campaña” si las deudas están todas pagadas.|El sistema registra la finalización de la campaña y genera un reporte de cierre.|
+	
+5. Flujo Alternativo : El sistema mostrara un anuncio de registro exitoso.
+
+|Paso|Acción del actor|Respuesta|
+|:---:|---|---|
+|5|El supervisor selecciona la opción de rechazo de la excepción de pago. / El supervisor selecciona la opción de no finalización del pago.|El sistema registra y actualiza el estado de la solicitud.|		
 
 ### 2.2. REQUERIMIENTOS DE ATRIBUTOS DE CALIDAD
 * Disponibilidad: El sistema estará siempre disponible para que así el deudor pueda validar su deuda y gestionar su compromiso en cualquier momento del día. 
