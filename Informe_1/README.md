@@ -42,7 +42,7 @@ Finaliza la campaña con el reporte de cierre, donde además muestra una lista d
 Se identificaron 3 actores o usuarios: Asistente de TI, Asesor y Supervisor. 
 , los clientes pueden pagar sus deudas de manera conveniente y recibir recordatorios automáticos. Esto nos ayuda a recuperar deudas más rápido y a dar un mejor servicio a los clientes.
 
-**ACTIVIDADES**
+#### **ACTIVIDADES**
 1.	Creación Entidad, Cartera y Campaña:
 Iniciamos con la creación de una nueva entidad(origen) de cuentas por cobrar, luego la cartera relacionada con la entidad para finalmente crear la campaña del mes correspondiente. En caso la entidad y la cartera ya estén creadas solo se creará la campaña.
 2.	Creación Persona y asignación de Asesores con Campaña:
