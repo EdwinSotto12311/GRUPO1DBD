@@ -91,7 +91,7 @@ El supervisor podrá visualizar las solicitudes de excepciones de pago el cual p
 Cuando el deudor cancela la totalidad de la deuda se valida y se aprueba la emisión para un próximo envío de la carta de no adeudo.
 22.	Reporte Cierre de Campaña
 Al finalizar la campaña el supervisor solicitará el reporte de cierre donde podrá revisar el desempeño de la campaña y además generar un reporte de los compromisos a plazos generados para mantenerlos con los asesores que cerraron el compromiso.
-
+![TO BE DBD (1)](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/ed35c344-ef9b-4524-942d-ec6d45e25e9b)
 
 ### 1.5 MOTIVACIÓN
 La elección de la empresa de cobranzas se dio porque no había otra propuesta donde nos brinden toda la información relacionada; se llego a contactar con Oscar Cuba que laboro en el año 2022 por un periodo de 6 meses y tuvo la predisposición de brindarnos la entrevista, la información del proceso de cobranzas nos genero mayor curiosidad y nos animamos por el proceso de cobranzas de cartera consumo.
