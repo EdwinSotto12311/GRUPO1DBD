@@ -275,11 +275,10 @@ La elección de la empresa de cobranzas se dio porque no había otra propuesta d
 ### 3.2 Especificación de módulos
 #### 3.2.1. Módulo Registros Nuevos 
 * Descripción:  
-Es el módulo asignado para los asistentes de ti que tienen el rol de soporte realiza tareas de generar registros nuevos para carteras, campañas, personas y para relacionar personas con su campaña 
+Es el módulo asignado para los asistentes de ti que tienen el rol de soporte realiza tareas de generar registros nuevos para carteras, campañas y empleados.
 * Responsabilidad: 
 Realiza los registros de carteras nuevas y campañas para su gestión. 
-Realiza los registros de personas nuevas con su información necesaria para el sistema. 
-Relaciona a la persona con rol de ejecutor a la campaña que será asignado a gestionar y de igual forma relaciona a la persona con rol de supervisor a la cartera  
+Realiza los registros de empleados nuevos con su información necesaria para el sistema. 
 * Interacción: 
 -Modulo Cargas Masivas 
 -Modulo Generación de Reportes 
