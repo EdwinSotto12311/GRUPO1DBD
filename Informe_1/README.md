@@ -32,6 +32,8 @@ Se finaliza la campaña con un reporte total del comportamiento de la cartera.
 
 ### 1.3.	Proceso (BPM)
 
+![AS IS DBD (1)](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/a422248e-3e26-4c92-aac7-d3084043e8cf)
+
 ### 1.4.	Proceso de Cobranzas Consumo – Reestructuración de cobranza consumo (TO-BE)
 Se considero todo el proceso de cobranzas de consumo para tener un mayor alcance del proceso, además se consideró que la empresa sea la que adquiere las deudas y no es tercerista, además que los procesos manuales de envíos de herramientas masivas se realicen desde el mismo sistema, automatización de reportes y emisión y envío de cartas de no adeudo.
 El proceso iniciaría con el asistente de ti generando por encargo la creación de las entidades que interactuaran con la gestión, al iniciar con una cartera propia se generaría la entidad bancaria de donde se adquirió las deudas, para luego crear la cartera correspondiente y por consiguiente la creación de campaña, se crean las personas que ocuparan el rol de supervisor, asesor y asistente de ti. Para luego asignarles a cada asesor su deudor de la campaña activa.
