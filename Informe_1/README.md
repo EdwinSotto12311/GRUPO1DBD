@@ -266,12 +266,23 @@ La elección de la empresa de cobranzas se dio porque no había otra propuesta d
 * Escalabilidad: El sistema tendrá la capacidad de trabajar con una gran cantidad de usuarios. 
 
 ### 2.4. RESTRICCIONES 
+* El sistema se implementará utilizando SGBD PostgreSQL dado que la empresa no tiene ninguna licencia comprada con ningún otro gestor de base de datos y además el equipo domina el manejo de tal gestor. 
+* En el Frontend se elige la implementación con Laravel, y en el backend se seguirá usando Php. La empresa ya cuenta con un sistema propio y se debe adecuar a los lineamientos propuestos por el cliente.
 
 ## 3.MÓDULOS
 ### 3.1 Arquitectura de módulos
 
 ### 3.2 Especificación de módulos
-
+#### 3.2.1. Módulo Registros Nuevos 
+* Descripción:  
+Es el módulo asignado para los asistentes de ti que tienen el rol de soporte realiza tareas de generar registros nuevos para carteras, campañas, personas y para relacionar personas con su campaña 
+* Responsabilidad: 
+Realiza los registros de carteras nuevas y campañas para su gestión. 
+Realiza los registros de personas nuevas con su información necesaria para el sistema. 
+Relaciona a la persona con rol de ejecutor a la campaña que será asignado a gestionar y de igual forma relaciona a la persona con rol de supervisor a la cartera  
+* Interacción: 
+-Modulo Cargas Masivas 
+-Modulo Generación de Reportes 
 #### 3.2.2. Módulo Cargas Masivas 
 * Descripción: Es el módulo asignado a los de soporte para subir al sistema las distintas cargas de datos (deudor, contacto y campaña) junto con su respectivo chequeo si lo datos concuerdan con las columnas ya establecidas. 
 * Responsabilidad: 
