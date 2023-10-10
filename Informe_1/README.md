@@ -292,7 +292,16 @@ Realiza las modificaciones en el Excel que muestra errores de datos para volver 
 * Interacción: 
   - Modulo Registros Nuevos 
   - Modulo Generación de Reportes
-
+#### 3.2.3. Módulo Generación de Reportes 
+* Descripción: 
+Es el módulo asignado al de soporte para bajar la información del sistema de distintos tipos de reportes (recaudo, cartera, llamadas y gestión), para luego tomar estrategias de acuerdo a la información que se tenga. 
+* Responsabilidad: 
+Permite la descarga de información del sistema. 
+Permite la visualización de datos de los deudores  
+Permite la visualización de cuanto se ha recaudado. 
+Permite la visualización de las llamadas que han hecho los asesores. 
+* Interacción: 
+  - Módulo Creación de estrategias   
 #### 3.2.4. Módulo Creación de estrategias 
 * Descripción: 
 Es el módulo asignado al supervisor donde se muestra segmentado el reporte de estado y reporte de gestión de la campaña y, donde gracias a esto, el supervisor analizara y generara estrategias 
@@ -304,7 +313,33 @@ Permite el guardado de estrategias en el sistema
   - Modulo Generación de Reportes  
   - Modulo Gestión Masiva 
   - Modulo Gestión Unitaria
-
+#### 3.2.5. Módulo Gestión Masiva 
+* Descripción: 
+Este módulo está diseñado para el personal de soporte encargado de gestionar las actividades de tercerización automática de llamadas, correos y mensajes SMS a través de la subida de archivos CSV. Permite la configuración y seguimiento de la gestión tecnológica masiva y la interacción con proveedores externos para la ejecución de estas actividades. 
+* Responsabilidad: 
+Seleccionar el tipo de gestión a realizar (llamadas, correos o SMS). 
+Seleccionar el proveedor disponible para la gestión tecnológica. 
+Definir un nombre o número de identificación para la gestión. 
+Configurar mensajes predefinidos según filtros de deuda. 
+Crear mensajes personalizados para clientes específicos. 
+Subir archivos CSV con la información necesaria para la gestión (nombre, número de teléfono, correo, monto de deuda, etc.). 
+Monitorizar el progreso de la gestión tecnológica en tiempo real. 
+Descargar los resultados proporcionados por el proveedor en la sección de "Archivos Recibidos". 
+Registrar la finalización de la gestión y generar un informe. 
+* Interacción:
+  - Módulo de Creación de Estrategias (para definir mensajes predefinidos).
+  - Módulo de Validación (para registrar la finalización de la gestión). 
+#### 3.2.6. Módulo Gestión Unitaria 
+* Descripción: 
+Es el módulo asignado para los asesores de cobranzas que cubren el rol de ejecutores realiza tareas netamente de negociación con los deudores mediante comunicación telefónica. 
+* Responsabilidad: 
+Permite la selección del filtro de estrategia. 
+Permite la visualización de datos de los deudores permitiendo una negociación directa por medio telefónico. 
+Permite el registro de compromisos, excepciones y pagos. 
+* Interacción:
+  - Modulo Generación de Reporte
+  - Modulo Validación
+  - Modulo Generación de Estrategias 
 #### 3.2.7.	Módulo Validación
 * Descripción: 
 Es el módulo asignado al supervisor para la validación de excepciones de pago, aprobar pagos realizados por los deudores y gestionar la finalización del proceso de cobranza.
