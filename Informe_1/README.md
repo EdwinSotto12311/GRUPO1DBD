@@ -1180,9 +1180,9 @@ Entidad Empleado
 
 | id_empleado | Nombres | ApellMat | ApellPat | rol  | DNI | usuario | contraseña | telefonos              | correos                  |
 |-------------|---------|----------|----------|------|-----|---------|------------|-----------------------|--------------------------|
-| 1           | Juan    | Perez    | Lopez    | Agte | 123 | juan123 | pass123    | 555-555-555, 666-666-666 | juan@email.com, juan2@email.com |
-| 2           | Maria   | Rodriguez | Garcia  | Mgr  | 456 | maria   | 456pass    | 777-777-777, 888-888-888 | maria@email.com, maria2@email.com |
-| 3           | Pedro   | Sanchez  | Gomez   | Agte | 789 | pedro   | 789pass    | 999-999-999, 000-000-000 | pedro@email.com, pedro2@email.com |
+| 1           | Juan    | Perez    | Lopez    | Agte | 75512388 | juan123 | pass123    | 984-541-112, 956-789-123 | juan@email.com, juan2@email.com |
+| 2           | Maria   | Rodriguez | Garcia  | Mgr  | 48641056 | maria   | 456pass    | 999-555-888, 934-567-890 | maria@email.com, maria2@email.com |
+| 3           | Pedro   | Sanchez  | Gomez   | Agte | 78987354 | pedro   | 789pass    | 978-123-456, 960-432-987 | pedro@email.com, pedro2@email.com |
 
 En esta tabla, hemos agregado dos atributos, "telefonos" y "correos," que contienen múltiples valores separados por comas, lo que incumple con la Primera Forma Normal (1NF).
 
@@ -1190,20 +1190,20 @@ En esta tabla, hemos agregado dos atributos, "telefonos" y "correos," que contie
 
 | id_empleado | Nombres | ApellMat | ApellPat | rol  | DNI | usuario | contraseña |
 |-------------|---------|----------|----------|------|-----|---------|------------|
-| 1           | Juan    | Perez    | Lopez    | Agte | 123 | juan123 | pass123    |
-| 2           | Maria   | Rodriguez | Garcia  | Mgr  | 456 | maria   | 456pass    |
-| 3           | Pedro   | Sanchez  | Gomez   | Agte | 789 | pedro   | 789pass    |
+| 1           | Juan    | Perez    | Lopez    | Agte | 75512388 | juan123 | pass123    |
+| 2           | Maria   | Rodriguez | Garcia  | Mgr  | 48641056 | maria   | 456pass    |
+| 3           | Pedro   | Sanchez  | Gomez   | Agte | 78987354 | pedro   | 789pass    |
 
 **Tabla Empleado_Telefono (Nueva):**
 
 | id_empleado | telefono    |
 |-------------|-------------|
-| 1           | 555-555-555 |
-| 1           | 666-666-666 |
-| 2           | 777-777-777 |
-| 2           | 888-888-888 |
-| 3           | 999-999-999 |
-| 3           | 000-000-000 |
+| 1           | 984-541-112 |
+| 1           | 956-789-123 |
+| 2           | 999-555-888 |
+| 2           | 934-567-890 |
+| 3           | 978-123-456 |
+| 3           | 960-432-987|
 
 **Tabla Empleado_Correo (Nueva):**
 
