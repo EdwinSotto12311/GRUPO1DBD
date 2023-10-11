@@ -386,6 +386,7 @@ Registra la finalización del proceso de cobranza para el deudor y genera un rep
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/5cf7d776-1141-4d1d-86a3-1a7f51087930)
 
 ## 10. DOCUMENTACIÓN DE RELACIONES Y REGLAS DE NEGOCIO
+
 ## 11. DICCIONARIO DE DATOS
 
 **Empleado** : Almacena información sobre los empleados de la organización
@@ -529,3 +530,8 @@ Registra la finalización del proceso de cobranza para el deudor y genera un rep
 | id_acuerdo  | Número Entero           | Identificador de acuerdo   | Identificación      |
 | id_empleado | Número Entero           | Identificador de empleado  | Identificación      |
 
+## 12. MODELO RELACIONAL
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/d14461f3-9b92-4764-9011-6966228ce34b)
+
+## 13. CREACIÓN DE TABLAS
+## 14. POBLAMIENTOS DE DATOS
