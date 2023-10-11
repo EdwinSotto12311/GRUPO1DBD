@@ -1173,3 +1173,47 @@ VALUES ('2023-07-01', 50.00, 'Efectivo', 1, 'Realizado', 2, 2, 2, 2, 2);
 INSERT INTO Pago (fecha\_pago, monto, tipo\_pago, num\_cuota, estado, id\_pago, id\_deudor, id\_acuerdo, id\_empleado, id\_respuesta)
 
 VALUES ('2023-08-01', 125.00, 'Transferencia', 2, 'Pendiente', 3, 3, 3, 3, 3);
+
+
+## NORMALIZACIÓN
+Entidad Empleado
+
+| id_empleado | Nombres | ApellMat | ApellPat | rol  | DNI | usuario | contraseña | telefonos              | correos                  |
+|-------------|---------|----------|----------|------|-----|---------|------------|-----------------------|--------------------------|
+| 1           | Juan    | Perez    | Lopez    | Agte | 123 | juan123 | pass123    | 555-555-555, 666-666-666 | juan@email.com, juan2@email.com |
+| 2           | Maria   | Rodriguez | Garcia  | Mgr  | 456 | maria   | 456pass    | 777-777-777, 888-888-888 | maria@email.com, maria2@email.com |
+| 3           | Pedro   | Sanchez  | Gomez   | Agte | 789 | pedro   | 789pass    | 999-999-999, 000-000-000 | pedro@email.com, pedro2@email.com |
+
+En esta tabla, hemos agregado dos atributos, "telefonos" y "correos," que contienen múltiples valores separados por comas, lo que incumple con la Primera Forma Normal (1NF).
+
+**Tabla Empleado (1NF Corregida):**
+
+| id_empleado | Nombres | ApellMat | ApellPat | rol  | DNI | usuario | contraseña |
+|-------------|---------|----------|----------|------|-----|---------|------------|
+| 1           | Juan    | Perez    | Lopez    | Agte | 123 | juan123 | pass123    |
+| 2           | Maria   | Rodriguez | Garcia  | Mgr  | 456 | maria   | 456pass    |
+| 3           | Pedro   | Sanchez  | Gomez   | Agte | 789 | pedro   | 789pass    |
+
+**Tabla Empleado_Telefono (Nueva):**
+
+| id_empleado | telefono    |
+|-------------|-------------|
+| 1           | 555-555-555 |
+| 1           | 666-666-666 |
+| 2           | 777-777-777 |
+| 2           | 888-888-888 |
+| 3           | 999-999-999 |
+| 3           | 000-000-000 |
+
+**Tabla Empleado_Correo (Nueva):**
+
+| id_empleado | correo                 |
+|-------------|------------------------|
+| 1           | juan@email.com         |
+| 1           | juan2@email.com        |
+| 2           | maria@email.com        |
+| 2           | maria2@email.com       |
+| 3           | pedro@email.com        |
+| 3           | pedro2@email.com       |
+
+Con esta corrección, hemos separado los valores múltiples en tablas separadas, cumpliendo con la Primera Forma Normal (1NF). Las tablas "Empleado_Telefono" y "Empleado_Correo" se han introducido para manejar la información de teléfonos y correos electrónicos relacionados con los empleados, respectivamente. Las tablas originales "Empleado" y "Empleado_telefono" cumplen con la Segunda Forma Normal (2NF), y no hay dependencias transitivas, por lo que también cumplen con la Tercera Forma Normal (3NF).
