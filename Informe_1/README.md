@@ -258,9 +258,9 @@ La elección de la empresa de cobranzas se dio porque no había otra propuesta d
 
 ### 2.3. REQUERIMIENTOS DE ATRIBUTOS DE CALIDAD
 * Disponibilidad: El sistema estará disponible el 99.9% o más del día para que así los usuarios puedan cumplir los roles que les correspondan en cualquier momento del día. Además, durante las operaciones de mantenimiento programadas, el tiempo de inactividad no debe superar las 3 horas al mes.
-* Seguridad: El sistema solo permitirá acceso a usuarios que se han registrado al portal web con sus datos correspondientes como nombres, apellidos y DNI.  
-* Rendimiento: Se usarán eficazmente los recursos para garantizar que el sistema pueda procesar grandes cantidades de datos y generar reportes de manera rápida y eficiente. 
-* Adaptabilidad: El sistema debe funcionar principalmente en los siguientes dispositivos electrónicos: Computadora, laptop, Tablet y teléfono inteligente.  
+* Seguridad: El sistema solo permitirá acceso a usuarios que están registrados en el portal web y que cumplan un rol en la empresa, y para este ingreso se requerirá que los usuarios proporcionen dos formas de autenticación, como una contraseña y un código enviado a su dispositivo móvil. Una vez que el usuario es autenticado, se le dará autorización al sistema de acuerdo al tipo de usuario. Además, el sistema establecerá un tiempo de bloqueo después de tres intentos de inicio de sesión fallidos durante 10 minutos.
+* Rendimiento: El tiempo de respuesta promedio para las transacciones dentro de la plataforma será de menos de 3 segundo. En horas pico, el tiempo de respuesta no debe superar los 5 segundos.
+* Adaptabilidad: El sistema funcionara en los siguientes dispositivos electrónicos: Computadora, laptop, Tablet y teléfono inteligente.  
 * Usabilidad: El sistema es fácil de usar y comprender, con una interfaz amigable tanto para los usuarios y administradores.  
 * Fiabilidad: El sistema continuará operando así se presenten problemas, para lograr eso se pondrá a prueba continuamente el rendimiento del sistema.  
 * Escalabilidad: El sistema tendrá la capacidad de trabajar con una gran cantidad de usuarios. 
