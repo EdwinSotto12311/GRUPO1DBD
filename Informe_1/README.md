@@ -535,331 +535,619 @@ Registra la finalización del proceso de cobranza para el deudor y genera un rep
 
 ## 13. CREACIÓN DE TABLAS
 CREATE TABLE Empleado
+
 (
-  Nombres VARCHAR(20) NOT NULL,
-  ApellMat VARCHAR(15) NOT NULL,
-  ApellPat VARCHAR(15) NOT NULL,
-  rol VARCHAR(15) NOT NULL,
-  DNI CHAR(8) NOT NULL,
-  usuario VARCHAR(30) NOT NULL,
-  contraseña VARCHAR(30) NOT NULL,
-  id_empleado INT NOT NULL,
-  PRIMARY KEY (id_empleado)
+
+`  `Nombres VARCHAR(20) NOT NULL,
+
+`  `ApellMat VARCHAR(15) NOT NULL,
+
+`  `ApellPat VARCHAR(15) NOT NULL,
+
+`  `rol VARCHAR(15) NOT NULL,
+
+`  `DNI CHAR(8) NOT NULL,
+
+`  `usuario VARCHAR(30) NOT NULL,
+
+`  `contraseña VARCHAR(30) NOT NULL,
+
+`  `id\_empleado INT NOT NULL,
+
+`  `PRIMARY KEY (id\_empleado)
+
 );
 
 CREATE TABLE Estrategia
+
 (
-  tipo_gestion VARCHAR(10) NOT NULL,
-  nombre_estrategia VARCHAR(30) NOT NULL,
-  id_estrategia INT NOT NULL,
-  id_empleado INT NOT NULL,
-  PRIMARY KEY (id_estrategia),
-  FOREIGN KEY (id_empleado) REFERENCES Empleado(id_empleado)
+
+`  `tipo\_gestion VARCHAR(10) NOT NULL,
+
+`  `nombre\_estrategia VARCHAR(30) NOT NULL,
+
+`  `id\_estrategia INT NOT NULL,
+
+`  `id\_empleado INT NOT NULL,
+
+`  `PRIMARY KEY (id\_estrategia),
+
+`  `FOREIGN KEY (id\_empleado) REFERENCES Empleado(id\_empleado)
+
 );
 
 CREATE TABLE Deuda
+
 (
-  fecha_venc DATE NOT NULL,
-  monto_total FLOAT NOT NULL,
-  monto_capital FLOAT NOT NULL,
-  estado VARCHAR(10) NOT NULL,
-  origen VARCHAR(20) NOT NULL,
-  id_deuda INT NOT NULL,
-  PRIMARY KEY (id_deuda)
+
+`  `fecha\_venc DATE NOT NULL,
+
+`  `monto\_total FLOAT NOT NULL,
+
+`  `monto\_capital FLOAT NOT NULL,
+
+`  `estado VARCHAR(10) NOT NULL,
+
+`  `origen VARCHAR(20) NOT NULL,
+
+`  `id\_deuda INT NOT NULL,
+
+`  `PRIMARY KEY (id\_deuda)
+
 );
 
-CREATE TABLE Entidad_Financiera
+CREATE TABLE Entidad\_Financiera
+
 (
-  nombre VARCHAR(20) NOT NULL,
-  RUC NUMERIC(12) NOT NULL,
-  tipo_entidad VARCHAR(10) NOT NULL,
-  telefono_contacto NUMERIC(9) NOT NULL,
-  id_entfinan INT NOT NULL,
-  PRIMARY KEY (id_entfinan)
+
+`  `nombre VARCHAR(20) NOT NULL,
+
+`  `RUC NUMERIC(12) NOT NULL,
+
+`  `tipo\_entidad VARCHAR(10) NOT NULL,
+
+`  `telefono\_contacto NUMERIC(9) NOT NULL,
+
+`  `id\_entfinan INT NOT NULL,
+
+`  `PRIMARY KEY (id\_entfinan)
+
 );
 
-CREATE TABLE Empleado_email
+CREATE TABLE Empleado\_email
+
 (
-  email VARCHAR(50) NOT NULL,
-  id_empleado INT NOT NULL,
-  FOREIGN KEY (id_empleado) REFERENCES Empleado(id_empleado)
+
+`  `email VARCHAR(50) NOT NULL,
+
+`  `id\_empleado INT NOT NULL,
+
+`  `FOREIGN KEY (id\_empleado) REFERENCES Empleado(id\_empleado)
+
 );
 
-CREATE TABLE Empleado_telefono
+CREATE TABLE Empleado\_telefono
+
 (
-  telefono NUMERIC(9) NOT NULL,
-  id_empleado INT NOT NULL,
-  FOREIGN KEY (id_empleado) REFERENCES Empleado(id_empleado)
+
+`  `telefono NUMERIC(9) NOT NULL,
+
+`  `id\_empleado INT NOT NULL,
+
+`  `FOREIGN KEY (id\_empleado) REFERENCES Empleado(id\_empleado)
+
 );
 
 CREATE TABLE Deudor
+
 (
-  Nombres VARCHAR(20) NOT NULL,
-  ApellPat VARCHAR(15) NOT NULL,
-  ApellMat VARCHAR(15) NOT NULL,
-  fecha_nac DATE NOT NULL,
-  DNI VARCHAR(8) NOT NULL,
-  id_deudor INT NOT NULL,
-  id_deuda INT NOT NULL,
-  PRIMARY KEY (id_deudor),
-  FOREIGN KEY (id_deuda) REFERENCES Deuda(id_deuda)
+
+`  `Nombres VARCHAR(20) NOT NULL,
+
+`  `ApellPat VARCHAR(15) NOT NULL,
+
+`  `ApellMat VARCHAR(15) NOT NULL,
+
+`  `fecha\_nac DATE NOT NULL,
+
+`  `DNI VARCHAR(8) NOT NULL,
+
+`  `id\_deudor INT NOT NULL,
+
+`  `id\_deuda INT NOT NULL,
+
+`  `PRIMARY KEY (id\_deudor),
+
+`  `FOREIGN KEY (id\_deuda) REFERENCES Deuda(id\_deuda)
+
 );
 
 CREATE TABLE Respuesta
+
 (
-  Descripcion_contacto VARCHAR(50) NOT NULL,
-  tipo_contacto VARCHAR(10) NOT NULL,
-  Detalle VARCHAR(50) NOT NULL,
-  fecha_gestión DATE NOT NULL,
-  id_respuesta INT NOT NULL,
-  id_empleado INT NOT NULL,
-  id_deudor INT NOT NULL,
-  PRIMARY KEY (id_respuesta, id_empleado, id_deudor),
-  FOREIGN KEY (id_empleado) REFERENCES Empleado(id_empleado),
-  FOREIGN KEY (id_deudor) REFERENCES Deudor(id_deudor)
+
+`  `Descripcion\_contacto VARCHAR(50) NOT NULL,
+
+`  `tipo\_contacto VARCHAR(10) NOT NULL,
+
+`  `Detalle VARCHAR(50) NOT NULL,
+
+`  `fecha\_gestión DATE NOT NULL,
+
+`  `id\_respuesta INT NOT NULL,
+
+`  `id\_empleado INT NOT NULL,
+
+`  `id\_deudor INT NOT NULL,
+
+`  `PRIMARY KEY (id\_respuesta, id\_empleado, id\_deudor),
+
+`  `FOREIGN KEY (id\_empleado) REFERENCES Empleado(id\_empleado),
+
+`  `FOREIGN KEY (id\_deudor) REFERENCES Deudor(id\_deudor)
+
 );
 
 CREATE TABLE Teléfono
+
 (
-  tipo_telefono VARCHAR(10) NOT NULL,
-  numero NUMERIC(9) NOT NULL,
-  fecha_registro DATE NOT NULL,
-  estado VARCHAR(15) NOT NULL,
-  id_telefono INT NOT NULL,
-  id_deudor INT NOT NULL,
-  PRIMARY KEY (id_telefono),
-  FOREIGN KEY (id_deudor) REFERENCES Deudor(id_deudor)
+
+`  `tipo\_telefono VARCHAR(10) NOT NULL,
+
+`  `numero NUMERIC(9) NOT NULL,
+
+`  `fecha\_registro DATE NOT NULL,
+
+`  `estado VARCHAR(15) NOT NULL,
+
+`  `id\_telefono INT NOT NULL,
+
+`  `id\_deudor INT NOT NULL,
+
+`  `PRIMARY KEY (id\_telefono),
+
+`  `FOREIGN KEY (id\_deudor) REFERENCES Deudor(id\_deudor)
+
 );
 
 CREATE TABLE Campaña
+
 (
-  nombre VARCHAR(50) NOT NULL,
-  fecha_incio DATE NOT NULL,
-  fecha_fin DATE NOT NULL,
-  estado VARCHAR(20) NOT NULL,
-  id_campaña INT NOT NULL,
-  id_entfinan INT NOT NULL,
-  PRIMARY KEY (id_campaña),
-  FOREIGN KEY (id_entfinan) REFERENCES Entidad_Financiera(id_entfinan)
+
+`  `nombre VARCHAR(50) NOT NULL,
+
+`  `fecha\_incio DATE NOT NULL,
+
+`  `fecha\_fin DATE NOT NULL,
+
+`  `estado VARCHAR(20) NOT NULL,
+
+`  `id\_campaña INT NOT NULL,
+
+`  `id\_entfinan INT NOT NULL,
+
+`  `PRIMARY KEY (id\_campaña),
+
+`  `FOREIGN KEY (id\_entfinan) REFERENCES Entidad\_Financiera(id\_entfinan)
+
 );
 
-CREATE TABLE Deudor_email
+CREATE TABLE Deudor\_email
+
 (
-  email VARCHAR(50) NOT NULL,
-  id_deudor INT NOT NULL,
-  FOREIGN KEY (id_deudor) REFERENCES Deudor(id_deudor)
+
+`  `email VARCHAR(50) NOT NULL,
+
+`  `id\_deudor INT NOT NULL,
+
+`  `FOREIGN KEY (id\_deudor) REFERENCES Deudor(id\_deudor)
+
 );
 
-CREATE TABLE estrategia_deudor
+CREATE TABLE estrategia\_deudor
+
 (
-  periodo_activo INT NOT NULL,
-  turno VARCHAR(10) NOT NULL,
-  id_estrategia INT NOT NULL,
-  id_deudor INT NOT NULL,
-  FOREIGN KEY (id_estrategia) REFERENCES Estrategia(id_estrategia),
-  FOREIGN KEY (id_deudor) REFERENCES Deudor(id_deudor)
+
+`  `periodo\_activo INT NOT NULL,
+
+`  `turno VARCHAR(10) NOT NULL,
+
+`  `id\_estrategia INT NOT NULL,
+
+`  `id\_deudor INT NOT NULL,
+
+`  `FOREIGN KEY (id\_estrategia) REFERENCES Estrategia(id\_estrategia),
+
+`  `FOREIGN KEY (id\_deudor) REFERENCES Deudor(id\_deudor)
+
 );
 
-CREATE TABLE campaña_deuda
+CREATE TABLE campaña\_deuda
+
 (
-  descuento FLOAT NOT NULL,
-  monto_campaña FLOAT NOT NULL,
-  id_campaña INT NOT NULL,
-  id_deuda INT NOT NULL,
-  FOREIGN KEY (id_campaña) REFERENCES Campaña(id_campaña),
-  FOREIGN KEY (id_deuda) REFERENCES Deuda(id_deuda)
+
+`  `descuento FLOAT NOT NULL,
+
+`  `monto\_campaña FLOAT NOT NULL,
+
+`  `id\_campaña INT NOT NULL,
+
+`  `id\_deuda INT NOT NULL,
+
+`  `FOREIGN KEY (id\_campaña) REFERENCES Campaña(id\_campaña),
+
+`  `FOREIGN KEY (id\_deuda) REFERENCES Deuda(id\_deuda)
+
 );
 
 CREATE TABLE Acuerdo
+
 (
-  tipo_acuerdo VARCHAR(5) NOT NULL,
-  descripcion VARCHAR(50) NOT NULL,
-  fecha_genercion DATE NOT NULL,
-  estado VARCHAR(10) NOT NULL,
-  monto FLOAT NOT NULL,
-  cuota_pago INT NOT NULL,
-  razón VARCHAR(20) NOT NULL,
-  id_acuerdo INT NOT NULL,
-  id_empleado INT NOT NULL,
-  id_deudor INT NOT NULL,
-  id_respuesta INT NOT NULL,
-  PRIMARY KEY (id_acuerdo, id_empleado, id_deudor, id_respuesta),
-  FOREIGN KEY (id_empleado, id_deudor, id_respuesta) REFERENCES Respuesta(id_empleado, id_deudor, id_respuesta)
+
+`  `tipo\_acuerdo VARCHAR(5) NOT NULL,
+
+`  `descripcion VARCHAR(50) NOT NULL,
+
+`  `fecha\_genercion DATE NOT NULL,
+
+`  `estado VARCHAR(10) NOT NULL,
+
+`  `monto FLOAT NOT NULL,
+
+`  `cuota\_pago INT NOT NULL,
+
+`  `razón VARCHAR(20) NOT NULL,
+
+`  `id\_acuerdo INT NOT NULL,
+
+`  `id\_empleado INT NOT NULL,
+
+`  `id\_deudor INT NOT NULL,
+
+`  `id\_respuesta INT NOT NULL,
+
+`  `PRIMARY KEY (id\_acuerdo, id\_empleado, id\_deudor, id\_respuesta),
+
+`  `FOREIGN KEY (id\_empleado, id\_deudor, id\_respuesta) REFERENCES Respuesta(id\_empleado, id\_deudor, id\_respuesta)
+
 );
 
 CREATE TABLE Pago
-(
-  fecha_pago DATE NOT NULL,
-  monto FLOAT NOT NULL,
-  tipo_pago VARCHAR(10) NOT NULL,
-  num_cuota INT NOT NULL,
-  estado VARCHAR(15) NOT NULL,
-  id_pago INT NOT NULL,
-  id_deudor INT NOT NULL,
-  id_acuerdo INT NOT NULL,
-  id_empleado INT NOT NULL,
-  id_deudor INT NOT NULL,
-  id_respuesta INT NOT NULL,
-  id_empleado INT NOT NULL,
-  PRIMARY KEY (id_pago, id_deudor),
-  FOREIGN KEY (id_deudor) REFERENCES Deudor(id_deudor),
-  FOREIGN KEY (id_acuerdo, id_empleado, id_deudor, id_respuesta) REFERENCES Acuerdo(id_acuerdo, id_empleado, id_deudor, id_respuesta),
-  FOREIGN KEY (id_empleado) REFERENCES Empleado(id_empleado)
-);
 
+(
+
+`  `fecha\_pago DATE NOT NULL,
+
+`  `monto FLOAT NOT NULL,
+
+`  `tipo\_pago VARCHAR(10) NOT NULL,
+
+`  `num\_cuota INT NOT NULL,
+
+`  `estado VARCHAR(15) NOT NULL,
+
+`  `id\_pago INT NOT NULL,
+
+`  `id\_deudor INT NOT NULL,
+
+`  `id\_acuerdo INT NOT NULL,
+
+`  `id\_empleado INT NOT NULL,
+
+`  `id\_deudor INT NOT NULL,
+
+`  `id\_respuesta INT NOT NULL,
+
+`  `id\_empleado INT NOT NULL,
+
+`  `PRIMARY KEY (id\_pago, id\_deudor),
+
+`  `FOREIGN KEY (id\_deudor) REFERENCES Deudor(id\_deudor),
+
+`  `FOREIGN KEY (id\_acuerdo, id\_empleado, id\_deudor, id\_respuesta) REFERENCES Acuerdo(id\_acuerdo, id\_empleado, id\_deudor, id\_respuesta),
+
+`  `FOREIGN KEY (id\_empleado) REFERENCES Empleado(id\_empleado)
+
+);
 ## 14. POBLAMIENTOS DE DATOS
 TABLAS GENERADAS
 
-TABLA EMPLEADO
+**TABLA EMPLEADO**
+
 -- Instancia 1
-INSERT INTO Empleado (Nombres, ApellMat, ApellPat, rol, DNI, usuario, contraseña, id_empleado)
+
+INSERT INTO Empleado (Nombres, ApellMat, ApellPat, rol, DNI, usuario, contraseña, id\_empleado)
+
 VALUES ('Juan', 'Pérez', 'Gómez', 'Soporte', '12345678', 'juanperez', 'clave123', 1);
+
 -- Instancia 2
-INSERT INTO Empleado (Nombres, ApellMat, ApellPat, rol, DNI, usuario, contraseña, id_empleado)
+
+INSERT INTO Empleado (Nombres, ApellMat, ApellPat, rol, DNI, usuario, contraseña, id\_empleado)
+
 VALUES ('Ana', 'López', 'García', 'Supervisor', '87654321', 'analopez', 'contraseña456', 2);
+
 -- Instancia 3
-INSERT INTO Empleado (Nombres, ApellMat, ApellPat, rol, DNI, usuario, contraseña, id_empleado)
+
+INSERT INTO Empleado (Nombres, ApellMat, ApellPat, rol, DNI, usuario, contraseña, id\_empleado)
+
 VALUES ('Luis', 'Martínez', 'Rodríguez', 'Ejecutor', '56781234', 'luisrodri', 'clave789', 3);
-TABLA  ESTRATEGÍA
+
+**TABLA  ESTRATEGÍA**
+
 -- Instancia 1
-INSERT INTO Estrategia (tipo_gestion, nombre_estrategia, id_estrategia, id_empleado)
+
+INSERT INTO Estrategia (tipo\_gestion, nombre\_estrategia, id\_estrategia, id\_empleado)
+
 VALUES (SMS, 'Estrategia A', 1, 1);
+
 -- Instancia 2
-INSERT INTO Estrategia (tipo_gestion, nombre_estrategia, id_estrategia, id_empleado)
+
+INSERT INTO Estrategia (tipo\_gestion, nombre\_estrategia, id\_estrategia, id\_empleado)
+
 VALUES (Correo, 'Estrategia B', 2, 2);
+
 -- Instancia 3
-INSERT INTO Estrategia (tipo_gestion, nombre_estrategia, id_estrategia, id_empleado)
+
+INSERT INTO Estrategia (tipo\_gestion, nombre\_estrategia, id\_estrategia, id\_empleado)
+
 VALUES (Llamada, 'Estrategia C', 3, 3);
-TABLA DEUDA
+
+**TABLA DEUDA**
+
 -- Instancia 1
-INSERT INTO Deuda (fecha_venc, monto_total, monto_capital, estado, origen, id_deuda)
+
+INSERT INTO Deuda (fecha\_venc, monto\_total, monto\_capital, estado, origen, id\_deuda)
+
 VALUES ('2023-06-30', 1500.00, 1200.00, 'Pendiente', 'Tarjeta de Crédito', 1);
+
 -- Instancia 2
-INSERT INTO Deuda (fecha_venc, monto_total, monto_capital, estado, origen, id_deuda)
+
+INSERT INTO Deuda (fecha\_venc, monto\_total, monto\_capital, estado, origen, id\_deuda)
+
 VALUES ('2023-07-15', 2500.00, 2000.00, 'Pendiente', 'Préstamo Personal', 2);
+
 -- Instancia 3
-INSERT INTO Deuda (fecha_venc, monto_total, monto_capital, estado, origen, id_deuda)
+
+INSERT INTO Deuda (fecha\_venc, monto\_total, monto\_capital, estado, origen, id\_deuda)
+
 VALUES ('2023-05-20', 1800.00, 1500.00, 'Pendiente', 'Tarjeta de Crédito', 3);
 
-TABLA ENTIDAD_FINANCIERA
+**TABLA ENTIDAD\_FINANCIERA**
+
 -- Instancia 1
-INSERT INTO Entidad_Financiera (nombre, RUC, tipo_entidad, telefono_contacto, id_entfinan)
+
+INSERT INTO Entidad\_Financiera (nombre, RUC, tipo\_entidad, telefono\_contacto, id\_entfinan)
+
 VALUES ('Banco ABC', 12345678901, 'Banco', 987654321, 1);
+
 -- Instancia 2
-INSERT INTO Entidad_Financiera (nombre, RUC, tipo_entidad, telefono_contacto, id_entfinan)
+
+INSERT INTO Entidad\_Financiera (nombre, RUC, tipo\_entidad, telefono\_contacto, id\_entfinan)
+
 VALUES ('Cooperativa XYZ', 98765432109, 'Cooperativa', 123456789, 2);
+
 -- Instancia 3
-INSERT INTO Entidad_Financiera (nombre, RUC, tipo_entidad, telefono_contacto, id_entfinan)
+
+INSERT INTO Entidad\_Financiera (nombre, RUC, tipo\_entidad, telefono\_contacto, id\_entfinan)
+
 VALUES ('Financiera 123', 56789012345, 'Financiera', 345678901, 3);
-TABLA EMPLEADO_EMAIL
+
+**TABLA EMPLEADO\_EMAIL**
+
 -- Instancia 1
-INSERT INTO Empleado_email (email, id_empleado)
+
+INSERT INTO Empleado\_email (email, id\_empleado)
+
 VALUES ('juan@empresa.com', 1);
+
 -- Instancia 2
-INSERT INTO Empleado_email (email, id_empleado)
+
+INSERT INTO Empleado\_email (email, id\_empleado)
+
 VALUES ('ana@empresa.com', 2);
+
 -- Instancia 3
-INSERT INTO Empleado_email (email, id_empleado)
+
+INSERT INTO Empleado\_email (email, id\_empleado)
+
 VALUES ('luis@empresa.com', 3);
-TABLA EMPLEADO_TELEFONO
+
+**TABLA EMPLEADO\_TELEFONO**
+
 -- Instancia 1
-INSERT INTO Empleado_telefono (telefono, id_empleado)
+
+INSERT INTO Empleado\_telefono (telefono, id\_empleado)
+
 VALUES (987654321, 1);
+
 -- Instancia 2
-INSERT INTO Empleado_telefono (telefono, id_empleado)
+
+INSERT INTO Empleado\_telefono (telefono, id\_empleado)
+
 VALUES (123456789, 2);
+
 -- Instancia 3
-INSERT INTO Empleado_telefono (telefono, id_empleado)
+
+INSERT INTO Empleado\_telefono (telefono, id\_empleado)
+
 VALUES (345678901, 3);
-TABLA DEUDOR
+
+**TABLA DEUDOR**
+
 -- Instancia 1
-INSERT INTO Deudor (Nombres, ApellPat, ApellMat, fecha_nac, DNI, id_deudor, id_deuda)
+
+INSERT INTO Deudor (Nombres, ApellPat, ApellMat, fecha\_nac, DNI, id\_deudor, id\_deuda)
+
 VALUES ('María', 'García', 'López', '1990-03-15', '34567890', 1, 1);
+
 -- Instancia 2
-INSERT INTO Deudor (Nombres, ApellPat, ApellMat, fecha_nac, DNI, id_deudor, id_deuda)
+
+INSERT INTO Deudor (Nombres, ApellPat, ApellMat, fecha\_nac, DNI, id\_deudor, id\_deuda)
+
 VALUES ('Pedro', 'Martínez', 'Sánchez', '1985-07-20', '45678901', 2, 2);
+
 -- Instancia 3
-INSERT INTO Deudor (Nombres, ApellPat, ApellMat, fecha_nac, DNI, id_deudor, id_deuda)
+
+INSERT INTO Deudor (Nombres, ApellPat, ApellMat, fecha\_nac, DNI, id\_deudor, id\_deuda)
+
 VALUES ('Laura', 'Rodríguez', 'Pérez', '1992-11-10', '56789012', 3, 3);
-TABLA RESPUESTA
+
+**TABLA RESPUESTA**
+
 -- Instancia 1
-INSERT INTO Respuesta (Descripcion_contacto, tipo_contacto, Detalle, fecha_gestión, id_respuesta, id_empleado, id_deudor)
+
+INSERT INTO Respuesta (Descripcion\_contacto, tipo\_contacto, Detalle, fecha\_gestión, id\_respuesta, id\_empleado, id\_deudor)
+
 VALUES ('Llamada', 'Telefónica', 'Habló con deudor y acordó pago', '2023-05-10', 1, 1, 1);
+
 -- Instancia 2
-INSERT INTO Respuesta (Descripcion_contacto, tipo_contacto, Detalle, fecha_gestión, id_respuesta, id_empleado, id_deudor)
+
+INSERT INTO Respuesta (Descripcion\_contacto, tipo\_contacto, Detalle, fecha\_gestión, id\_respuesta, id\_empleado, id\_deudor)
+
 VALUES ('Correo Electrónico', 'Correo', 'Enviado correo de recordatorio', '2023-06-05', 2, 2, 2);
+
 -- Instancia 3
-INSERT INTO Respuesta (Descripcion_contacto, tipo_contacto, Detalle, fecha_gestión, id_respuesta, id_empleado, id_deudor)
+
+INSERT INTO Respuesta (Descripcion\_contacto, tipo\_contacto, Detalle, fecha\_gestión, id\_respuesta, id\_empleado, id\_deudor)
+
 VALUES ('Reunión virtual', “Skype”, 'Se realizó reunión con el deudor”, '2023-07-15', 3, 3, 3);
-TABLA TELÉFONO
+
+**TABLA TELÉFONO**
+
 -- Instancia 1
-INSERT INTO Teléfono (tipo_telefono, numero, fecha_registro, estado, id_telefono, id_deudor)
+
+INSERT INTO Teléfono (tipo\_telefono, numero, fecha\_registro, estado, id\_telefono, id\_deudor)
+
 VALUES ('Móvil', 987654321, '2023-04-02', 'Activo', 1, 1);
+
 -- Instancia 2
-INSERT INTO Teléfono (tipo_telefono, numero, fecha_registro, estado, id_telefono, id_deudor)
+
+INSERT INTO Teléfono (tipo\_telefono, numero, fecha\_registro, estado, id\_telefono, id\_deudor)
+
 VALUES ('Fijo', 123456789, '2023-05-20', 'Inactivo', 2, 2);
+
 -- Instancia 3
-INSERT INTO Teléfono (tipo_telefono, numero, fecha_registro, estado, id_telefono, id_deudor)
+
+INSERT INTO Teléfono (tipo\_telefono, numero, fecha\_registro, estado, id\_telefono, id\_deudor)
+
 VALUES ('Móvil', 567890123, '2023-06-10', 'Activo', 3, 3);
 
-TABLA CAMPAÑA
+**TABLA CAMPAÑA**
+
 -- Instancia 1
-INSERT INTO Campaña (nombre, fecha_incio, fecha_fin, estado, id_campaña, id_entfinan)
+
+INSERT INTO Campaña (nombre, fecha\_incio, fecha\_fin, estado, id\_campaña, id\_entfinan)
+
 VALUES ('Campaña Verano 2023', '2023-06-01', '2023-07-31', 'Activa', 1, 1);
+
 -- Instancia 2
-INSERT INTO Campaña (nombre, fecha_incio, fecha_fin, estado, id_campaña, id_entfinan)
+
+INSERT INTO Campaña (nombre, fecha\_incio, fecha\_fin, estado, id\_campaña, id\_entfinan)
+
 VALUES ('Campaña Otoño 2023', '2023-09-01', '2023-11-30', 'Activa', 2, 2);
+
 -- Instancia 3
-INSERT INTO Campaña (nombre, fecha_incio, fecha_fin, estado, id_campaña, id_entfinan)
+
+INSERT INTO Campaña (nombre, fecha\_incio, fecha\_fin, estado, id\_campaña, id\_entfinan)
+
 VALUES ('Campaña Navidad 2023', '2023-12-01', '2023-12-31', 'Inactiva', 3, 3);
-TABLA DEUDOR_EMAIL
+
+**TABLA DEUDOR\_EMAIL**
+
 -- Instancia 1
-INSERT INTO Deudor_email (email, id_deudor)
+
+INSERT INTO Deudor\_email (email, id\_deudor)
+
 VALUES ('maria@gmail.com', 1);
+
 -- Instancia 2
-INSERT INTO Deudor_email (email, id_deudor)
+
+INSERT INTO Deudor\_email (email, id\_deudor)
+
 VALUES ('pedro@hotmail.com', 2);
+
 -- Instancia 3
-INSERT INTO Deudor_email (email, id_deudor)
+
+INSERT INTO Deudor\_email (email, id\_deudor)
+
 VALUES ('laura@yahoo.com', 3);
-TABLA ESTRATEGIA_DEUDOR
+
+**TABLA ESTRATEGIA\_DEUDOR**
+
 -- Instancia 1
-INSERT INTO Estrategia_deudor (periodo_activo, turno, id_estrategia, id_deudor)
+
+INSERT INTO Estrategia\_deudor (periodo\_activo, turno, id\_estrategia, id\_deudor)
+
 VALUES (1, 'Mañana', 1, 1);
+
 -- Instancia 2
-INSERT INTO Estrategia_deudor (periodo_activo, turno, id_estrategia, id_deudor)
+
+INSERT INTO Estrategia\_deudor (periodo\_activo, turno, id\_estrategia, id\_deudor)
+
 VALUES (2, 'Tarde', 2, 2);
+
 -- Instancia 3
-INSERT INTO Estrategia_deudor (periodo_activo, turno, id_estrategia, id_deudor)
+
+INSERT INTO Estrategia\_deudor (periodo\_activo, turno, id\_estrategia, id\_deudor)
+
 VALUES (1, 'Mañana', 3, 3);
 
-TABLA CAMPAÑA_DEUDA
+**TABLA CAMPAÑA\_DEUDA**
+
 -- Instancia 1
-INSERT INTO Campaña_Deuda (descuento, monto_campaña, id_campaña, id_deuda)
+
+INSERT INTO Campaña\_Deuda (descuento, monto\_campaña, id\_campaña, id\_deuda)
+
 VALUES (500.00, 2000.00, 1, 1);
+
 -- Instancia 2
-INSERT INTO Campaña_Deuda (descuento, monto_campaña, id_campaña, id_deuda)
+
+INSERT INTO Campaña\_Deuda (descuento, monto\_campaña, id\_campaña, id\_deuda)
+
 VALUES (300.00, 1500.00, 2, 2);
+
 -- Instancia 3
-INSERT INTO Campaña_Deuda (descuento, monto_campaña, id_campaña, id_deuda)
+
+INSERT INTO Campaña\_Deuda (descuento, monto\_campaña, id\_campaña, id\_deuda)
+
 VALUES (700.00, 3000.00, 3, 3);
-TABLA ACUERDO
+
+**TABLA ACUERDO**
+
 -- Instancia 1
-INSERT INTO Acuerdo (tipo_acuerdo, descripcion, fecha_genercion, estado, monto, cuota_pago, razón, id_acuerdo, id_empleado, id_deudor, id_respuesta)
+
+INSERT INTO Acuerdo (tipo\_acuerdo, descripcion, fecha\_genercion, estado, monto, cuota\_pago, razón, id\_acuerdo, id\_empleado, id\_deudor, id\_respuesta)
+
 VALUES ('Pago', 'Acuerdo de pago mensual', '2023-05-20', 'Activo', 1000.00, 12, 'N/A', 1, 1, 1, 1);
+
 -- Instancia 2
-INSERT INTO Acuerdo (tipo_acuerdo, descripcion, fecha_genercion, estado, monto, cuota_pago, razón, id_acuerdo, id_empleado, id_deudor, id_respuesta)
+
+INSERT INTO Acuerdo (tipo\_acuerdo, descripcion, fecha\_genercion, estado, monto, cuota\_pago, razón, id\_acuerdo, id\_empleado, id\_deudor, id\_respuesta)
+
 VALUES ('Descuento', 'Descuento por pronto pago', '2023-06-15', 'Activo', 800.00, 1, 'Pronto Pago', 2, 2, 2, 2);
+
 -- Instancia 3
-INSERT INTO Acuerdo (tipo_acuerdo, descripcion, fecha_genercion, estado, monto, cuota_pago, razón, id_acuerdo, id_empleado, id_deudor, id_respuesta)
+
+INSERT INTO Acuerdo (tipo\_acuerdo, descripcion, fecha\_genercion, estado, monto, cuota\_pago, razón, id\_acuerdo, id\_empleado, id\_deudor, id\_respuesta)
+
 VALUES ('Pago', 'Acuerdo de pago semanal', '2023-07-10', 'Inactivo', 1500.00, 24, 'N/A', 3, 3, 3, 3);
-TABLA PAGO
+
+**TABLA PAGO**
+
 -- Instancia 1
-INSERT INTO Pago (fecha_pago, monto, tipo_pago, num_cuota, estado, id_pago, id_deudor, id_acuerdo, id_empleado, id_respuesta)
+
+INSERT INTO Pago (fecha\_pago, monto, tipo\_pago, num\_cuota, estado, id\_pago, id\_deudor, id\_acuerdo, id\_empleado, id\_respuesta)
+
 VALUES ('2023-06-01', 100.00, 'Transferencia', 1, 'Realizado', 1, 1, 1, 1, 1);
+
 -- Instancia 2
-INSERT INTO Pago (fecha_pago, monto, tipo_pago, num_cuota, estado, id_pago, id_deudor, id_acuerdo, id_empleado, id_respuesta)
+
+INSERT INTO Pago (fecha\_pago, monto, tipo\_pago, num\_cuota, estado, id\_pago, id\_deudor, id\_acuerdo, id\_empleado, id\_respuesta)
+
 VALUES ('2023-07-01', 50.00, 'Efectivo', 1, 'Realizado', 2, 2, 2, 2, 2);
+
 -- Instancia 3
-INSERT INTO Pago (fecha_pago, monto, tipo_pago, num_cuota, estado, id_pago, id_deudor, id_acuerdo, id_empleado, id_respuesta)
+
+INSERT INTO Pago (fecha\_pago, monto, tipo\_pago, num\_cuota, estado, id\_pago, id\_deudor, id\_acuerdo, id\_empleado, id\_respuesta)
+
 VALUES ('2023-08-01', 125.00, 'Transferencia', 2, 'Pendiente', 3, 3, 3, 3, 3);
