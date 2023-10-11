@@ -534,29 +534,11 @@ Registra la finalización del proceso de cobranza para el deudor y genera un rep
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/d14461f3-9b92-4764-9011-6966228ce34b)
 
 ## 13. CREACIÓN DE TABLAS
-CREATE TABLE Empleado
+### TABLA EMPLEADO
+-- INSTANCIA 1
+INSERT INTO Empleado (Nombres, ApellMat, ApellPat, rol, DNI, usuario, contraseña, id_empleado)
+VALUES ('Juan', 'Pérez', 'Gómez', 'Soporte', '12345678', 'juanperez', 'clave123', 1);
 
-(
-
-`  `Nombres VARCHAR(20) NOT NULL,
-
-`  `ApellMat VARCHAR(15) NOT NULL,
-
-`  `ApellPat VARCHAR(15) NOT NULL,
-
-`  `rol VARCHAR(15) NOT NULL,
-
-`  `DNI CHAR(8) NOT NULL,
-
-`  `usuario VARCHAR(30) NOT NULL,
-
-`  `contraseña VARCHAR(30) NOT NULL,
-
-`  `id\_empleado INT NOT NULL,
-
-`  `PRIMARY KEY (id\_empleado)
-
-);
 
 CREATE TABLE Estrategia
 
