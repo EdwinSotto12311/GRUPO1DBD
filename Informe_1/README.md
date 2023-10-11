@@ -261,9 +261,9 @@ La elección de la empresa de cobranzas se dio porque no había otra propuesta d
 * Seguridad: El sistema solo permitirá acceso a usuarios que están registrados en el portal web y que cumplan un rol en la empresa, y para este ingreso se requerirá que los usuarios proporcionen dos formas de autenticación, como una contraseña y un código enviado a su dispositivo móvil. Una vez que el usuario es autenticado, se le dará autorización al sistema de acuerdo al tipo de usuario. Además, el sistema establecerá un tiempo de bloqueo después de tres intentos de inicio de sesión fallidos durante 10 minutos.
 * Rendimiento: El tiempo de respuesta promedio para las transacciones dentro de la plataforma será de menos de 3 segundo. En horas pico, el tiempo de respuesta no debe superar los 5 segundos.
 * Adaptabilidad: El sistema funcionara en los siguientes dispositivos electrónicos: Computadora, laptop, Tablet y teléfono inteligente.  
-* Usabilidad: El sistema es fácil de usar y comprender, con una interfaz amigable tanto para los usuarios y administradores.  
-* Fiabilidad: El sistema continuará operando así se presenten problemas, para lograr eso se pondrá a prueba continuamente el rendimiento del sistema.  
-* Escalabilidad: El sistema tendrá la capacidad de trabajar con una gran cantidad de usuarios. 
+* Usabilidad: El sistema será fácil de usar y comprender, con una interfaz amigable para los usuarios. Los usuarios podrán acceder a cualquier función del sistema desde la página de inicio en menos de 2 clics y el sistema proporcionara una función de búsqueda que devuelva resultados relevantes en menos de 1 segundo.
+* Fiabilidad: El sistema debe ser resistente a fallos menores y ser capaz de recuperarse automáticamente sin afectar significativamente la operación. En caso de fallos graves, el tiempo de recuperación no debe superar las 3 horas. Además, se realizará copias de seguridad diarias de los datos del sistema y mantener copias de seguridad históricas durante al menos 90 días. 
+* Escalabilidad: El sistema tendrá la capacidad de trabajar con mínimo 10000 usuarios en tiempo real. 
 
 ### 2.4. RESTRICCIONES 
 * El sistema se implementará utilizando SGBD PostgreSQL dado que la empresa no tiene ninguna licencia comprada con ningún otro gestor de base de datos y además el equipo domina el manejo de tal gestor. 
