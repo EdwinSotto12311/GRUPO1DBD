@@ -379,5 +379,52 @@ Registra la finalización del proceso de cobranza para el deudor y genera un rep
 
 9. MODELAMIENTO CONCEPTUAL
 10. DOCUMENTACIÓN DE RELACIONES Y REGLAS DE NEGOCIO
-11. DICCIONARIO DE DATOS
+## 11. DICCIONARIO DE DATOS
+#### ENTIDAD: CARTERA
+Una cartera representa una agrupación de deudas pendientes que se ha realizado bajo ciertos parámetros y acuerdos entre la entidad acreedora.
 
+|Atributo|Semántica|Ontología|Valor|
+|:---:|---|---|---|
+|Tipo|Tipo de cartera|Permite distinguir en que categoría está la cartera (por ejemplo, educativa, financiera)|Texto|
+|Estado|Estado de la cartera|Permite identificar el estado actual de la cartera (activo, inactivo, en proceso)|Texto|
+
+#### ENTIDAD: CAMPAÑA
+Una campaña de cobranza es una iniciativa estratégica y organizada llevada a cabo por la empresa de cobranzas para gestionar y recuperar las deudas de una cartera específica. 
+
+|Atributo|Semántica|Ontología|Valor|
+|:---:|---|---|---|
+|Estado|Estado de la campaña|Permite saber en que estado se encuentra la campaña (activo, inactivo, en proceso)|Texto|
+
+#### ENTIDAD: DEUDA
+Una deuda representa el dinero que una persona o entidad debe a la entidad acreedora, generalmente como resultado de un préstamo o una transacción financiera.  
+
+|Atributo|Semántica|Ontología|Valor|
+|:---:|---|---|---|
+|Origen|Origen de la deuda|Permite saber por que medio se origino la deuda del deudor (por ejemplo, préstamo, tarjeta de crédito)|Texto|
+|Monto_capital|Monto del capital de la deuda|El primer monto de la deuda que obtuvo el deudor|Decimal|
+|Estado|Estado de la deuda|Permite saber en que estado está la deuda (activo, inactivo, en proceso)|Texto|
+|Monto_total|Monto total de la deuda|Es la suma total de la deuda que ha ido creciendo con el tiempo|Decimal|
+
+#### ENTIDAD: DEUDOR
+Un deudor es una persona o entidad que tiene una deuda pendiente con la entidad acreedora.
+
+#### ENTIDAD: TELÉFONO
+El teléfono del deudor es un medio de contacto utilizado por la empresa de cobranzas para comunicarse con los deudores en un intento de recuperar las deudas pendientes. 
+
+|Atributo|Semántica|Ontología|Valor|
+|:---:|---|---|---|
+|Estado|Estado del teléfono del deudor|Permite saber en que estado está el teléfono del deudor al llamarlo (activo, inactivo, en proceso)|Texto|
+
+#### ENTIDAD: PERSONAL
+El personal son los empleados de la empresa de cobranzas que están involucrados en la gestión y recuperación de las deudas, área de TI, etc. 
+
+|Atributo|Semántica|Ontología|Valor|
+|:---:|---|---|---|
+|Fecha_registro|Fecha de registro del personal|Permite identificar cuando se registró el personal al sistema|Fecha|
+
+#### ENTIDAD: PROVEEDOR
+Un proveedor es una entidad externa a la empresa de cobranzas que ofrece servicios relacionados con la gestión de cobranzas, como el envío de mensajes automáticos o la tercerización de ciertas tareas. 
+
+|Atributo|Semántica|Ontología|Valor|
+|:---:|---|---|---|
+|Tipo_servicio |Tipo de servicio que ofrece el proveedor|Permite identificar qué tipo de servicios ofrece un proveedor|Texto|
