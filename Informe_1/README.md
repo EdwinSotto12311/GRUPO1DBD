@@ -257,7 +257,7 @@ La elección de la empresa de cobranzas se dio porque no había otra propuesta d
 |5|El supervisor selecciona la opción de rechazo de la excepción de pago. / El supervisor selecciona la opción de no finalización del pago.|El sistema registra y actualiza el estado de la solicitud.|		
 
 ### 2.3. REQUERIMIENTOS DE ATRIBUTOS DE CALIDAD
-* Disponibilidad: El sistema estará siempre disponible para que así el deudor pueda validar su deuda y gestionar su compromiso en cualquier momento del día. 
+* Disponibilidad: El sistema estará disponible el 99.9% o más del día para que así los usuarios puedan cumplir los roles que les correspondan en cualquier momento del día. Además, durante las operaciones de mantenimiento programadas, el tiempo de inactividad no debe superar las 3 horas al mes.
 * Seguridad: El sistema solo permitirá acceso a usuarios que se han registrado al portal web con sus datos correspondientes como nombres, apellidos y DNI.  
 * Rendimiento: Se usarán eficazmente los recursos para garantizar que el sistema pueda procesar grandes cantidades de datos y generar reportes de manera rápida y eficiente. 
 * Adaptabilidad: El sistema debe funcionar principalmente en los siguientes dispositivos electrónicos: Computadora, laptop, Tablet y teléfono inteligente.  
