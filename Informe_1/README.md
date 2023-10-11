@@ -270,6 +270,8 @@ La elección de la empresa de cobranzas se dio porque no había otra propuesta d
 * En el Frontend se elige la implementación con Laravel, y en el backend se seguirá usando Php. La empresa ya cuenta con un sistema propio y se debe adecuar a los lineamientos propuestos por el cliente.
 
 ## 3.MÓDULOS
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966974/52fbffe4-142e-479a-9d50-141ceda427ec)
+
 ### 3.1 Arquitectura de módulos
 
 ### 3.2 Especificación de módulos
