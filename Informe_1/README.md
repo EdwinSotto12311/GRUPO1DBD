@@ -382,54 +382,150 @@ Registra la finalización del proceso de cobranza para el deudor y genera un rep
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/022ea929-55aa-43cc-8d10-517eb3e0cce2)
 
 
-9. MODELAMIENTO CONCEPTUAL
-10. DOCUMENTACIÓN DE RELACIONES Y REGLAS DE NEGOCIO
+## 9. MODELAMIENTO CONCEPTUAL
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/5cf7d776-1141-4d1d-86a3-1a7f51087930)
+
+## 10. DOCUMENTACIÓN DE RELACIONES Y REGLAS DE NEGOCIO
 ## 11. DICCIONARIO DE DATOS
-#### ENTIDAD: CARTERA
-Una cartera representa una agrupación de deudas pendientes que se ha realizado bajo ciertos parámetros y acuerdos entre la entidad acreedora.
 
-|Atributo|Semántica|Ontología|Valor|
-|:---:|---|---|---|
-|Tipo|Tipo de cartera|Permite distinguir en que categoría está la cartera (por ejemplo, educativa, financiera)|Texto|
-|Estado|Estado de la cartera|Permite identificar el estado actual de la cartera (activo, inactivo, en proceso)|Texto|
+**Empleado** : Almacena información sobre los empleados de la organización
+| Atributo     | Naturaleza del Atributo | Semántica                  | Ontología           |
+|--------------|-------------------------|---------------------------|---------------------|
+| Nombres      | Texto                   | Nombre de una persona      | Información personal |
+| ApellMat     | Texto                   | Apellido materno de una persona | Información personal |
+| ApellPat     | Texto                   | Apellido paterno de una persona | Información personal |
+| rol          | Texto                   | Rol o posición de un empleado | Empleo              |
+| DNI          | Texto                   | Número de Documento de Identidad | Identificación      |
+| usuario      | Texto                   | Nombre de usuario          | Identificación      |
+| contraseña   | Texto                   | Contraseña de acceso        | Seguridad           |
+| id_empleado  | Número Entero           | Identificador de empleado  | Identificación      |
 
-#### ENTIDAD: CAMPAÑA
-Una campaña de cobranza es una iniciativa estratégica y organizada llevada a cabo por la empresa de cobranzas para gestionar y recuperar las deudas de una cartera específica. 
+**Estrategia** : Registra estrategias de gestión utilizadas por la organización
+| Atributo            | Naturaleza del Atributo | Semántica                  | Ontología           |
+|---------------------|-------------------------|---------------------------|---------------------|
+| tipo_gestion        | Texto                   | Tipo de gestión estratégica | Estrategia          |
+| nombre_estrategia   | Texto                   | Nombre de una estrategia  | Estrategia          |
+| id_estrategia       | Número Entero           | Identificador de estrategia | Identificación      |
+| id_empleado         | Número Entero           | Identificación de empleado | Identificación      |
 
-|Atributo|Semántica|Ontología|Valor|
-|:---:|---|---|---|
-|Estado|Estado de la campaña|Permite saber en que estado se encuentra la campaña (activo, inactivo, en proceso)|Texto|
+**Deuda** : Almacena datos relacionados con las deudas
+| Atributo           | Naturaleza del Atributo | Semántica                  | Ontología           |
+|--------------------|-------------------------|---------------------------|---------------------|
+| fecha_venc         | Fecha                   | Fecha de vencimiento de una deuda | Tiempo              |
+| monto_total        | Número Decimal          | Monto total de una deuda  | Finanzas            |
+| monto_capital      | Número Decimal          | Monto del capital de una deuda | Finanzas            |
+| estado             | Texto                   | Estado de una entidad o deuda | Estado              |
+| origen             | Texto                   | Origen de una deuda       | Origen              |
+| id_deuda           | Número Entero           | Identificador de deuda    | Identificación      |
 
-#### ENTIDAD: DEUDA
-Una deuda representa el dinero que una persona o entidad debe a la entidad acreedora, generalmente como resultado de un préstamo o una transacción financiera.  
+**Entidad_Financiera** : Contiene información sobre las entidades financieras
+| Atributo         | Naturaleza del Atributo | Semántica                  | Ontología           |
+|------------------|-------------------------|---------------------------|---------------------|
+| nombre           | Texto                   | Nombre de una entidad financiera | Entidad financiera  |
+| RUC              | Número Decimal          | Registro Único de Contribuyente | Identificación      |
+| tipo_entidad     | Texto                   | Tipo de entidad financiera | Entidad financiera  |
+| telefono_contacto | Número Decimal         | Teléfono de contacto      | Comunicación        |
+| id_entfinan      | Número Entero           | Identificador de entidad financiera | Identificación  |
 
-|Atributo|Semántica|Ontología|Valor|
-|:---:|---|---|---|
-|Origen|Origen de la deuda|Permite saber por que medio se origino la deuda del deudor (por ejemplo, préstamo, tarjeta de crédito)|Texto|
-|Monto_capital|Monto del capital de la deuda|El primer monto de la deuda que obtuvo el deudor|Decimal|
-|Estado|Estado de la deuda|Permite saber en que estado está la deuda (activo, inactivo, en proceso)|Texto|
-|Monto_total|Monto total de la deuda|Es la suma total de la deuda que ha ido creciendo con el tiempo|Decimal|
+**Empleado_email** : Registra direcciones de correo electrónico asociadas a los empleados, permitiendo el contacto y la comunicación por correo electrónico.
+| Atributo  | Naturaleza del Atributo | Semántica                  | Ontología           |
+|-----------|-------------------------|---------------------------|---------------------|
+| email     | Texto                   | Dirección de correo electrónico | Comunicación        |
+| id_empleado | Número Entero         | Identificador de empleado  | Identificación      |
 
-#### ENTIDAD: DEUDOR
-Un deudor es una persona o entidad que tiene una deuda pendiente con la entidad acreedora.
+**Empleado_telefono** : Almacena números de teléfono de contacto de los empleados, facilitando la comunicación telefónica.
+| Atributo  | Naturaleza del Atributo | Semántica                  | Ontología           |
+|-----------|-------------------------|---------------------------|---------------------|
+| telefono  | Número Decimal          | Número de teléfono        | Comunicación        |
+| id_empleado | Número Entero         | Identificador de empleado  | Identificación      |
 
-#### ENTIDAD: TELÉFONO
-El teléfono del deudor es un medio de contacto utilizado por la empresa de cobranzas para comunicarse con los deudores en un intento de recuperar las deudas pendientes. 
+**Deudor** : Contiene datos de deudores, incluyendo sus nombres, apellidos, fecha de nacimiento, número de DNI, y un identificador único. También se asocia a deudas.
+| Atributo     | Naturaleza del Atributo | Semántica                  | Ontología           |
+|--------------|-------------------------|---------------------------|---------------------|
+| Nombres      | Texto                   | Nombre de una persona      | Información personal |
+| ApellPat     | Texto                   | Apellido paterno de una persona | Información personal |
+| ApellMat     | Texto                   | Apellido materno de una persona | Información personal |
+| fecha_nac    | Fecha                   | Fecha de nacimiento de una persona | Tiempo              |
+| DNI          | Texto                   | Número de Documento de Identidad | Identificación      |
+| id_deudor    | Número Entero           | Identificador de deudor   | Identificación      |
+| id_deuda     | Número Entero           | Identificador de deuda    | Identificación      |
 
-|Atributo|Semántica|Ontología|Valor|
-|:---:|---|---|---|
-|Estado|Estado del teléfono del deudor|Permite saber en que estado está el teléfono del deudor al llamarlo (activo, inactivo, en proceso)|Texto|
+**Respuesta** : Registra respuestas o interacciones con deudores, incluyendo descripciones de contacto, tipos de contacto, detalles de la gestión, fechas de gestión, y se asocia a empleados y deudores.
+| Atributo           | Naturaleza del Atributo | Semántica                  | Ontología           |
+|--------------------|-------------------------|---------------------------|---------------------|
+| Descripcion_contacto | Texto                 | Descripción del contacto  | Comunicación        |
+| tipo_contacto      | Texto                   | Tipo de contacto          | Comunicación        |
+| Detalle            | Texto                   | Detalle del contacto      | Comunicación        |
+| fecha_gestión      | Fecha                   | Fecha de gestión del contacto | Tiempo            |
+| id_respuesta       | Número Entero           | Identificador de respuesta | Identificación      |
+| id_empleado        | Número Entero           | Identificador de empleado  | Identificación      |
+| id_deudor          | Número Entero           | Identificador de deudor   | Identificación      |
 
-#### ENTIDAD: PERSONAL
-El personal son los empleados de la empresa de cobranzas que están involucrados en la gestión y recuperación de las deudas, área de TI, etc. 
+**Teléfono** : Almacena información sobre números de teléfono utilizados en el proceso de gestión de deudas, incluyendo el tipo de teléfono, el número, la fecha de registro y el estado del teléfono.
+| Atributo      | Naturaleza del Atributo | Semántica                  | Ontología           |
+|---------------|-------------------------|---------------------------|---------------------|
+| tipo_telefono | Texto                   | Tipo de teléfono          | Comunicación        |
+| numero        | Número Decimal          | Número de teléfono        | Comunicación        |
+| fecha_registro | Fecha                   | Fecha de registro del teléfono | Tiempo              |
+| estado        | Texto                   | Estado del teléfono       | Estado              |
+| id_telefono   | Número Entero           | Identificador de teléfono | Identificación      |
 
-|Atributo|Semántica|Ontología|Valor|
-|:---:|---|---|---|
-|Fecha_registro|Fecha de registro del personal|Permite identificar cuando se registró el personal al sistema|Fecha|
+**Campaña** Registra campañas utilizadas por las entidades financieras, incluyendo el nombre de la campaña, fechas de inicio y fin, estado y un identificador único. Asociado a entidades financieras.: 
+| Atributo     | Naturaleza del Atributo | Semántica                  | Ontología           |
+|--------------|-------------------------|---------------------------|---------------------|
+| nombre       | Texto                   | Nombre de una campaña     | Campaña             |
+| fecha_incio  | Fecha                   | Fecha de inicio de una campaña | Tiempo              |
+| fecha_fin    | Fecha                   | Fecha de fin de una campaña | Tiempo              |
+| estado       | Texto                   | Estado de una campaña     | Estado              |
+| id_campaña   | Número Entero           | Identificador de campaña  | Identificación      |
 
-#### ENTIDAD: PROVEEDOR
-Un proveedor es una entidad externa a la empresa de cobranzas que ofrece servicios relacionados con la gestión de cobranzas, como el envío de mensajes automáticos o la tercerización de ciertas tareas. 
+**Deudor_email** : Almacena direcciones de correo electrónico asociadas a deudores, permitiendo la comunicación por correo electrónico con los deudores.
+| Atributo  | Naturaleza del Atributo | Semántica                  | Ontología           |
+|-----------|-------------------------|---------------------------|---------------------|
+| email     | Texto                   | Dirección de correo electrónico | Comunicación        |
+| id_deudor | Número Entero           | Identificador de deudor   | Identificación      |
 
-|Atributo|Semántica|Ontología|Valor|
-|:---:|---|---|---|
-|Tipo_servicio |Tipo de servicio que ofrece el proveedor|Permite identificar qué tipo de servicios ofrece un proveedor|Texto|
+**estrategia_deudor** : Registra la asignación de estrategias a deudores, incluyendo el período activo, el turno y se asocia a estrategias y deudores.
+| Atributo       | Naturaleza del Atributo | Semántica                  | Ontología           |
+|----------------|-------------------------|---------------------------|---------------------|
+| periodo_activo | Número Entero           | Período activo            | Tiempo              |
+| turno          | Texto                   | Turno de estrategia       | Estrategia          |
+| id_estrategia  | Número Entero           | Identificador de estrategia | Identificación      |
+| id_deudor      | Número Entero           | Identificador de deudor   | Identificación      |
+
+**campaña_deuda** : Almacena información relacionada con campañas y deudas, incluyendo descuentos, montos de campaña y se asocia a campañas y deudas.
+| Atributo        | Naturaleza del Atributo | Semántica                  | Ontología           |
+|-----------------|-------------------------|---------------------------|---------------------|
+| descuento       | Número Decimal          | Valor del descuento en una campaña | Finanzas           |
+| monto_campaña   | Número Decimal          | Monto de una campaña      | Finanzas            |
+| id_campaña      | Número Entero           | Identificador de campaña  | Identificación      |
+| id_deuda        | Número Entero           | Identificador de deuda    | Identificación      |
+
+**Acuerdo** : Registra acuerdos entre deudores y entidades financieras, incluyendo detalles como el tipo de acuerdo, descripción, fecha de generación, estado, montos y cuotas de pago. Se asocia a empleados, deudores y respuestas.
+| Atributo        | Naturaleza del Atributo | Semántica                  | Ontología           |
+|-----------------|-------------------------|---------------------------|---------------------|
+| tipo_acuerdo    | Texto                   | Tipo de acuerdo           | Acuerdo             |
+| descripcion     | Texto                   | Descripción del acuerdo   | Acuerdo             |
+| fecha_genercion | Fecha                   | Fecha de generación del acuerdo | Tiempo            |
+| estado          | Texto                   | Estado del acuerdo        | Estado              |
+| monto           | Número Decimal          | Monto del acuerdo         | Finanzas            |
+| cuota_pago      | Número Entero           | Cuota de pago del acuerdo | Finanzas            |
+| razón           | Texto                   | Razón del acuerdo         | Acuerdo             |
+| id_acuerdo      | Número Entero           | Identificador de acuerdo  | Identificación      |
+| id_empleado     | Número Entero           | Identificador de empleado  | Identificación      |
+| id_deudor       | Número Entero           | Identificador de deudor   | Identificación      |
+| id_respuesta    | Número Entero           | Identificador de respuesta | Identificación      |
+
+**Pago** : Contiene información sobre los pagos realizados por deudores, incluyendo fechas de pago, montos, tipos de pago, números de cuota y estados. Se asocia a deudores, acuerdos, empleados y respuestas.
+| Atributo    | Naturaleza del Atributo | Semántica                  | Ontología           |
+|-------------|-------------------------|---------------------------|---------------------|
+| fecha_pago  | Fecha                   | Fecha de pago              | Tiempo              |
+| monto       | Número Decimal          | Monto de pago              | Finanzas            |
+| tipo_pago   | Texto                   | Tipo de pago               | Finanzas            |
+| num_cuota   | Número Entero           | Número de cuota de pago    | Finanzas            |
+| estado      | Texto                   | Estado del pago            | Estado              |
+| id_pago     | Número Entero           | Identificador de pago      | Identificación      |
+| id_deudor   | Número Entero           | Identificador de deudor    | Identificación      |
+| id_acuerdo  | Número Entero           | Identificador de acuerdo   | Identificación      |
+| id_empleado | Número Entero           | Identificador de empleado  | Identificación      |
+
