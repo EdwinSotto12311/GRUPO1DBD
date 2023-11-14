@@ -1219,3 +1219,9 @@ En esta tabla, hemos agregado dos atributos, "telefonos" y "correos," que contie
 | 3           | pedro2@email.com       |
 
 Con esta corrección, hemos separado los valores múltiples en tablas separadas, cumpliendo con la Primera Forma Normal (1NF). Las tablas "Empleado_Telefono" y "Empleado_Correo" se han introducido para manejar la información de teléfonos y correos electrónicos relacionados con los empleados, respectivamente. Las tablas originales "Empleado" y "Empleado_telefono" cumplen con la Segunda Forma Normal (2NF), y no hay dependencias transitivas, por lo que también cumplen con la Tercera Forma Normal (3NF).
+
+
+## SENTENCIA SQL PARA CADA PROTOTIPO
+|Código de requerimiento|xxxx|
+|------------------------|----|
+|**Código de interfaz**|xxx|
