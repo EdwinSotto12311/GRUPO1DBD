@@ -1222,7 +1222,7 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 
 ## 15. SENTENCIAS SQL PARA CADA PROTOTIPO
 
-| Codigo Requerimiento | R-001                  |
+| Codigo Requerimiento | REQ-01                  |
 |-------------|------------------------|
 | Codigo Interfaz         | I-001        |
 | Imagen Interfaz                                  |
@@ -1235,7 +1235,7 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 |Donde los valores del 1 al 10 se capturarán de la interfaz del soporte según se muestran en la imagen. |
 
 
-| Codigo Requerimiento | R-001                  |
+| Codigo Requerimiento | REQ-01                  |
 |-------------|------------------------|
 | Codigo Interfaz         | I-002        |
 | Imagen Interfaz                                  |
@@ -1246,7 +1246,7 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 |Donde los valores del 1 al 6 se capturarán de la interfaz del soporte según se muestran en la imagen. |
 
 
-| Codigo Requerimiento | R-001                  |
+| Codigo Requerimiento | REQ-01                  |
 |-------------|------------------------|
 | Codigo Interfaz         | I-003        |
 | Imagen Interfaz                                  |
