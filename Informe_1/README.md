@@ -110,23 +110,23 @@ La elección de la empresa de cobranzas se dio porque no había otra propuesta d
 ### 2.2. REQUERIMIENTOS FUNCIONALES
 #### REQ-01: Creación de registros de información para la gestión
 1. Caso de Uso: Gestionar la campaña por llamadas siguiendo los filtros que el supervisor generó en su análisis
-2. Descripción del Caso de Uso: El sistema permitirá ingresar el usuario de ejecutor donde le mostrará solo las opciones que le permite su rol, por el que podrá movilizarse entre las campañas asignadas y colocarse en el filtro que por indicación del supervisor podrá gestionar llamada tras llamada por cada deudor, permitiéndole registrar el tipo de respuesta que le brindo su gestión, los compromisos y registrar pagos que indican los deudores.
+2. Descripción del Caso de Uso: El sistema permite la creación de entidades junto con sus carteras, campañas y personas que están relacionadas con el proceso de gestión. 
 3. Actor: Soporte
 4. Flujo Regular:
 
 |Paso|Acción del actor|Respuesta|
 |:---:|---|---|
-|1|El ejecutor ingresa con su usuario y contraseña al sistema.|El sistema muestra el menú de tareas que corresponde al usuario ejecutor.|
-|2|El ejecutor ingresa al módulo de gestión de campañas.|El sistema muestra una lista desplegable con las campañas activas asignadas al ejecutor.|
-|3|El ejecutor selecciona la campaña, coloca el filtro a posicionarse y da clic en el botón iniciar gestión|El sistema muestra los datos de la deuda con la información del deudor, permitiendo llenar datos de respuesta de la gestión. El sistema activa el botón registrar gestión.|
-|Paso 4|El ejecutor da clic en el botón de registrar gestión.|El sistema guarda la información registrada y notifica el registro exitoso y automáticamente avanza al siguiente deudor.|
-
+|1|El soporte ingresa con su usuario y contraseña al sistema. |El sistema muestra el menú de tareas que corresponde al usuario soporte.|
+|2|El soporte ingresa al módulo de creación de registros|El sistema muestra opciones de creación de entidad, cartera, campañas, personas y Asignación de personas con campañas.|
+|3|El soporte selecciona el tipo de registro a cargar. |El sistema mostrara un tipo distinto de formulario para cada selección.|
+|4|El soporte llena la información solicitada y da clic en el botón agregar|EEl sistema mostrara un anuncio de registro exitoso|
+|5|Se selecciona la asignación de persona con campaña.  |El sistema nos muestra un listado de campañas y un listado de personas con rol ejecutor, además de la asignación de un nombre de asignación|
+|6|El soporte selecciona la campaña y el ejecutor|El sistema mostrara un anuncio de registro exitoso|
 6. Flujo Alternativo:
 
 |Paso|Acción del actor|Respuesta|
 |:---:|---|---|
-|3|El Ejecutor podrá registrar un compromiso, excepción o un pago.|El sistema muestra las casillas a rellenar dependiendo del tipo de registro.|
-|4|El ejecutor realiza el registro y da en el botón aceptar.|El sistema notifica el registro con éxito y finaliza la gestión, automáticamente avanza al siguiente deudor.|
+|6|El soporte intenta registrar un campo vacío o invalido y da clic en registrar.|El sistema muestra un anuncio de error, la asignación se trunca y no realiza ninguna acción.|
 
 #### REQ-02: Cargas masivas de información de la campaña y del deudor 
 1. Caso de Uso : Cargas masivas de información de la campaña y del deudor 
