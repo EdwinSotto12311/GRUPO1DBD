@@ -1220,18 +1220,8 @@ En esta tabla, hemos agregado dos atributos, "telefonos" y "correos," que contie
 
 Con esta corrección, hemos separado los valores múltiples en tablas separadas, cumpliendo con la Primera Forma Normal (1NF). Las tablas "Empleado_Telefono" y "Empleado_Correo" se han introducido para manejar la información de teléfonos y correos electrónicos relacionados con los empleados, respectivamente. Las tablas originales "Empleado" y "Empleado_telefono" cumplen con la Segunda Forma Normal (2NF), y no hay dependencias transitivas, por lo que también cumplen con la Tercera Forma Normal (3NF).
 
-
-## SENTENCIA SQL PARA CADA PROTOTIPO
-|Código de requerimiento|xxxx|
-|------------------------|----|
-|**Código de interfaz**|xxx|
-
-|Imagen interfaz|
-|---|
-|![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/12478357-9dff-432c-9ed5-e5b2f6dcdf67)|
-|Sentencia SQL|
-|Evento
 ## 15. SENTENCIAS SQL PARA CADA PROTOTIPO
+
 | Codigo Requerimiento | R-001                  |
 |-------------|------------------------|
 | Codigo Interfaz         | I-001        |
@@ -1244,6 +1234,7 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 |INSERT INTO Empleado\_telefono (telefono, id\_empleado) VALUES (<10>, <8>);| 
 |Donde los valores del 1 al 10 se capturarán de la interfaz del soporte según se muestran en la imagen. |
 
+
 | Codigo Requerimiento | R-001                  |
 |-------------|------------------------|
 | Codigo Interfaz         | I-002        |
@@ -1254,6 +1245,7 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 |INSERT INTO Campaña (nombre, fecha\_incio, fecha\_fin, estado, id\_campaña, id\_entfinan) VALUES (<1>, <2>, <3>, <4>, <5>, <6>); |
 |Donde los valores del 1 al 6 se capturarán de la interfaz del soporte según se muestran en la imagen. |
 
+
 | Codigo Requerimiento | R-001                  |
 |-------------|------------------------|
 | Codigo Interfaz         | I-003        |
@@ -1263,3 +1255,14 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 | 1. Botón Agregar: Se agregará un nuevo registro a la tabla de empleado. |
 |INSERT INTO Entidad\_Financiera (nombre, RUC, tipo\_entidad, telefono\_contacto, id\_entfinan) VALUES (<1>, <2>, <3>, <4>, <5>); |
 |Donde los valores del 1 al 5 se capturarán de la interfaz del soporte según se muestran en la imagen. |
+
+
+|Código de requerimiento|xxxx|
+|------------------------|----|
+|**Código de interfaz**|xxx|
+
+|Imagen interfaz|
+|---|
+|![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/12478357-9dff-432c-9ed5-e5b2f6dcdf67)|
+|Sentencia SQL|
+|Evento
