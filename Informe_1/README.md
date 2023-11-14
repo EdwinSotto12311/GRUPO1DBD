@@ -357,7 +357,7 @@ Registra la finalización del proceso de cobranza para el deudor y genera un rep
 ## 4. PROTOTIPOS
 ### REQ-01: Creación de registros de información para la gestión
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966974/2afbcfc5-efba-4610-96d2-23fef66b8161)
-![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/de8b3df1-5516-4328-9739-2558a6394261)
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/407a7934-9898-46dd-bc37-661ed10e1ac4)
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/0b56de0d-ea88-4ec2-9678-42a9c5841c77)
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/3324ca75-2020-41eb-812e-d6904c9a957a)
 
@@ -1236,6 +1236,7 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 |-------------|------------------------|
 | Codigo Interfaz         | I-001        |
 | Imegen Interfaz                                  |
-| ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/de8b3df1-5516-4328-9739-2558a6394261) |
+|![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/28c6633d-1729-498e-ac6c-75c1130ac9de)|
 | Sentencias SQL                                  |
-| 1. Botón Agregar: Se agregará un nuevo registro a la tabla de empleado. INSERT INTO Empleado (Nombres, ApellMat, ApellPat, rol, DNI, usuario, contraseña, id_empleado) VALUES (<1>, <2>, <3>, <4>, <5>, <6>, <7>, <8>); Donde los valores del 1 al 8 se capturarán de la interfaz del soporte según se muestran en la imagen. |
+| 1. Botón Agregar: Se agregará un nuevo registro a la tabla de empleado. INSERT INTO Empleado (Nombres, ApellMat, ApellPat, rol, DNI, usuario, contraseña, id\_empleado) VALUES (<1>, <2>, <3>, <4>, <5>, <6>, <7>, <8>); 
+  INSERT INTO Empleado\_email (email, id\_empleado) VALUES (<9>, <8>);   INSERT INTO Empleado\_telefono (telefono, id\_empleado) VALUES (<10>, <8>); Donde los valores del 1 al 10 se capturarán de la interfaz del soporte según se muestran en la imagen. |
