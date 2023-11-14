@@ -1225,3 +1225,9 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 |Código de requerimiento|xxxx|
 |------------------------|----|
 |**Código de interfaz**|xxx|
+
+|Imagen interfaz|
+|---|
+|![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/12478357-9dff-432c-9ed5-e5b2f6dcdf67)|
+](https://www.google.com/search?q=imagen&sca_esv=582374017&tbm=isch&sxsrf=AM9HkKn8dJl1qJ6mYRU72AjTfB3iQRfG_A:1699994629626&source=lnms&sa=X&ved=2ahUKEwix8pLArcSCAxX0kZUCHYOIAeUQ_AUoAXoECAIQAw&biw=1528&bih=716&dpr=1.25#imgrc=jB3jh8GoAS2uHM)|Sentencia SQL|
+|Evento
