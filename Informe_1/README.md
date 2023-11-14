@@ -1235,8 +1235,11 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 | Codigo Requerimiento | R-001                  |
 |-------------|------------------------|
 | Codigo Interfaz         | I-001        |
-| Imegen Interfaz                                  |
+| Imagen Interfaz                                  |
 |![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/28c6633d-1729-498e-ac6c-75c1130ac9de)|
 | Sentencias SQL                                  |
-| 1. Botón Agregar: Se agregará un nuevo registro a la tabla de empleado. INSERT INTO Empleado (Nombres, ApellMat, ApellPat, rol, DNI, usuario, contraseña, id\_empleado) VALUES (<1>, <2>, <3>, <4>, <5>, <6>, <7>, <8>); 
-  INSERT INTO Empleado\_email (email, id\_empleado) VALUES (<9>, <8>);   INSERT INTO Empleado\_telefono (telefono, id\_empleado) VALUES (<10>, <8>); Donde los valores del 1 al 10 se capturarán de la interfaz del soporte según se muestran en la imagen. |
+| 1. Botón Agregar: Se agregará un nuevo registro a la tabla de empleado. |
+|INSERT INTO Empleado (Nombres, ApellMat, ApellPat, rol, DNI, usuario, contraseña, id\_empleado) VALUES (<1>, <2>, <3>, <4>, <5>, <6>, <7>, <8>); |
+|INSERT INTO Empleado\_email (email, id\_empleado) VALUES (<9>, <8>);|   
+|INSERT INTO Empleado\_telefono (telefono, id\_empleado) VALUES (<10>, <8>);| 
+|Donde los valores del 1 al 10 se capturarán de la interfaz del soporte según se muestran en la imagen. |
