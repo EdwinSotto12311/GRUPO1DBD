@@ -1233,15 +1233,8 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 |Evento
 ## 15. SENTENCIAS SQL PARA CADA PROTOTIPO
 | Codigo Requerimiento | R-001                  |
-|-------------|------------------------|
 | Codigo Interfaz         | I-001        |
 | Imegen Interfaz                                  |
 | ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/de8b3df1-5516-4328-9739-2558a6394261) |
 | Sentencias SQL                                  |
-| Eventos
- 1. Botón Registrar: Se agregará un nuevo registro a la tabla de clientes.
-INSERT INTO CLIENTE(DNI, NOMBRE, DIRECCION,
-CORREO, TELEFONO)
-VALUES (<1>, <2>, <3>, <4>, <5>);
-Donde los valores del 1 al 5 se capturarán de la interfaz de usuario según
-se muestran en la imagen. |
+| 1. Botón Agregar: Se agregará un nuevo registro a la tabla de empleado. INSERT INTO Empleado (Nombres, ApellMat, ApellPat, rol, DNI, usuario, contraseña, id_empleado) VALUES (<1>, <2>, <3>, <4>, <5>, <6>, <7>, <8>); Donde los valores del 1 al 8 se capturarán de la interfaz del soporte según se muestran en la imagen. |
