@@ -1241,7 +1241,7 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 | Imagen Interfaz                                  |
 |![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/f839db97-2300-442a-9e6b-c787f93d25ad)|
 | Sentencias SQL                                  |
-| 1. Botón Agregar: Se agregará un nuevo registro a la tabla de empleado. |
+| 1. Botón Agregar: Se agregará un nuevo registro a la tabla de campaña. |
 |INSERT INTO Campaña (nombre, fecha\_incio, fecha\_fin, estado, id\_campaña, id\_entfinan) VALUES (<1>, <2>, <3>, <4>, <5>, <6>); |
 |Donde los valores del 1 al 6 se capturarán de la interfaz del soporte según se muestran en la imagen. |
 
@@ -1252,7 +1252,7 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 | Imagen Interfaz                                  |
 |![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/f75188b0-7326-4305-a2cf-e918faf1ef4a)|
 | Sentencias SQL                                  |
-| 1. Botón Agregar: Se agregará un nuevo registro a la tabla de empleado. |
+| 1. Botón Agregar: Se agregará un nuevo registro a la tabla de entidad financiera. |
 |INSERT INTO Entidad\_Financiera (nombre, RUC, tipo\_entidad, telefono\_contacto, id\_entfinan) VALUES (<1>, <2>, <3>, <4>, <5>); |
 |Donde los valores del 1 al 5 se capturarán de la interfaz del soporte según se muestran en la imagen. |
 
