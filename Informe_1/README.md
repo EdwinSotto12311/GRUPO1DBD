@@ -358,8 +358,8 @@ Registra la finalización del proceso de cobranza para el deudor y genera un rep
 ### REQ-01: Creación de registros de información para la gestión
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966974/2afbcfc5-efba-4610-96d2-23fef66b8161)
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/407a7934-9898-46dd-bc37-661ed10e1ac4)
-![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/0b56de0d-ea88-4ec2-9678-42a9c5841c77)
-![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/3324ca75-2020-41eb-812e-d6904c9a957a)
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/825c1ea3-558b-4868-86b4-af7bb046c58e)
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/42bbaec6-6d31-49b6-b1fc-2517f877eca1)
 
 ### REQ-02: Cargas masivas de información de la campaña y del deudor 
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/23de51aa-cca5-44b8-9cc1-d14b2c268fde)
@@ -1243,3 +1243,23 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 |INSERT INTO Empleado\_email (email, id\_empleado) VALUES (<9>, <8>);|   
 |INSERT INTO Empleado\_telefono (telefono, id\_empleado) VALUES (<10>, <8>);| 
 |Donde los valores del 1 al 10 se capturarán de la interfaz del soporte según se muestran en la imagen. |
+
+| Codigo Requerimiento | R-001                  |
+|-------------|------------------------|
+| Codigo Interfaz         | I-002        |
+| Imagen Interfaz                                  |
+|![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/f839db97-2300-442a-9e6b-c787f93d25ad)|
+| Sentencias SQL                                  |
+| 1. Botón Agregar: Se agregará un nuevo registro a la tabla de empleado. |
+|INSERT INTO Campaña (nombre, fecha\_incio, fecha\_fin, estado, id\_campaña, id\_entfinan) VALUES (<1>, <2>, <3>, <4>, <5>, <6>); |
+|Donde los valores del 1 al 6 se capturarán de la interfaz del soporte según se muestran en la imagen. |
+
+| Codigo Requerimiento | R-001                  |
+|-------------|------------------------|
+| Codigo Interfaz         | I-003        |
+| Imagen Interfaz                                  |
+|![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/f75188b0-7326-4305-a2cf-e918faf1ef4a)|
+| Sentencias SQL                                  |
+| 1. Botón Agregar: Se agregará un nuevo registro a la tabla de empleado. |
+|INSERT INTO Entidad\_Financiera (nombre, RUC, tipo\_entidad, telefono\_contacto, id\_entfinan) VALUES (<1>, <2>, <3>, <4>, <5>); |
+|Donde los valores del 1 al 5 se capturarán de la interfaz del soporte según se muestran en la imagen. |
