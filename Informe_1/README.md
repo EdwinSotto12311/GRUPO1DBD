@@ -358,7 +358,8 @@ Registra la finalización del proceso de cobranza para el deudor y genera un rep
 ### REQ-01: Creación de registros de información para la gestión
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966974/2afbcfc5-efba-4610-96d2-23fef66b8161)
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/de8b3df1-5516-4328-9739-2558a6394261)
-
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/0b56de0d-ea88-4ec2-9678-42a9c5841c77)
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/3324ca75-2020-41eb-812e-d6904c9a957a)
 
 ### REQ-02: Cargas masivas de información de la campaña y del deudor 
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/23de51aa-cca5-44b8-9cc1-d14b2c268fde)
