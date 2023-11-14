@@ -1233,6 +1233,7 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 |Evento
 ## 15. SENTENCIAS SQL PARA CADA PROTOTIPO
 | Codigo Requerimiento | R-001                  |
+|-------------|------------------------|
 | Codigo Interfaz         | I-001        |
 | Imegen Interfaz                                  |
 | ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/de8b3df1-5516-4328-9739-2558a6394261) |
