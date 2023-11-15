@@ -1262,9 +1262,9 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 
 
 ### Módulo de Generación de Estrategias
-|Código de requerimiento|R-01|
+|Código de requerimiento|R-04|
 |------------------------|----|
-|**Código de interfaz**|GUI-001_1|
+|**Código de interfaz**|GUI-004_1|
 
 |Imagen interfaz|
 |---|
@@ -1285,9 +1285,9 @@ ORDER BY RC.codigo;|
 INSERT INTO ESTRATEGIA(tipo_gestion,nombre_estrategia, id_estrategia, id_empleado) VALUES (<1>, <2>, <3>, <4>);|
 
 
-|Código de requerimiento|R-01|
+|Código de requerimiento|R-04|
 |------------------------|----|
-|**Código de interfaz**|GUI-001_2|
+|**Código de interfaz**|GUI-004_2|
 
 |Imagen interfaz|
 |---|
