@@ -1256,7 +1256,8 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 |INSERT INTO Entidad\_Financiera (nombre, RUC, tipo\_entidad, telefono\_contacto, id\_entfinan) VALUES (<1>, <2>, <3>, <4>, <5>); |
 |Donde los valores del 1 al 5 se capturarán de la interfaz del soporte según se muestran en la imagen. |
 
-Módulo de validación
+### Módulo de validación
+
 |Código de requerimiento|R-07|
 |------------------------|----|
 |**Código de interfaz**|GUI-007|
@@ -1273,3 +1274,37 @@ FROM Pago p, Deudor d
 WHERE p.id_deudor = d.id_deudor|
 |3. Botón “Detalle”: Se accede a una página para revisar los detalles del pago.|
 |4. Botón “Generar cartas de no adeudo”: Se genera las cartas de no adeudo de todos los estados que cambiaron a “Completo”.|
+
+|Código de requerimiento||
+|------------------------|----|
+|**Código de interfaz**||
+
+|Imagen interfaz|
+|---|
+|![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/1bd696ff-419b-4910-ad9e-6ba6fd25c466)
+|
+|Sentencia SQL|
+|Eventos:|
+||
+
+|Código de requerimiento||
+|------------------------|----|
+|**Código de interfaz**||
+
+|Imagen interfaz|
+|---|
+||
+|Sentencia SQL|
+|Eventos:|
+||
+
+|Código de requerimiento||
+|------------------------|----|
+|**Código de interfaz**||
+
+|Imagen interfaz|
+|---|
+||
+|Sentencia SQL|
+|Eventos:|
+||
