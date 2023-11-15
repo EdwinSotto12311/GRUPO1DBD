@@ -1258,6 +1258,36 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 |INSERT INTO Entidad\_Financiera (nombre, RUC, tipo\_entidad, telefono\_contacto, id\_entfinan) VALUES (<1>, <2>, <3>, <4>, <5>); |
 |Donde los valores del 1 al 5 se capturarán de la interfaz del soporte según se muestran en la imagen. |
 
+
+### Módulo de Generación de Estrategias
+|Código de requerimiento|R-01|
+|------------------------|----|
+|**Código de interfaz**|GUI-001_1|
+
+|Imagen interfaz|
+|---|
+|![Generacion de Estrategias Pantalla1_con numeros](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/98f02b95-1fe7-48a5-ba7c-969ea0b813fa)|
+|Sentencia SQL|
+|Eventos:|
+|1. Carga de Página de Tipos de Reporte: Se llenará la lista de tipos de reportes a seleccionar:
+SELECT CODIGO, NOMBRE_TIPO_REPORTE FROM TIPOS_REPORTES;|
+|2. Carga de Página de Tipos de Segmentacion: Se llenará la lista de los tipos de segmentacion de Reporte de Estado a seleccionar:
+SELECT NOMBRE_TIPO_SEGMENTACION _RESTADO FROM TIPOS_SEGMENTACION;|
+|3. Botón Buscar: Cuando el usuario presione el botón buscar se llenará la grilla de resultados utilizando la siguiente sentencia:
+SELECT
+    RC.descripcion AS Rango_de_Capital,
+    COUNT(D.codigo) AS Cantidad_Deudores,
+    SUM(D.monto_total) AS Monto_Total
+FROM RANGO_CAPITALES RC
+LEFT JOIN DEUDOR D ON D.monto_total BETWEEN RC.limite_inferior AND RC.limite_superior
+GROUP BY RC.codigo, RC.descripcion
+ORDER BY RC.codigo;|
+|4. Botón Registrar: Se agregará un nueva estrategia a la tabla de estrategias.
+INSERT INTO ESTRATEGIA(tipo_gestion,nombre_estrategia, id_estrategia, id_empleado)
+VALUES (<1>, <2>, <3>, <4>);
+Donde los valores del 1 al 4 se capturarán de la interfaz de usuario según
+se muestran en la imagen.|
+
 ### Módulo de validación
 
 |Código de requerimiento|R-07|
