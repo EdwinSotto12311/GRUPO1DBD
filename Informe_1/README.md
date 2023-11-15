@@ -1274,19 +1274,13 @@ SELECT CODIGO, NOMBRE_TIPO_REPORTE FROM TIPOS_REPORTES;|
 |2. Carga de Página de Tipos de Segmentacion: Se llenará la lista de los tipos de segmentacion de Reporte de Estado a seleccionar:
 SELECT NOMBRE_TIPO_SEGMENTACION _RESTADO FROM TIPOS_SEGMENTACION;|
 |3. Botón Buscar: Cuando el usuario presione el botón buscar se llenará la grilla de resultados utilizando la siguiente sentencia:
-SELECT
-    RC.descripcion AS Rango_de_Capital,
-    COUNT(D.codigo) AS Cantidad_Deudores,
-    SUM(D.monto_total) AS Monto_Total
+SELECT RC.descripcion AS Rango_de_Capital, COUNT(D.codigo) AS Cantidad_Deudores, SUM(D.monto_total) AS Monto_Total
 FROM RANGO_CAPITALES RC
 LEFT JOIN DEUDOR D ON D.monto_total BETWEEN RC.limite_inferior AND RC.limite_superior
 GROUP BY RC.codigo, RC.descripcion
 ORDER BY RC.codigo;|
 |4. Botón Registrar: Se agregará un nueva estrategia a la tabla de estrategias.
-INSERT INTO ESTRATEGIA(tipo_gestion,nombre_estrategia, id_estrategia, id_empleado)
-VALUES (<1>, <2>, <3>, <4>);
-Donde los valores del 1 al 4 se capturarán de la interfaz de usuario según
-se muestran en la imagen.|
+INSERT INTO ESTRATEGIA(tipo_gestion,nombre_estrategia, id_estrategia, id_empleado) VALUES (<1>, <2>, <3>, <4>);|
 
 ### Módulo de validación
 
