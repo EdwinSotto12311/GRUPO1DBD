@@ -616,6 +616,8 @@ CREATE TABLE Deuda
 
 `  `origen VARCHAR(20) NOT NULL,
 
+`  `descripcion VARCHAR(20) NOT NULL,
+
 `  `id\_deuda INT NOT NULL,
 
 `  `PRIMARY KEY (id\_deuda)
