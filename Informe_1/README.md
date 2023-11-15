@@ -1266,7 +1266,6 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 |------------------------|----|
 |**Código de interfaz**|GUI-004_1|
 |Imagen interfaz|
-|---|
 |![Generacion de Estrategias Pantalla1_con numeros](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/98f02b95-1fe7-48a5-ba7c-969ea0b813fa)|
 |Sentencia SQL|
 |Eventos:|
@@ -1287,9 +1286,7 @@ INSERT INTO ESTRATEGIA(tipo_gestion,nombre_estrategia, id_estrategia, id_emplead
 |Código de requerimiento|R-04|
 |------------------------|----|
 |**Código de interfaz**|GUI-004_2|
-
 |Imagen interfaz|
-|---|
 |![Generacion de Estrategias Pantalla 2-con numeros](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/9536959e-2c14-43cd-81b9-91793f3c5c70)|
 |Sentencia SQL|
 |Eventos:|
@@ -1313,9 +1310,7 @@ INSERT INTO ESTRATEGIA(tipo_gestion,nombre_estrategia, id_estrategia, id_emplead
 |Código de requerimiento|R-07|
 |------------------------|----|
 |**Código de interfaz**|GUI-007|
-
 |Imagen interfaz|
-|---|
 |![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/7a1dfa32-ad27-4a7d-93cd-3bdb592317ea)|
 |Sentencia SQL|
 |Eventos:|
@@ -1331,9 +1326,7 @@ WHERE p.id_deudor = d.id_deudor|
 |Código de requerimiento|R-07|
 |------------------------|----|
 |**Código de interfaz**|GUI-007_1|
-
 |Imagen interfaz|
-|---|
 |![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/ad68bbc2-f193-42e2-b717-5da6817c9680)|
 |Sentencia SQL|
 |Eventos:|
@@ -1350,9 +1343,7 @@ JOIN Deuda DEU ON D.id_deudor = DEU.id_deudor|
 |Código de requerimiento|R-07|
 |------------------------|----|
 |**Código de interfaz**|GUI-007_2|
-
 |Imagen interfaz|
-|---|
 |![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/da40d0b8-37dc-41d8-9415-0873599096f4)|
 |Sentencia SQL|
 |Eventos:|
@@ -1370,9 +1361,7 @@ JOIN Deuda DEU ON D.id_deudor = DEU.id_deudor|
 |Código de requerimiento|R-07|
 |------------------------|----|
 |**Código de interfaz**|GUI-007_3|
-
 |Imagen interfaz|
-|---|
 |![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/3836e612-84ee-4276-abd8-a2db8e358938)|
 |Sentencia SQL|
 |Eventos:|
