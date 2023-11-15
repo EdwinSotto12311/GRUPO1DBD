@@ -1305,7 +1305,7 @@ SELECT SEHCI.descripcion AS Contacto_Indirecto, COUNT(D.codigo) AS Cantidad_Deud
 FROM SEGMENTACION_ESTADO_HISTORICO_CONTACTO_IND SEHCI
 LEFT JOIN DEUDOR D ON D.descripcion=SEHCI.descripcion
 GROUP BY SEHCI.codigo, SEHCI.descripcion
-ORDER BY REHCI.codigo;|
+ORDER BY SEHCI.codigo;|
 |5. Botón Registrar: Se agregará un nueva estrategia a la tabla de estrategias.
 INSERT INTO ESTRATEGIA(tipo_gestion,nombre_estrategia, id_estrategia, id_empleado) VALUES (<1>, <2>, <3>, <4>);|
 
