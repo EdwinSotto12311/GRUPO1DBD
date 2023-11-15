@@ -1265,7 +1265,6 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 |Código de requerimiento|R-04|
 |------------------------|----|
 |**Código de interfaz**|GUI-004_1|
-
 |Imagen interfaz|
 |---|
 |![Generacion de Estrategias Pantalla1_con numeros](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/98f02b95-1fe7-48a5-ba7c-969ea0b813fa)|
