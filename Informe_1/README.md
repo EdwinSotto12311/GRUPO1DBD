@@ -368,9 +368,9 @@ Registra la finalización del proceso de cobranza para el deudor y genera un rep
 ![Reportes](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966392/80c66e28-cfe5-4a34-8626-47ef589b8388)
 
 ### REQ-04: Asignación y generación de estrategias
-![PROTOTIPO1](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/04225d18-c61c-4716-937c-d9aa012ece07)
-![PROTOTIPO2](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/24b268fb-c2f5-433c-8179-3c93e98e6cb9)
-![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/9430fdb9-73b2-4b5c-994d-25b27326eb79)
+![Generacion de Estrategias Pantalla1](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/8034a23a-93af-473c-b9d9-c3631d69fe80)
+![Generacion de Estrategias Pantalla 2](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/aeca45d8-b190-4b2a-afad-d63f9e2fa3eb)
+
 ### REQ-05: Gestion tecnologica masiva
 
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/97325341/b8af911c-5936-447c-942d-166372af5ceb)
