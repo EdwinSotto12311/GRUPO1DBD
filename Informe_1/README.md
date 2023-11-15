@@ -387,7 +387,8 @@ Registra la finalización del proceso de cobranza para el deudor y genera un rep
 
 
 ## 9. MODELAMIENTO CONCEPTUAL
-![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/5cf7d776-1141-4d1d-86a3-1a7f51087930)
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/8798173e-f5c0-4514-93cd-83c7a2cacb97)
+
 
 ## 10. DOCUMENTACIÓN DE RELACIONES Y REGLAS DE NEGOCIO
 
@@ -553,7 +554,8 @@ Registra la finalización del proceso de cobranza para el deudor y genera un rep
 | id_empleado | Número Entero           | Identificador de empleado  | Identificación      |
 
 ## 12. MODELO RELACIONAL
-![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/d14461f3-9b92-4764-9011-6966228ce34b)
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/3bc2b010-7f7d-4fad-8cbe-606ebcc51269)
+
 
 ## 13. CREACIÓN DE TABLAS
 ### TABLA EMPLEADO
