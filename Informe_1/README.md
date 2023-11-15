@@ -1282,7 +1282,7 @@ WHERE p.id_deudor = d.id_deudor|
 
 |Imagen interfaz|
 |---|
-|![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/1bd696ff-419b-4910-ad9e-6ba6fd25c466)|
+|![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/ad68bbc2-f193-42e2-b717-5da6817c9680)|
 |Sentencia SQL|
 |Eventos:|
 |1. Botón “Excepciones”: Es una opción para visualizar en forma los excepciones que se realizarán a los deudores en el pago.|
@@ -1295,24 +1295,45 @@ JOIN Deudor D ON R.id_deudor = D.id_deudor
 JOIN Deuda DEU ON D.id_deudor = DEU.id_deudor|
 |3. Botón “Detalle”: Se accede a una página para revisar los detalles de la excepción.|
 
-|Código de requerimiento||
+|Código de requerimiento|R-07|
 |------------------------|----|
-|**Código de interfaz**||
+|**Código de interfaz**|GUI-007_2|
 
 |Imagen interfaz|
 |---|
-||
+|![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/da40d0b8-37dc-41d8-9415-0873599096f4)|
 |Sentencia SQL|
 |Eventos:|
-||
+|1.Botón “Excepciones”: Es una opción para visualizar en forma los excepciones que se realizarán a los deudores en el pago.|
+|2. Carga de página:
+SELECT A.id_acuerdo AS "N° Solicitud", D.DNI AS "DNI", DEU.monto_total AS "Monto de deuda", A.estado AS "Estado"
+FROM Acuerdo A
+JOIN Respuesta R ON A.id_respuesta = R.id_respuesta
+JOIN Pago P ON A.id_acuerdo = P.id_acuerdo
+JOIN Deudor D ON R.id_deudor = D.id_deudor
+JOIN Deuda DEU ON D.id_deudor = DEU.id_deudor|
+|3. Botón “Detalle”: Se accede a una página para revisar los detalles de la excepción.|
 
-|Código de requerimiento||
+
+|Código de requerimiento|R-07|
 |------------------------|----|
-|**Código de interfaz**||
+|**Código de interfaz**|GUI-007_3|
 
 |Imagen interfaz|
 |---|
-||
+|![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/3836e612-84ee-4276-abd8-a2db8e358938)|
 |Sentencia SQL|
 |Eventos:|
-||
+|1.	Carga de página:
+SELECT A.id_acuerdo AS N°_solicitud, D.DNI AS DNI, CONCAT(D.apellpat,' ',D.apellmat) AS Apellidos, D.nombres AS Nombres, DEU.estado AS Tipo_de_Consumo, DEU.origen AS Entidad_de_origen_de_consumo, DEU.fecha_venc AS Fecha_de_deuda, DEU.monto_total AS Deuda_total, A.razón AS Justificación_del_deudor
+FROM Acuerdo A
+JOIN Respuesta R ON A.id_respuesta = R.id_respuesta
+JOIN Pago P ON A.id_acuerdo = P.id_acuerdo
+JOIN Deudor D ON R.id_deudor = D.id_deudor
+JOIN Deuda DEU ON D.id_deudor = DEU.id_deudor
+WHERE A.id_acuerdo = '<1>'|
+|2. Botón de “Aceptar” o “Rechazar”: Se modifica el estado de excepción.
+UPDATE Acuerdo SET estado = '<2>'
+WHERE id_acuerdo = '<1>'|
+|3. Botón “Regresar a solicitudes”: Regresa a la página de validación ubicada en la opción de “Excepciones”.|
+
