@@ -1256,13 +1256,24 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 |INSERT INTO Entidad\_Financiera (nombre, RUC, tipo\_entidad, telefono\_contacto, id\_entfinan) VALUES (<1>, <2>, <3>, <4>, <5>); |
 |Donde los valores del 1 al 5 se capturarán de la interfaz del soporte según se muestran en la imagen. |
 
-
-|Código de requerimiento|xxxx|
+Módulo de validación
+|Código de requerimiento|R-07|
 |------------------------|----|
-|**Código de interfaz**|xxx|
+|**Código de interfaz**|GUI-007|
 
 |Imagen interfaz|
 |---|
-|![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/12478357-9dff-432c-9ed5-e5b2f6dcdf67)|
+|![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/7a1dfa32-ad27-4a7d-93cd-3bdb592317ea)|
 |Sentencia SQL|
-|Evento
+|Eventos:
+1. Botón “Pagos”: Es una opción para visualizar en forma los pagos pendientes.
+
+2. Carga de página: Se carga los datos de pago de los clientes.
+SELECT p.id_pago AS N° solicitud, d.DNI AS DNI, p.monto AS Monto pagado, p.estado AS Estado
+FROM Pago p, Deudor d
+WHERE p.id_deudor = d.id_deudor
+
+3. Botón “Detalle”: Se accede a una página para revisar los detalles del pago.
+
+4.Botón “Generar cartas de no adeudo”: Se genera las cartas de no adeudo de todos los estados que cambiaron a “Completo”. 
+|
