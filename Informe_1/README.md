@@ -1305,6 +1305,85 @@ ORDER BY SEHCI.codigo;|
 |5. Botón Registrar: Se agregará un nueva estrategia a la tabla de estrategias.
 INSERT INTO ESTRATEGIA(tipo_gestion,nombre_estrategia, id_estrategia, id_empleado) VALUES (<1>, <2>, <3>, <4>);|
 
+### MODULO DE GESTION TECNOLOGICA
+| Codigo Requerimiento | REQ-05                 |
+|-------------|------------------------|
+| Codigo Interfaz         | GUI-005-01       |
+| Imagen Interfaz                                  |
+|![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/97325341/9772893c-ecb8-4a48-9a85-6ff2cc16c121) |
+| Sentencias SQL                                  |
+| 1.	Botón Generar Agregar mensaje. |
+|INSERT INTO Mensajes (id_estrategia, tipo_gestion, nombre_deudor, monto_solicitado, nombre_asesor,teléfono_asesor , mensaje_predeterminado, id_campaña)
+SELECT
+  '<1>',  
+  '<2>', 
+d.<3>, 
+  deu.<4>,  
+  t.asesor – o ‘<5>’ , 
+  t.telefono --- o ‘<6>’,  
+  d.id_campaña --- o ‘<8>’
+FROM Deudor d
+JOIN Deuda deu ON d.id_deudor = deu.id_deudor
+JOIN Trabajador t ON d.id_trabajador = t.id_trabajador  
+WHERE d.id_estrategia = '<1>’; |
+| 2.	Botón Generar  mensaje. |
+| INSERT INTO Mensajes (id_estrategia, tipo_gestion, nombre_deudor, monto_solicitado, nombre_asesor, telefono_asesor, mensaje_predeterminado, id_campaña)
+SELECT
+  ‘<1>,  -- Ajusta esto con el valor seleccionado para el tipo de campaña
+  '<2>',  -- Ajusta esto con el valor seleccionado para el tipo de gestión
+  d.nombre,  -- Suponiendo que 'nombre' es el campo en la tabla 'Deudor' que contiene el nombre del deudor
+  deu.monto_total,  -- Suponiendo que 'monto_total' es el campo en la tabla 'Deuda' que contiene el monto total de la deuda
+  t.nombre_asesor,  -- Ajusta esto con el nombre del asesor en la tabla 'Trabajador'
+  t.telefono_asesor,  -- Ajusta esto con el campo que contiene el teléfono del asesor en la tabla 'Trabajador'
+  'Buenas tardes sr/sra ' + d.nombre + '. Se le comunica que usted tiene un monto de deuda de ' + deu.monto_total + ' por lo que se pide que se comunique a los siguientes números: ' + t.telefono_asesor,
+  d.id_campaña  -- o ‘<8>’
+FROM Deudor d
+JOIN Deuda deu ON d.id_deudor = deu.id_deudor
+JOIN Trabajador t ON d.id_trabajador = t.id_trabajador
+WHERE d.id_estrategia = '<1>’ 
+AND d.id_deudor NOT IN (SELECT id_deudor FROM Mensajes WHERE id_campaña = '<8>');|
+
+| Codigo Requerimiento | REQ-05                 |
+|-------------|------------------------|
+| Codigo Interfaz         | GUI-005-02       |
+| Imagen Interfaz                                  |
+|![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/97325341/b7323591-208f-4157-9f43-e57bf8242fb0) |
+| Sentencias SQL                                  |
+| 1.	Boton aplicar:  |
+|SELECT
+  (COUNT(CASE WHEN a.estado = 'Logrado' THEN 1 END)::FLOAT / COUNT(*)) * 100 AS porcentaje_logro,
+  (c.fecha_fin - CURRENT_DATE) AS dias_restantes,
+  COUNT(*) AS cantidad_mensajes_enviados
+FROM Acuerdo a
+JOIN Respuesta r ON a.id_respuesta = r.id_respuesta
+JOIN Mensajes m ON r.id_mensaje = m.id_mensaje
+JOIN Campaña c ON m.id_campaña = c.id_campaña
+WHERE m.id_campaña = '<1>'  
+  AND m.id_estrategia = '<2>';  |
+
+| Codigo Requerimiento | REQ-05                 |
+|-------------|------------------------|
+| Codigo Interfaz         | GUI-005-03       |
+| Imagen Interfaz                                  |
+|![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/97325341/261dbdca-c9fc-44ff-9998-dc38ba82f768) |
+| Sentencias SQL                                  |
+| 1. Cargar pagina:  |
+|SELECT
+  d.nombre AS nombre_deudor,
+  d.distrito AS ubigeo,
+  EXTRACT(YEAR FROM CURRENT_DATE) - EXTRACT(YEAR FROM d.fecha_nac) AS edad,
+  deu.fecha_venc - deu.fecha_creacion AS antiguedad_deuda,
+  deu.monto_total AS monto_deuda,
+  e.tipo_gestion
+FROM Deudor d
+JOIN Deuda deu ON d.id_deudor = deu.id_deudor
+JOIN Estrategia e ON d.id_estrategia = e.id_estrategia
+WHERE 
+  EXTRACT(YEAR FROM CURRENT_DATE) - EXTRACT(YEAR FROM d.fecha_nac) BETWEEN 25 AND 45
+  AND (deu.monto_total > 10000 OR deu.monto_total < 1000)
+  AND d.distrito IN ('Lima', 'Callao', 'Arequipa', 'Tumbes');|
+
+
 ### Módulo de validación
 
 |Código de requerimiento|R-07|
