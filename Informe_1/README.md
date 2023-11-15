@@ -1275,6 +1275,7 @@ WHERE p.id_deudor = d.id_deudor|
 |3. Botón “Detalle”: Se accede a una página para revisar los detalles del pago.|
 |4. Botón “Generar cartas de no adeudo”: Se genera las cartas de no adeudo de todos los estados que cambiaron a “Completo”.|
 
+
 |Código de requerimiento|R-07|
 |------------------------|----|
 |**Código de interfaz**|GUI-007_1|
@@ -1284,8 +1285,7 @@ WHERE p.id_deudor = d.id_deudor|
 |![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/1bd696ff-419b-4910-ad9e-6ba6fd25c466)|
 |Sentencia SQL|
 |Eventos:|
-|1. Botón “Excepciones”: Es una opción para visualizar en forma los excepciones que se realizarán a los deudores en el pago.
-
+|1. Botón “Excepciones”: Es una opción para visualizar en forma los excepciones que se realizarán a los deudores en el pago.|
 |2. Carga de página:
 SELECT A.id_acuerdo AS "N° Solicitud", D.DNI AS "DNI", DEU.monto_total AS "Monto de deuda", A.estado AS "Estado"
 FROM Acuerdo A
