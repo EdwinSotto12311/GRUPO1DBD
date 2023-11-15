@@ -1265,14 +1265,11 @@ Módulo de validación
 |---|
 |![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/7a1dfa32-ad27-4a7d-93cd-3bdb592317ea)|
 |Sentencia SQL|
-|Eventos:
-1. Botón “Pagos”: Es una opción para visualizar en forma los pagos pendientes.
-
-2. Carga de página: Se carga los datos de pago de los clientes.
+|Eventos:|
+|1. Botón “Pagos”: Es una opción para visualizar en forma los pagos pendientes.|
+|2. Carga de página: Se carga los datos de pago de los clientes.
 SELECT p.id_pago AS N° solicitud, d.DNI AS DNI, p.monto AS Monto pagado, p.estado AS Estado
 FROM Pago p, Deudor d
-WHERE p.id_deudor = d.id_deudor
-
-3. Botón “Detalle”: Se accede a una página para revisar los detalles del pago.
-
-4. Botón “Generar cartas de no adeudo”: Se genera las cartas de no adeudo de todos los estados que cambiaron a “Completo”.|
+WHERE p.id_deudor = d.id_deudor|
+|3. Botón “Detalle”: Se accede a una página para revisar los detalles del pago.|
+|4. Botón “Generar cartas de no adeudo”: Se genera las cartas de no adeudo de todos los estados que cambiaron a “Completo”.|
