@@ -1275,5 +1275,4 @@ WHERE p.id_deudor = d.id_deudor
 
 3. Botón “Detalle”: Se accede a una página para revisar los detalles del pago.
 
-4.Botón “Generar cartas de no adeudo”: Se genera las cartas de no adeudo de todos los estados que cambiaron a “Completo”. 
-|
+4. Botón “Generar cartas de no adeudo”: Se genera las cartas de no adeudo de todos los estados que cambiaron a “Completo”.|
