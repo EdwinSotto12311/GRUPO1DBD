@@ -368,7 +368,7 @@ Registra la finalización del proceso de cobranza para el deudor y genera un rep
 ![Reportes](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966392/80c66e28-cfe5-4a34-8626-47ef589b8388)
 
 ### REQ-04: Asignación y generación de estrategias
-![Generacion de Estrategias Pantalla1](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/579f8117-b687-4fce-8e7c-d8bae0a43e90)
+![Generacion de Estrategias Pantalla1](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/f787bfca-970a-48af-8cfa-8d9cc4ec0476)
 ![Generacion de Estrategias Pantalla 2](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/61570f17-cfc2-4bbf-92c2-858c5a8c986f)
 
 ### REQ-05: Gestion tecnologica masiva
@@ -1266,17 +1266,17 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 |------------------------|----|
 |**Código de interfaz**|GUI-004_1|
 |Imagen interfaz|
-|![Generacion de Estrategias Pantalla1_con numeros](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/fe04a57c-3bce-4941-ae01-72d14540be49)|
+|![Generacion de Estrategias Pantalla1_con numeros](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/25e0d764-f172-418b-b30b-302ff165ed1b)|
 |Sentencia SQL|
 |Eventos:|
 |1.Carga de Opciones de Tipos de Reporte: Se mostrara la lista de tipos de reportes a seleccionar:
 SELECT CODIGO, DESCRIPCION FROM TIPOS_REPORTES;|
 |2.Carga de Opciones de Tipos de Segmentacion: Se mostrara la lista de los tipos de segmentacion de Reporte de Estado a seleccionar
 SELECT DESCRIPCION FROM TIPOS_SEGMENTACION_ESTADO;|
-|3.Botón Buscar: Cuando el usuario presione el botón buscar se llenará la grilla de resultados utilizando la siguiente sentencia
-SELECT RC.descripcion AS Rango_de_Capital, COUNT(D.codigo) AS Cantidad_Deudores, SUM(D.monto_total) AS Monto_Total
+|3.Botón Buscar: Cuando el usuario presione el botón buscar se llenará la grilla de resultados utilizando la siguiente sentencia:
+SELECT RC.descripcion AS Rango_de_Capital, COUNT(D.codigo) AS Cantidad_Deudas, SUM(D.monto_total) AS Monto_Total
 FROM RANGO_CAPITALES RC
-LEFT JOIN DEUDOR D ON D.monto_total BETWEEN RC.limite_inferior AND RC.limite_superior
+LEFT JOIN DEUDA D ON D.monto_total BETWEEN RC.limite_inferior AND RC.limite_superior
 GROUP BY RC.codigo, RC.descripcion
 ORDER BY RC.codigo;|
 |4.Botón Asignar: Se agregará un nueva estrategia a la tabla de estrategias.
