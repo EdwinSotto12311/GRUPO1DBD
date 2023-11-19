@@ -616,7 +616,7 @@ CREATE TABLE Deuda
 
 `  `origen VARCHAR(20) NOT NULL,
 
-`  `descripcion VARCHAR(20) NOT NULL,
+`  `descripcion VARCHAR(100) NOT NULL,
 
 `  `id\_deuda INT NOT NULL,
 
@@ -1297,10 +1297,10 @@ SELECT CODIGO, DESCRIPCION FROM TIPOS_REPORTES;|
 SELECT DESCRIPCION FROM TIPOS_SEGMENTACION_GESTION;|
 |3.Carga de Opciones del Estado Historico: Se mostrara la lista de las opciones de tablas que se puede mostrar en la segmentacion por Estado Historico
 SELECT DESCRIPCION FROM  OPCIONES_ESTADO_HISTORICO;|
-|4.Botón Buscar: Cuando el usuario presione el botón buscar se llenará la grilla de resultados utilizando la siguiente sentencia
-SELECT OCI.DESCRIPCION AS Contacto_Indirecto, COUNT(D.codigo) AS Cantidad_Deudores
+|4.Botón Buscar: Cuando el usuario presione el botón buscar se llenará la grilla de resultados utilizando la siguiente sentencia:
+SELECT OCI.DESCRIPCION AS Contacto_Indirecto, COUNT(D.codigo) AS Cantidad_Deudas
 FROM OPCIONES_CONTACTO_INDIRECTO OCI
-LEFT JOIN DEUDOR D ON D.descripcion = OCI.DESCRIPCION
+LEFT JOIN DEUDA D ON D.descripcion = OCI.DESCRIPCION
 GROUP BY OCI.codigo, OCI.DESCRIPCION
 ORDER BY OCI.codigo;|
 |5.Botón Asignar: Se agregará un nueva estrategia a la tabla de estrategias.
