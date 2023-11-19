@@ -1226,9 +1226,9 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 
 ## 15. SENTENCIAS SQL PARA CADA PROTOTIPO
 ### Módulo registros nuevos
-| Codigo Requerimiento | REQ-01                  |
+| Codigo Requerimiento | R-01                  |
 |-------------|------------------------|
-| Codigo Interfaz         | I-001        |
+| Codigo Interfaz         | GUI-001_1       |
 | Imagen Interfaz                                  |
 |![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/28c6633d-1729-498e-ac6c-75c1130ac9de)|
 | Sentencias SQL                                  |
@@ -1239,9 +1239,9 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 |Donde los valores del 1 al 10 se capturarán de la interfaz del soporte según se muestran en la imagen. |
 
 
-| Codigo Requerimiento | REQ-01                  |
+| Codigo Requerimiento | R-01                  |
 |-------------|------------------------|
-| Codigo Interfaz         | I-002        |
+| Codigo Interfaz         | GUI-001_2        |
 | Imagen Interfaz                                  |
 |![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/f839db97-2300-442a-9e6b-c787f93d25ad)|
 | Sentencias SQL                                  |
@@ -1250,9 +1250,9 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 |Donde los valores del 1 al 6 se capturarán de la interfaz del soporte según se muestran en la imagen. |
 
 
-| Codigo Requerimiento | REQ-01                  |
+| Codigo Requerimiento | R-01                  |
 |-------------|------------------------|
-| Codigo Interfaz         | I-003        |
+| Codigo Interfaz         | GUI-001_3        |
 | Imagen Interfaz                                  |
 |![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/82728541/f75188b0-7326-4305-a2cf-e918faf1ef4a)|
 | Sentencias SQL                                  |
