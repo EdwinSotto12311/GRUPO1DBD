@@ -1276,11 +1276,11 @@ SELECT DESCRIPCION FROM TIPOS_SEGMENTACION_ESTADO;|
 |3.Botón Buscar: Cuando el usuario presione el botón buscar se llenará la grilla de resultados utilizando la siguiente sentencia:
 SELECT RC.descripcion AS Rango_de_Capital, COUNT(D.codigo) AS Cantidad_Deudas, SUM(D.monto_total) AS Monto_Total
 FROM RANGO_CAPITALES RC
-LEFT JOIN DEUDA D ON D.monto_total BETWEEN RC.limite_inferior AND RC.limite_superior
+LEFT JOIN Deuda D ON D.monto_total BETWEEN RC.limite_inferior AND RC.limite_superior
 GROUP BY RC.codigo, RC.descripcion
 ORDER BY RC.codigo;|
 |4.Botón Asignar: Se agregará un nueva estrategia a la tabla de estrategias.
-INSERT INTO ESTRATEGIA(tipo_gestion,nombre_estrategia, id_estrategia, id_empleado) VALUES (<1>, <2>, <3>, <4>);
+INSERT INTO Estrategia(tipo_gestion,nombre_estrategia, id_estrategia, id_empleado) VALUES (<1>, <2>, <3>, <4>);
 Donde los valores del 1 al 4 se capturarán de la interfaz de usuario según se muestran en la imagen.|
 
 
@@ -1300,11 +1300,11 @@ SELECT DESCRIPCION FROM  OPCIONES_ESTADO_HISTORICO;|
 |4.Botón Buscar: Cuando el usuario presione el botón buscar se llenará la grilla de resultados utilizando la siguiente sentencia:
 SELECT OCI.DESCRIPCION AS Contacto_Indirecto, COUNT(D.codigo) AS Cantidad_Deudas
 FROM OPCIONES_CONTACTO_INDIRECTO OCI
-LEFT JOIN DEUDA D ON D.descripcion = OCI.DESCRIPCION
+LEFT JOIN Deuda D ON D.descripcion = OCI.DESCRIPCION
 GROUP BY OCI.codigo, OCI.DESCRIPCION
 ORDER BY OCI.codigo;|
 |5.Botón Asignar: Se agregará un nueva estrategia a la tabla de estrategias.
-INSERT INTO ESTRATEGIA(tipo_gestion,nombre_estrategia, id_estrategia, id_empleado)
+INSERT INTO Estrategia(tipo_gestion,nombre_estrategia, id_estrategia, id_empleado)
 VALUES (<1>, <2>, <3>, <4>);
 Donde los valores del 1 al 4 se capturarán de la interfaz de usuario según se muestran en la imagen|
 
