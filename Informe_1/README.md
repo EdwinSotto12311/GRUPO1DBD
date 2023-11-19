@@ -1266,44 +1266,47 @@ Con esta corrección, hemos separado los valores múltiples en tablas separadas,
 |------------------------|----|
 |**Código de interfaz**|GUI-004_1|
 |Imagen interfaz|
-|![Generacion de Estrategias Pantalla1_con numeros](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/98f02b95-1fe7-48a5-ba7c-969ea0b813fa)|
+|![Generacion de Estrategias Pantalla1_con numeros](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/fe04a57c-3bce-4941-ae01-72d14540be49)|
 |Sentencia SQL|
 |Eventos:|
-|1. Carga de Página de Tipos de Reporte: Se llenará la lista de tipos de reportes a seleccionar:
-SELECT CODIGO, NOMBRE_TIPO_REPORTE FROM TIPOS_REPORTES;|
-|2. Carga de Página de Tipos de Segmentacion: Se llenará la lista de los tipos de segmentacion de Reporte de Estado a seleccionar:
-SELECT NOMBRE_TIPO_SEGMENTACION _RESTADO FROM TIPOS_SEGMENTACION;|
-|3. Botón Buscar: Cuando el usuario presione el botón buscar se llenará la grilla de resultados utilizando la siguiente sentencia.
+|1.Carga de Opciones de Tipos de Reporte: Se mostrara la lista de tipos de reportes a seleccionar:
+SELECT CODIGO, DESCRIPCION FROM TIPOS_REPORTES;|
+|2.Carga de Opciones de Tipos de Segmentacion: Se mostrara la lista de los tipos de segmentacion de Reporte de Estado a seleccionar
+SELECT DESCRIPCION FROM TIPOS_SEGMENTACION_ESTADO;|
+|3.Botón Buscar: Cuando el usuario presione el botón buscar se llenará la grilla de resultados utilizando la siguiente sentencia
 SELECT RC.descripcion AS Rango_de_Capital, COUNT(D.codigo) AS Cantidad_Deudores, SUM(D.monto_total) AS Monto_Total
 FROM RANGO_CAPITALES RC
 LEFT JOIN DEUDOR D ON D.monto_total BETWEEN RC.limite_inferior AND RC.limite_superior
 GROUP BY RC.codigo, RC.descripcion
 ORDER BY RC.codigo;|
-|4. Botón Registrar: Se agregará un nueva estrategia a la tabla de estrategias.
-INSERT INTO ESTRATEGIA(tipo_gestion,nombre_estrategia, id_estrategia, id_empleado) VALUES (<1>, <2>, <3>, <4>);|
+|4.Botón Asignar: Se agregará un nueva estrategia a la tabla de estrategias.
+INSERT INTO ESTRATEGIA(tipo_gestion,nombre_estrategia, id_estrategia, id_empleado) VALUES (<1>, <2>, <3>, <4>);
+Donde los valores del 1 al 4 se capturarán de la interfaz de usuario según se muestran en la imagen.|
 
 
 |Código de requerimiento|R-04|
 |------------------------|----|
 |**Código de interfaz**|GUI-004_2|
 |Imagen interfaz|
-|![Generacion de Estrategias Pantalla 2-con numeros](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/9536959e-2c14-43cd-81b9-91793f3c5c70)|
+|![Generacion de Estrategias Pantalla 2-con numeros](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/c3c5d2c2-7635-4a29-aac6-8289f2343197)|
 |Sentencia SQL|
 |Eventos:|
-|1. Carga de Página de Tipos de Reporte: Se llenará la lista de tipos de reportes a seleccionar:
-SELECT CODIGO, NOMBRE_TIPO_REPORTE FROM TIPOS_REPORTES;|
-|2. Carga de Página de Tipos de Segmentacion: Se llenará la lista de los tipos de segmentacion del Reporte de Gestion a seleccionar:
-SELECT NOMBRE_TIPO_SEGMENTACION_RGESTION FROM TIPOS_SEGMENTACION;|
-|3. Carga de Página de Opciones del Estado Historico: Se llenará la lista de las opciones de tablas que se puede mostrar en la segmentacion por Estado Historico:
-SELECT NOMBRE_OPCIONES_ESTADO_HISTORICO FROM   SEGMENTACION_ESTADO_HISTORICO;|
-|4. Botón Buscar: Cuando el usuario presione el botón buscar se llenará la grilla de resultados utilizando la siguiente sentencia
-SELECT SEHCI.descripcion AS Contacto_Indirecto, COUNT(D.codigo) AS Cantidad_Deudores
-FROM SEGMENTACION_ESTADO_HISTORICO_CONTACTO_IND SEHCI
-LEFT JOIN DEUDOR D ON D.descripcion=SEHCI.descripcion
-GROUP BY SEHCI.codigo, SEHCI.descripcion
-ORDER BY SEHCI.codigo;|
-|5. Botón Registrar: Se agregará un nueva estrategia a la tabla de estrategias.
-INSERT INTO ESTRATEGIA(tipo_gestion,nombre_estrategia, id_estrategia, id_empleado) VALUES (<1>, <2>, <3>, <4>);|
+|1.Carga de Opciones de Tipos de Reporte: Se mostrara la lista de tipos de reportes a seleccionar
+SELECT CODIGO, DESCRIPCION FROM TIPOS_REPORTES;|
+|2.Carga de Opciones de Tipos de Segmentacion: Se mostrara la lista de los tipos de segmentacion del Reporte de Gestion a seleccionar
+SELECT DESCRIPCION FROM TIPOS_SEGMENTACION_GESTION;|
+|3.Carga de Opciones del Estado Historico: Se mostrara la lista de las opciones de tablas que se puede mostrar en la segmentacion por Estado Historico
+SELECT DESCRIPCION FROM  OPCIONES_ESTADO_HISTORICO;|
+|4.Botón Buscar: Cuando el usuario presione el botón buscar se llenará la grilla de resultados utilizando la siguiente sentencia
+SELECT OCI.DESCRIPCION AS Contacto_Indirecto, COUNT(D.codigo) AS Cantidad_Deudores
+FROM OPCIONES_CONTACTO_INDIRECTO OCI
+LEFT JOIN DEUDOR D ON D.descripcion = OCI.DESCRIPCION
+GROUP BY OCI.codigo, OCI.DESCRIPCION
+ORDER BY OCI.codigo;|
+|5.Botón Asignar: Se agregará un nueva estrategia a la tabla de estrategias.
+INSERT INTO ESTRATEGIA(tipo_gestion,nombre_estrategia, id_estrategia, id_empleado)
+VALUES (<1>, <2>, <3>, <4>);
+Donde los valores del 1 al 4 se capturarán de la interfaz de usuario según se muestran en la imagen|
 
 ### MODULO DE GESTION TECNOLOGICA
 | Codigo Requerimiento | REQ-05                 |
