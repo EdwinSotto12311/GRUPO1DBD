@@ -1313,38 +1313,41 @@ Donde los valores del 1 al 4 se capturarán de la interfaz de usuario según se 
 |-------------|------------------------|
 | Codigo Interfaz         | GUI-005-01       |
 | Imagen Interfaz                                  |
-|![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/97325341/9772893c-ecb8-4a48-9a85-6ff2cc16c121) |
+|![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/97325341/9f3a3510-d6d9-4a7f-bf19-df563aa20062)|
 | Sentencias SQL                                  |
 | 1.	Botón Generar Agregar mensaje. |
-|INSERT INTO Mensajes (id_estrategia, tipo_gestion, nombre_deudor, monto_solicitado, nombre_asesor,teléfono_asesor , mensaje_predeterminado, id_campaña)
-SELECT
-  '<1>',  
-  '<2>', 
-d.<3>, 
-  deu.<4>,  
-  t.asesor – o ‘<5>’ , 
-  t.telefono --- o ‘<6>’,  
-  d.id_campaña --- o ‘<8>’
-FROM Deudor d
-JOIN Deuda deu ON d.id_deudor = deu.id_deudor
-JOIN Trabajador t ON d.id_trabajador = t.id_trabajador  
-WHERE d.id_estrategia = '<1>’; |
+|INSERT INTO Mensaje (id_mensaje, mensaje_predeterminado, id_empleado, id_estrategia, id_campaña, id_deudor)
+VALUES (1, <6>, <5>, <2>, <1>, <4>); |
 | 2.	Botón Generar  mensaje. |
-| INSERT INTO Mensajes (id_estrategia, tipo_gestion, nombre_deudor, monto_solicitado, nombre_asesor, telefono_asesor, mensaje_predeterminado, id_campaña)
+| INSERT INTO Mensaje (id_mensaje, mensaje_predeterminado, id_empleado, id_estrategia, id_campaña, id_deudor)
 SELECT
-  ‘<1>,  -- Ajusta esto con el valor seleccionado para el tipo de campaña
-  '<2>',  -- Ajusta esto con el valor seleccionado para el tipo de gestión
-  d.nombre,  -- Suponiendo que 'nombre' es el campo en la tabla 'Deudor' que contiene el nombre del deudor
-  deu.monto_total,  -- Suponiendo que 'monto_total' es el campo en la tabla 'Deuda' que contiene el monto total de la deuda
-  t.nombre_asesor,  -- Ajusta esto con el nombre del asesor en la tabla 'Trabajador'
-  t.telefono_asesor,  -- Ajusta esto con el campo que contiene el teléfono del asesor en la tabla 'Trabajador'
-  'Buenas tardes sr/sra ' + d.nombre + '. Se le comunica que usted tiene un monto de deuda de ' + deu.monto_total + ' por lo que se pide que se comunique a los siguientes números: ' + t.telefono_asesor,
-  d.id_campaña  -- o ‘<8>’
-FROM Deudor d
-JOIN Deuda deu ON d.id_deudor = deu.id_deudor
-JOIN Trabajador t ON d.id_trabajador = t.id_trabajador
-WHERE d.id_estrategia = '<1>’ 
-AND d.id_deudor NOT IN (SELECT id_deudor FROM Mensajes WHERE id_campaña = '<8>');|
+  
+    ROW_NUMBER() OVER () + (SELECT COALESCE(MAX(id_mensaje), 0) FROM Mensaje),
+
+    '<7>',
+    e.id_empleado,
+    ed.id_estrategia,
+    c.id_campaña,
+    d.id_deudor
+FROM
+    Empleado e
+JOIN
+    Empleado_telefono et ON e.id_empleado = et.id_empleado 
+JOIN
+    Respuesta r ON e.id_empleado = r.id_empleado
+JOIN
+    Deudor d ON r.id_deudor = d.id_deudor
+JOIN
+    estrategia_deudor ed ON d.id_deudor = ed.id_deudor
+JOIN
+    Estrategia es ON ed.id_estrategia = es.id_estrategia
+JOIN
+    Campaña c ON es.id_empleado = c.id_campaña
+WHERE
+    es.tipo_gestion = <3>
+    AND c.id_campaña = <1>
+    AND ed.id_estrategia = <2>; 
+|
 
 
 | Codigo Requerimiento | REQ-05                 |
@@ -1355,19 +1358,25 @@ AND d.id_deudor NOT IN (SELECT id_deudor FROM Mensajes WHERE id_campaña = '<8>'
 | Sentencias SQL                                  |
 | 1. Cargar pagina:  |
 |SELECT
-  d.nombre AS nombre_deudor,
-  d.distrito AS ubigeo,
-  EXTRACT(YEAR FROM CURRENT_DATE) - EXTRACT(YEAR FROM d.fecha_nac) AS edad,
-  deu.fecha_venc - deu.fecha_creacion AS antiguedad_deuda,
-  deu.monto_total AS monto_deuda,
-  e.tipo_gestion
-FROM Deudor d
-JOIN Deuda deu ON d.id_deudor = deu.id_deudor
-JOIN Estrategia e ON d.id_estrategia = e.id_estrategia
-WHERE 
-  EXTRACT(YEAR FROM CURRENT_DATE) - EXTRACT(YEAR FROM d.fecha_nac) BETWEEN 25 AND 45
-  AND (deu.monto_total > 10000 OR deu.monto_total < 1000)
-  AND d.distrito IN ('Lima', 'Callao', 'Arequipa', 'Tumbes');|
+    d.Nombres || ' ' || d.ApellPat || ' ' || d.ApellMat AS Deudor,
+    d.distrito AS Ubigeo,
+    EXTRACT(YEAR FROM AGE(NOW(), d.fecha_nac)) AS Edad,
+    EXTRACT(YEAR FROM AGE(NOW(), deuda.fecha_venc)) AS Antiguedad_Deuda,
+    deuda.monto_total AS Monto_Total,
+    estrategia.tipo_gestion AS Tipo_Gestion
+FROM
+    Deudor d
+JOIN
+    estrategia_deudor ed ON d.id_deudor = ed.id_deudor
+JOIN
+    Estrategia estrategia ON ed.id_estrategia = estrategia.id_estrategia
+JOIN
+    Deuda deuda ON d.id_deudor = deuda.id_deudor
+WHERE
+    EXTRACT(YEAR FROM AGE(NOW(), d.fecha_nac)) BETWEEN 25 AND 45
+    AND EXTRACT(YEAR FROM AGE(NOW(), deuda.fecha_venc)) <= 2
+    AND d.distrito IN ('Lima', 'Callao', 'Arequipa', 'Tumbes')
+    AND deuda.monto_total BETWEEN 2000 AND 12000;|
 
 
 ### Módulo de validación
