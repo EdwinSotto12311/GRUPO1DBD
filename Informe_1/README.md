@@ -1346,23 +1346,6 @@ JOIN Trabajador t ON d.id_trabajador = t.id_trabajador
 WHERE d.id_estrategia = '<1>’ 
 AND d.id_deudor NOT IN (SELECT id_deudor FROM Mensajes WHERE id_campaña = '<8>');|
 
-| Codigo Requerimiento | REQ-05                 |
-|-------------|------------------------|
-| Codigo Interfaz         | GUI-005-02       |
-| Imagen Interfaz                                  |
-|![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/97325341/b7323591-208f-4157-9f43-e57bf8242fb0) |
-| Sentencias SQL                                  |
-| 1.	Boton aplicar:  |
-|SELECT
-  (COUNT(CASE WHEN a.estado = 'Logrado' THEN 1 END)::FLOAT / COUNT(*)) * 100 AS porcentaje_logro,
-  (c.fecha_fin - CURRENT_DATE) AS dias_restantes,
-  COUNT(*) AS cantidad_mensajes_enviados
-FROM Acuerdo a
-JOIN Respuesta r ON a.id_respuesta = r.id_respuesta
-JOIN Mensajes m ON r.id_mensaje = m.id_mensaje
-JOIN Campaña c ON m.id_campaña = c.id_campaña
-WHERE m.id_campaña = '<1>'  
-  AND m.id_estrategia = '<2>';  |
 
 | Codigo Requerimiento | REQ-05                 |
 |-------------|------------------------|
