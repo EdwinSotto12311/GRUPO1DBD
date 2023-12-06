@@ -1317,34 +1317,25 @@ Donde los valores del 1 al 4 se capturarán de la interfaz de usuario según se 
 |INSERT INTO Mensaje (id_mensaje, mensaje_predeterminado, id_empleado, id_estrategia, id_campaña, id_deudor)
 VALUES (1, <6>, <5>, <2>, <1>, <4>); |
 | 2.	Botón Generar  mensaje. |
-| INSERT INTO Mensaje (id_mensaje, mensaje_predeterminado, id_empleado, id_estrategia, id_campaña, id_deudor)
+|INSERT INTO Mensaje (id_mensaje, mensaje_predeterminado, id_empleado, id_estrategia, id_campaña, id_deudor)
 SELECT
-  
-    ROW_NUMBER() OVER () + (SELECT COALESCE(MAX(id_mensaje), 0) FROM Mensaje),
-
-    '<7>',
-    e.id_empleado,
-    ed.id_estrategia,
-    c.id_campaña,
-    d.id_deudor
-FROM
-    Empleado e
-JOIN
-    Empleado_telefono et ON e.id_empleado = et.id_empleado 
-JOIN
-    Respuesta r ON e.id_empleado = r.id_empleado
-JOIN
-    Deudor d ON r.id_deudor = d.id_deudor
-JOIN
-    estrategia_deudor ed ON d.id_deudor = ed.id_deudor
-JOIN
-    Estrategia es ON ed.id_estrategia = es.id_estrategia
-JOIN
-    Campaña c ON es.id_empleado = c.id_campaña
+ROW_NUMBER() OVER () + (SELECT COALESCE(MAX(id_mensaje), 0) FROM Mensaje),
+'<7>',
+e.id_empleado,
+ed.id_estrategia,
+c.id_campaña,
+d.id_deudor
+FROM Empleado e
+JOIN Empleado_telefono et ON e.id_empleado = et.id_empleado 
+JOIN Respuesta r ON e.id_empleado = r.id_empleado
+JOIN Deudor d ON r.id_deudor = d.id_deudor
+JOIN estrategia_deudor ed ON d.id_deudor = ed.id_deudor
+JOIN Estrategia es ON ed.id_estrategia = es.id_estrategia
+JOIN Campaña c ON es.id_empleado = c.id_campaña
 WHERE
-    es.tipo_gestion = <3>
-    AND c.id_campaña = <1>
-    AND ed.id_estrategia = <2>; 
+es.tipo_gestion = <3>
+AND c.id_campaña = <1>
+AND ed.id_estrategia = <2>; 
 |
 
 
