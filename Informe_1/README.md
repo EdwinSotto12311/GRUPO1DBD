@@ -1335,8 +1335,7 @@ JOIN Campaña c ON es.id_empleado = c.id_campaña
 WHERE
 es.tipo_gestion = <3>
 AND c.id_campaña = <1>
-AND ed.id_estrategia = <2>; 
-|
+AND ed.id_estrategia = <2>;|
 
 
 | Codigo Requerimiento | REQ-05                 |
@@ -1347,25 +1346,25 @@ AND ed.id_estrategia = <2>;
 | Sentencias SQL                                  |
 | 1. Cargar pagina:  |
 |SELECT
-    d.Nombres || ' ' || d.ApellPat || ' ' || d.ApellMat AS Deudor,
-    d.distrito AS Ubigeo,
-    EXTRACT(YEAR FROM AGE(NOW(), d.fecha_nac)) AS Edad,
-    EXTRACT(YEAR FROM AGE(NOW(), deuda.fecha_venc)) AS Antiguedad_Deuda,
-    deuda.monto_total AS Monto_Total,
-    estrategia.tipo_gestion AS Tipo_Gestion
+d.Nombres || ' ' || d.ApellPat || ' ' || d.ApellMat AS Deudor,
+d.distrito AS Ubigeo,
+EXTRACT(YEAR FROM AGE(NOW(), d.fecha_nac)) AS Edad,
+EXTRACT(YEAR FROM AGE(NOW(), deuda.fecha_venc)) AS Antiguedad_Deuda,
+deuda.monto_total AS Monto_Total,
+estrategia.tipo_gestion AS Tipo_Gestion
 FROM
-    Deudor d
+Deudor d
 JOIN
-    estrategia_deudor ed ON d.id_deudor = ed.id_deudor
+estrategia_deudor ed ON d.id_deudor = ed.id_deudor
 JOIN
-    Estrategia estrategia ON ed.id_estrategia = estrategia.id_estrategia
+Estrategia estrategia ON ed.id_estrategia = estrategia.id_estrategia
 JOIN
-    Deuda deuda ON d.id_deudor = deuda.id_deudor
+Deuda deuda ON d.id_deudor = deuda.id_deudor
 WHERE
-    EXTRACT(YEAR FROM AGE(NOW(), d.fecha_nac)) BETWEEN 25 AND 45
-    AND EXTRACT(YEAR FROM AGE(NOW(), deuda.fecha_venc)) <= 2
-    AND d.distrito IN ('Lima', 'Callao', 'Arequipa', 'Tumbes')
-    AND deuda.monto_total BETWEEN 2000 AND 12000;|
+EXTRACT(YEAR FROM AGE(NOW(), d.fecha_nac)) BETWEEN 25 AND 45
+AND EXTRACT(YEAR FROM AGE(NOW(), deuda.fecha_venc)) <= 2
+AND d.distrito IN ('Lima', 'Callao', 'Arequipa', 'Tumbes')
+AND deuda.monto_total BETWEEN 2000 AND 12000;|
 
 
 ### Módulo de validación
