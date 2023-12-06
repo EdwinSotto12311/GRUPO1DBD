@@ -1492,21 +1492,24 @@ https://neo4j.com/download/
 ![Imagen de WhatsApp 2023-12-06 a las 13 05 43_686fa30a](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/f232e4f5-40ee-4024-b487-c286460ff829)
 
 5. Configuramos la ruta de descarga
+
 ![Imagen de WhatsApp 2023-12-06 a las 13 05 43_fc24a31d](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/43564d00-eb3d-44f4-a18d-7e6237e58fce)
 
 6. Colocamos la licencia para poder obtener la app de escritorio con facilidad
 ![Imagen de WhatsApp 2023-12-06 a las 13 05 44_a7bff018](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/bcb91055-fd22-4d2b-b217-119fa2be58f2)
 
 7. Creamos proyecto
+
 ![Imagen de WhatsApp 2023-12-06 a las 13 05 44_6095494a](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/8655d9e3-d84a-4bc5-931a-69c2db543573)
 
 8. Configuramos nombre y contraseña
 ![Imagen de WhatsApp 2023-12-06 a las 13 05 45_117e3ffc](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/950a8f05-99ec-4e41-bdd3-abc9c90242bc)
 
-9. Damos click a Start
+9. Damos click a Start  
 ![Imagen de WhatsApp 2023-12-06 a las 13 06 18_65abfcf5](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/15389a5a-a2e0-4b41-9bc5-689ae8cd32d3)
 
 10. Damos click a Open
+
 ![Imagen de WhatsApp 2023-12-06 a las 13 09 11_71a18183](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/50fcc036-550e-4833-8c2e-d13af3a60691)
 
 11. 
