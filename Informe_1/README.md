@@ -1492,7 +1492,7 @@ https://neo4j.com/download/
 ![Imagen de WhatsApp 2023-12-06 a las 13 05 43_686fa30a](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/f232e4f5-40ee-4024-b487-c286460ff829)
 
 5. Configuramos la ruta de descarga
-![Imagen de WhatsApp 2023-12-06 a las 13 05 43_dc3d887a](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/f1ea4aa2-5702-47c6-858b-8d79b115a78d)
+![Imagen de WhatsApp 2023-12-06 a las 13 05 43_fc24a31d](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/43564d00-eb3d-44f4-a18d-7e6237e58fce)
 
 6. Colocamos la licencia para poder obtener la app de escritorio con facilidad
 ![Imagen de WhatsApp 2023-12-06 a las 13 05 44_a7bff018](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/bcb91055-fd22-4d2b-b217-119fa2be58f2)
