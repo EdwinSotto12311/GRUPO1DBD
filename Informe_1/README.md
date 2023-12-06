@@ -1450,3 +1450,74 @@ UPDATE Acuerdo SET estado = '<2>'
 WHERE id_acuerdo = '<1>'|
 |3. Botón “Regresar a solicitudes”: Regresa a la página de validación ubicada en la opción de “Excepciones”.|
 
+## GESTOR DE BASE DE DATOS NoSQL
+### Tipo de motor de búsqueda: Orientada a grafos
+El concepto de base de datos orientada a grafos se remonta a la década de 1960, cuando las bases de datos de modelos de red comenzaron a soportar estructuras de grafos. En la década de 1980, el modelo de datos lógico introdujo grafos etiquetados. Desde entonces, las bases de datos orientadas a grafos han evolucionado y se han convertido en una plataforma especializada y de un solo propósito para crear y manipular grafos.
+Una base de datos orientada a grafos es una plataforma especializada y de un solo propósito para crear y manipular grafos. Los grafos contienen nodos, bordes y propiedades que se utilizan para representar y almacenar datos de una forma que no permiten las bases de datos relacionales. La analítica de grafos es otro término de uso común y hace referencia específicamente al proceso de analizar datos en un formato de grafo utilizando los puntos de datos como nodos y las relaciones como bordes.
+Hay dos modelos comunes de bases de datos orientadas a grafos: grafos de propiedades y grafos RDF. Los grafos de propiedades se centran en el análisis y las consultas, y los RDF se centran en la integración de datos.
+
+#### Ventajas:
+• Flexibilidad: Las bases de datos orientadas a grafos son muy flexibles y pueden manejar datos no estructurados y semiestructurados. Esto significa que pueden manejar datos que no encajan en una tabla relacional.
+• Escalabilidad: Las bases de datos orientadas a grafos son altamente escalables y pueden manejar grandes cantidades de datos. Esto se debe a que los grafos son inherentemente escalables
+• Rendimiento: Las bases de datos orientadas a grafos son muy rápidas para ciertas consultas, como las que involucran relaciones complejas entre los datos. Esto se debe a que los grafos son inherentemente eficientes para modelar y consultar datos relacionales.
+• Análisis de grafos: Las bases de datos orientadas a grafos son ideales para el análisis de grafos, que es el proceso de analizar datos en un formato de grafo utilizando los puntos de datos como nodos y las relaciones como bordes. Esto permite a los usuarios descubrir patrones y relaciones en los datos que de otra manera serían difíciles de detectar.
+• Integración de datos: Las bases de datos orientadas a grafos son ideales para la integración de datos, ya que pueden manejar datos de diferentes fuentes y formatos. Esto significa que pueden integrar datos de diferentes sistemas y aplicaciones sin problemas.
+• Datos complejos: Las bases de datos orientadas a grafos son ideales para manejar datos complejos, como datos de redes sociales, datos de geolocalización y datos de sistemas de recomendación. Esto se debe a que los grafos son inherentemente buenos para modelar y consultar datos complejos.
+
+### Motor de búsqueda: Neo4J
+Es una plataforma de datos de grafos que ofrece una amplia gama de herramientas y aplicaciones para crear y administrar grafos, realizar análisis de grafos y escalar aplicaciones con búsqueda vectorial.
+#### Ventajas:
+• Rendimiento: Neo4j es muy rápido y escalable. Puede manejar grandes cantidades de datos de manera muy eficiente.
+• Facilidad de uso: Neo4j es muy fácil de usar. Tiene una interfaz amigable que hace que sea fácil de aprender y usar.
+• Flexibilidad: Neo4j es muy flexible y puede manejar datos no estructurados y semiestructurados. Esto significa que puede manejar datos que no encajan en una tabla relacional.
+• Análisis de grafos: Neo4j es ideal para el análisis de grafos, que es el proceso de analizar datos en un formato de grafo utilizando los puntos de datos como nodos y las relaciones como bordes. Esto permite a los usuarios descubrir patrones y relaciones en los datos que de otra manera serían difíciles de detectar.
+• Escalabilidad: Neo4j es altamente escalable y puede manejar grandes cantidades de datos. Esto se debe a que los grafos son inherentemente escalables.
+• Comunidad de usuarios: La comunidad de usuarios de Neo4j es una de las más grandes y activas del mundo NoSQL. Los miembros de esta comunidad han contribuido a crear un ambiente de colaboración altamente productivo donde las dudas y problemas que se presenten con la estructuración de tus proyectos pueden ser resueltas de forma rápida.
+
+### Descripción de escenario de uso
+
+### Configuración
+#### Instalación de Neo4J
+1. Vamos al enlace y descargamos neo4j deskop de acuerdo al sistema operativo
+https://neo4j.com/download/
+![Imagen de WhatsApp 2023-12-06 a las 13 05 42_a0e4387a](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/080b3dfc-bf32-4da0-a2f9-995aba09c6c7)
+
+2. Damos click a Download y nos pedira colocar nuestros datos para poder recibir la licencia gratuita
+![Imagen de WhatsApp 2023-12-06 a las 13 05 42_ff95963f](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/18fbc71a-37db-44af-b061-22991295b3a3)
+
+3. Copiamos y pegamos la licencia gratuita
+![Imagen de WhatsApp 2023-12-06 a las 13 05 43_58a9292c](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/83815c14-b5ba-4607-ba0f-9dae65e7ecb0)
+
+4. Ejecutamos el archivo setup para descargar neo4j desktop
+![Imagen de WhatsApp 2023-12-06 a las 13 05 43_686fa30a](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/f232e4f5-40ee-4024-b487-c286460ff829)
+
+5. Configuramos la ruta de descarga
+![Imagen de WhatsApp 2023-12-06 a las 13 05 43_dc3d887a](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/f1ea4aa2-5702-47c6-858b-8d79b115a78d)
+
+6. Colocamos la licencia para poder obtener la app de escritorio con facilidad
+![Imagen de WhatsApp 2023-12-06 a las 13 05 44_a7bff018](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/bcb91055-fd22-4d2b-b217-119fa2be58f2)
+
+7. Creamos proyecto
+![Imagen de WhatsApp 2023-12-06 a las 13 05 44_6095494a](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/8655d9e3-d84a-4bc5-931a-69c2db543573)
+
+8. Configuramos nombre y contraseña
+![Imagen de WhatsApp 2023-12-06 a las 13 05 45_117e3ffc](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/950a8f05-99ec-4e41-bdd3-abc9c90242bc)
+
+9. Damos click a Start
+![Imagen de WhatsApp 2023-12-06 a las 13 06 18_65abfcf5](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/15389a5a-a2e0-4b41-9bc5-689ae8cd32d3)
+
+10. Damos click a Open
+![Imagen de WhatsApp 2023-12-06 a las 13 09 11_71a18183](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/50fcc036-550e-4833-8c2e-d13af3a60691)
+
+11. 
+
+
+
+
+
+
+
+
+
+
+
