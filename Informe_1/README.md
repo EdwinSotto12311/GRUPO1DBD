@@ -1512,7 +1512,16 @@ https://neo4j.com/download/
 
 ![Imagen de WhatsApp 2023-12-06 a las 13 09 11_71a18183](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/50fcc036-550e-4833-8c2e-d13af3a60691)
 
-11. 
+### Implementación
+1. Crear nodos para las tareas:
+![Imagen de WhatsApp 2023-12-06 a las 13 21 03_3a3cb7dd](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/46d99991-22bf-45ae-a4ce-1eab99c0aec3)
+![Imagen de WhatsApp 2023-12-06 a las 13 21 04_b9500ad0](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/6d67df7e-517c-4be1-bf7e-fc25e7c815f3)
+![Imagen de WhatsApp 2023-12-06 a las 13 21 04_bd5e99a5](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/bcb028d4-0e59-4949-b8b2-33efadb25dad)
+![Imagen de WhatsApp 2023-12-06 a las 13 21 04_d4e86fdb](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/d78f325e-2e49-42fe-b9b7-e01a49243fce)
+![Imagen de WhatsApp 2023-12-06 a las 13 21 04_df89b1e6](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/e244f80c-3240-42d6-9856-9bf152e8723e)
+
+2.Ver nodos empleado para ver si se ejecutó correctamente:
+![Imagen de WhatsApp 2023-12-06 a las 13 21 26_cc25ba25](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/0c5acc51-b173-4a74-afd6-867fb4655224)
 
 
 
