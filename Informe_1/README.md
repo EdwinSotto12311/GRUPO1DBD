@@ -1410,7 +1410,6 @@ AND deuda.monto_total BETWEEN 2000 AND 12000;|
 |INSERT INTO pago (id_deudor, id_empleado, id_acuerdo, fecha_pago, monto, num_cuota) VALUES (<3>, id_empleado, id_acuerdo, CURRENT_DATE, <9> , <10>);|
 |Select id_respuesta from respuesta order by id_respuesta desc limit 1;|
 |INSERT INTO acuerdo (id_respuesta, id_empleado, tipo_acuerdo, monto, fecha_generacion,fecha_pactada, descripcion) VALUES (id_respuesta, id_empleado,  <’prom’ o ‘excep’>, (<7> o <8>),  CURRENT_DATE, <11>, <6>);|
-
 |UPDATE estrategia_deudor SET estado=0 WHERE id_estrategia = <2> AND id_deudor = <3>;|
 
 ### Módulo de validación
