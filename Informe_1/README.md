@@ -1402,15 +1402,25 @@ WHERE p.id_deudor = d.id_deudor|
 |![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/ad68bbc2-f193-42e2-b717-5da6817c9680)|
 |Sentencia SQL|
 |Eventos:|
-|1. Botón “Excepciones”: Es una opción para visualizar en forma los excepciones que se realizarán a los deudores en el pago.|
-|2. Carga de página:
-SELECT A.id_acuerdo AS "N° Solicitud", D.DNI AS "DNI", DEU.monto_total AS "Monto de deuda", A.estado AS "Estado"
-FROM Acuerdo A
-JOIN Respuesta R ON A.id_respuesta = R.id_respuesta
-JOIN Pago P ON A.id_acuerdo = P.id_acuerdo
-JOIN Deudor D ON R.id_deudor = D.id_deudor
-JOIN Deuda DEU ON D.id_deudor = DEU.id_deudor|
-|3. Botón “Detalle”: Se accede a una página para revisar los detalles de la excepción.|
+|1. Carga de página: 
+SELECT pa.id_pago AS Solicitud, dr.DNI, CONCAT(dr.apellpat, ' ',dr.apellmat) AS 
+Apellidos, dr.nombres AS Nombres, da.estado AS Tipo_de_consumo, da.origen AS 
+Entidad_de_origen_de_deuda, pa.monto AS Monto_pagado, da.monto_total AS 
+Deuda_Total, pa.fecha_pago AS Fecha_de_pago 
+FROM Deudor dr 
+JOIN Deuda da ON da.id_deudor = dr.id_deudor 
+LEFT JOIN Pago pa ON pa.id_deudor = dr.id_deudor 
+WHERE id_pago= '<1>'|
+|2. Botón “Modificar Monto pagado”: Se modifica al último monto que pagó el deudor. 
+UPDATE Pago SET monto = <2> 
+WHERE id_pago = '<1>'|
+|3. Botón “Modificar Fecha de pago”: Se modifica a la última fecha en donde el deudor realizó un pago. 
+UPDATE Pago SET fecha_pago = <3> 
+WHERE id_pago = '<1>'|
+|4. Botón de “Pendiente” o “Completo”: Se modifica el estado del pago. 
+UPDATE Pago SET estado = '<4>' 
+WHERE id_pago = '<1>'|
+|5. Botón “Regresar a solicitudes”: Regresa a la página de validación ubicada en la opción de “pagos”.|
 
 |Código de requerimiento|R-07|
 |------------------------|----|
