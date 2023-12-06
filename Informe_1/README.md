@@ -590,6 +590,8 @@ CREATE TABLE Estrategia
 
 `  `nombre\_estrategia VARCHAR(30) NOT NULL,
 
+`  `estado boolean DEFAULT true NOT NULL,
+
 `  `id\_estrategia INT NOT NULL,
 
 `  `id\_empleado INT NOT NULL,
