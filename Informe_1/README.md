@@ -117,16 +117,14 @@ La elección de la empresa de cobranzas se dio porque no había otra propuesta d
 |Paso|Acción del actor|Respuesta|
 |:---:|---|---|
 |1|El soporte ingresa con su usuario y contraseña al sistema. |El sistema muestra el menú de tareas que corresponde al usuario soporte.|
-|2|El soporte ingresa al módulo de creación de registros|El sistema muestra opciones de creación de entidad, cartera, campañas, personas y Asignación de personas con campañas.|
-|3|El soporte selecciona el tipo de registro a cargar. |El sistema mostrara un tipo distinto de formulario para cada selección.|
-|4|El soporte llena la información solicitada y da clic en el botón agregar|EEl sistema mostrara un anuncio de registro exitoso|
-|5|Se selecciona la asignación de persona con campaña.  |El sistema nos muestra un listado de campañas y un listado de personas con rol ejecutor, además de la asignación de un nombre de asignación|
-|6|El soporte selecciona la campaña y el ejecutor|El sistema mostrara un anuncio de registro exitoso|
-6. Flujo Alternativo:
+|2|El soporte ingresa al módulo de creación de registros|El sistema muestra opciones de creación de entidad financiera, campaña y empleados.|
+|3|El soporte selecciona el tipo de registro a crear. |El sistema mostrara un tipo distinto de formulario para cada selección.|
+|4|El soporte llena la información solicitada y da clic en el botón agregar|El sistema mostrara un anuncio de registro exitoso|
+5. Flujo Alternativo:
 
 |Paso|Acción del actor|Respuesta|
 |:---:|---|---|
-|6|El soporte intenta registrar un campo vacío o invalido y da clic en registrar.|El sistema muestra un anuncio de error, la asignación se trunca y no realiza ninguna acción.|
+|4|El soporte llena la información solicitada de manera incorrecta con los valores no correspondientes y da clic en el botón agregar. |El sistema muestra un anuncio de error, el registro se trunca y no realiza ninguna acción.|
 
 #### REQ-02: Cargas masivas de información de la campaña y del deudor 
 1. Caso de Uso : Cargas masivas de información de la campaña y del deudor 
