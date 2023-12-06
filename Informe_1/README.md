@@ -1560,13 +1560,34 @@ https://neo4j.com/download/
 ### Implementación
 1. Crear nodos para las tareas:
 ![Imagen de WhatsApp 2023-12-06 a las 13 21 03_3a3cb7dd](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/46d99991-22bf-45ae-a4ce-1eab99c0aec3)
+CREATE (e1:Empleado {Nombres: 'Juan', ApellMat: 'Pérez', ApellPat: 'García', rol: 'Agente de Cobranza', DNI: '12345678', usuario: 'jperez', contraseña: 'password1', id_empleado: 1}),
+       (e2:Empleado {Nombres: 'Ana', ApellMat: 'Martínez', ApellPat: 'López', rol: 'Supervisor', DNI: '87654321', usuario: 'amartinez', contraseña: 'password2', id_empleado: 2}),
+       (e3:Empleado {Nombres: 'Carlos', ApellMat: 'Rodríguez', ApellPat: 'Gómez', rol: 'Agente de Cobranza', DNI: '98765432', usuario: 'crodriguez', contraseña: 'password3', id_empleado: 3}),
+       (e4:Empleado {Nombres: 'María', ApellMat: 'Sánchez', ApellPat: 'Fernández', rol: 'Analista de Datos', DNI: '23456789', usuario: 'msanchez', contraseña: 'password4', id_empleado: 4}),
+       (e5:Empleado {Nombres: 'Pedro', ApellMat: 'Díaz', ApellPat: 'Ramírez', rol: 'Agente de Cobranza', DNI: '34567890', usuario: 'pdiaz', contraseña: 'password5', id_empleado: 5});
 ![Imagen de WhatsApp 2023-12-06 a las 13 21 04_b9500ad0](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/6d67df7e-517c-4be1-bf7e-fc25e7c815f3)
+CREATE (d1:Deudor {Nombres: 'Eduardo', ApellPat: 'Gómez', ApellMat: 'Ramírez', fecha_nac: '1985-09-20', DNI: '76543210', id_deudor: 1001, calle: 'Calle A', distrito: 'San Isidro', num_puerta: 456, registro_salud: 'B987654'}),
+       (d2:Deudor {Nombres: 'Laura', ApellPat: 'Fernández', ApellMat: 'López', fecha_nac: '1992-03-15', DNI: '65432109', id_deudor: 1002, calle: 'Calle B', distrito: 'Miraflores', num_puerta: 789, registro_salud: 'C876543'}),
+       (d3:Deudor {Nombres: 'Roberto', ApellPat: 'Martínez', ApellMat: 'García', fecha_nac: '1978-07-10', DNI: '54321098', id_deudor: 1003, calle: 'Calle C', distrito: 'Barranco', num_puerta: 123, registro_salud: 'A765432'}),
+       (d4:Deudor {Nombres: 'Sofía', ApellPat: 'López', ApellMat: 'Díaz', fecha_nac: '1989-12-05', DNI: '43210987', id_deudor: 1004, calle: 'Calle D', distrito: 'Chorrillos', num_puerta: 567, registro_salud: 'D654321'}),
+       (d5:Deudor {Nombres: 'Alejandro', ApellPat: 'Ramírez', ApellMat: 'Sánchez', fecha_nac: '1980-01-25', DNI: '32109876', id_deudor: 1005, calle: 'Calle E', distrito: 'Surco', num_puerta: 890, registro_salud: 'E543210'});
 ![Imagen de WhatsApp 2023-12-06 a las 13 21 04_bd5e99a5](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/bcb028d4-0e59-4949-b8b2-33efadb25dad)
+CREATE (r1:Respuesta {Descripcion_contacto: 'Llamada exitosa', tipo_contacto: 'Telefónico', Detalle: 'Acuerdo de pago', fecha_gestión: '2023-02-15', id_respuesta: 5001, id_empleado: 1, id_deudor: 1001}),
+       (r2:Respuesta {Descripcion_contacto: 'Correo enviado', tipo_contacto: 'Email', Detalle: 'Confirmación de pago', fecha_gestión: '2023-02-20', id_respuesta: 5002, id_empleado: 2, id_deudor: 1002}),
+       (r3:Respuesta {Descripcion_contacto: 'No disponible', tipo_contacto: 'Visita', Detalle: 'No se pudo contactar', fecha_gestión: '2023-02-25', id_respuesta: 5003, id_empleado: 3, id_deudor: 1003}),
+       (r4:Respuesta {Descripcion_contacto: 'Llamada sin respuesta', tipo_contacto: 'Telefónico', Detalle: 'Dejar mensaje en buzón', fecha_gestión: '2023-03-01', id_respuesta: 5004, id_empleado: 4, id_deudor: 1004}),
+       (r5:Respuesta {Descripcion_contacto: 'SMS enviado', tipo_contacto: 'Mensaje de texto', Detalle: 'Recordatorio de pago', fecha_gestión: '2023-03-05', id_respuesta: 5005, id_empleado: 5, id_deudor: 1005});
 ![Imagen de WhatsApp 2023-12-06 a las 13 21 04_d4e86fdb](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/d78f325e-2e49-42fe-b9b7-e01a49243fce)
+CREATE (de1:Deuda {fecha_venc: '2023-04-30', monto_total: 2000.00, monto_capital: 1800.00, estado: 'Pendiente', origen: 'Tarjeta de crédito', id_deuda: 3001, id_deudor: 1001}),
+       (de2:Deuda {fecha_venc: '2023-03-15', monto_total: 1200.00, monto_capital: 1000.00, estado: 'Pendiente', origen: 'Préstamo Personal', id_deuda: 3002, id_deudor: 1002}),
+       (de3:Deuda {fecha_venc: '2023-05-20', monto_total: 2500.00, monto_capital: 2200.00, estado: 'Pendiente', origen: 'Tarjeta de crédito', id_deuda: 3003, id_deudor: 1003}),
+       (de4:Deuda {fecha_venc: '2023-03-01', monto_total: 1500.00, monto_capital: 1300.00, estado: 'Pendiente', origen: 'Préstamo Hipotecario', id_deuda: 3004, id_deudor: 1004}),
+       (de5:Deuda {fecha_venc: '2023-04-10', monto_total: 1800.00, monto_capital: 1600.00, estado: 'Pendiente', origen: 'Tarjeta de crédito', id_deuda: 3005, id_deudor: 1005});
 ![Imagen de WhatsApp 2023-12-06 a las 13 21 04_df89b1e6](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/e244f80c-3240-42d6-9856-9bf152e8723e)
 
 2.Ver nodos empleado para ver si se ejecutó correctamente:
 ![Imagen de WhatsApp 2023-12-06 a las 13 21 26_cc25ba25](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/0c5acc51-b173-4a74-afd6-867fb4655224)
+MATCH (n:Empleado) RETURN n LIMIT 25
 
 
 
