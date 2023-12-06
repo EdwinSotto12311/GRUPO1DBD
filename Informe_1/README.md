@@ -1520,7 +1520,25 @@ Es una plataforma de datos de grafos que ofrece una amplia gama de herramientas 
 • Comunidad de usuarios: La comunidad de usuarios de Neo4j es una de las más grandes y activas del mundo NoSQL. Los miembros de esta comunidad han contribuido a crear un ambiente de colaboración altamente productivo donde las dudas y problemas que se presenten con la estructuración de tus proyectos pueden ser resueltas de forma rápida.
 
 ### Descripción de escenario de uso
+#### Escenario: Cobranzas
 
+En el desarrollo de la app para escritorio de la empresa de cobranzas, se identificó al módulo de validacion y gestion unitaria como un escenario que puede beneficiarse significativamente de una base de datos NoSQL de tipo grafo en comparación con una relacional. A continuación, se exploran las tareas que se realizan en este módulo y las ventajas específicas en la eficiencia de tareas clave de cobranzas utilizando un motor de tipo grafo (Neo4j) en contraste con un motor relacional (PostgresSQL):
+
+Tarea 1: Seguimiento de la evolución de pago y acuerdos
+
+En esta tarea, se tiene que gestionar el seguimiento de la evolución de los pagos y acuerdos a lo largo del tiempo, principalmente para tener en cuenta la validacion de deuda y su interpretacion de resultados para los acuerdos. El enfoque de grafos muestra ventajas dado que las bases de datos de grafos permiten representar y analizar las relaciones entre los datos de una manera muy intuitiva y flexible. Neo4j puede manejar grandes volúmenes de datos y consultas complejas, lo que facilita el seguimiento rápido y eficiente de la evolución de las deudas
+
+Rendimiento en consultas de grafos:
+
+La estructura de grafos supera a los motores relacionales al realizar consultas de grafos complejas de manera eficiente. Esto es crucial para seguir la evolución de las deudas y detectar patrones en los datos.
+
+Escalabilidad:
+
+En comparación con los motores relacionales, se destaca en las bases de datos de grafos la escalabilidad, permitiendo manejar grandes volúmenes de datos de manera efectiva y sostenible a medida que crecerá la actividad de cobranzas de tu empresa.
+
+Flexibilidad:
+
+Las bases de datos de grafos no requieren un esquema predefinido, ofrecen una gran flexibilidad y te permiten adaptar la base de datos a tus necesidades específicas. Esto es especialmente útil en un entorno de cobranzas, donde las relaciones entre los datos pueden ser complejas y cambiar con el tiempo.
 ### Configuración
 #### Instalación de Neo4J
 1. Vamos al enlace y descargamos neo4j deskop de acuerdo al sistema operativo
@@ -1589,10 +1607,41 @@ CREATE (de1:Deuda {fecha_venc: '2023-04-30', monto_total: 2000.00, monto_capital
 ![Imagen de WhatsApp 2023-12-06 a las 13 21 26_cc25ba25](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/0c5acc51-b173-4a74-afd6-867fb4655224)
 MATCH (n:Empleado) RETURN n LIMIT 25
 
+3. Crear relaciones para cuando empleados hallan realizado acuerdos. Asi se obtendrian ademas metricas de desempeño.
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/97325341/96bd88fc-546d-4f54-b376-5aab6063cdc0)
+Relación entre Empleado y Acuerdo
+MATCH (e:Empleado), (a:Acuerdo)
+WHERE e.id_empleado = a.id_empleado
+CREATE (e)-[:RealizaAcuerdo]->(a);
 
+4. Crear relacion entre deudor y acuerdo
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/97325341/957e7f2e-4123-4922-b3bd-330325dbceaa)
 
+MATCH (d:Deudor), (a:Acuerdo)
+WHERE d.id_deudor = a.id_deudor
+CREATE (d)-[:TieneAcuerdo]->(a);
 
+6. Crear la asociacion entre pago y deudor
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/97325341/d3f5ec4c-f138-4440-b3d7-32b913d0752b)
+ 
+Relación entre Pago y Deudor
+MATCH (p:Pago), (d:Deudor)
+WHERE p.id_deudor = d.id_deudor
+CREATE (p)-[:REALIZADO_POR]->(d);
+7. Relacion entre pago y deuda, siempre y cuando este en pagado.
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/97325341/4efc9cf5-8b97-4527-9688-20a190e59bf0)
 
+// Relación entre Pago y Deuda (cuando el pago está "pagado")
+MATCH (p:Pago {estado: 'Pagado'}), (d:Deuda)
+WHERE p.id_deudor = d.id_deudor
+CREATE (p)-[:CORRESPONDE_A]->(d);
+
+8. Ver los nodos finales
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/97325341/0e24b607-e140-48e8-86ac-d5cf326441ef)
+MATCH (n)
+RETURN n;
+10. CUANDO SE REALIZE EL POBLAMIENTO CORRECTO DE DATOS, SE DEBERIA VER ASI:
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/97325341/104d07df-9b55-40ec-98e8-a4b72f6a765b)
 
 
 
