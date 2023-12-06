@@ -1396,7 +1396,6 @@ AND deuda.monto_total BETWEEN 2000 AND 12000;|
 |Eventos:|
 |1.	Opción  “Gestión Unitaria”: Es una opción para visualizar y registrar la respuesta del deudor ante una gestión del ejecutor.|
 |2.	Carga de página|
-|
 |Combo box Campaña:|
 |select cd.id_campaña,c.nombre,count(ed.id_estrategia) as contar,c.estado  |
 |from campaña_deuda cd | 
@@ -1412,7 +1411,6 @@ AND deuda.monto_total BETWEEN 2000 AND 12000;|
 |on e.id_estrategia=ed.id_estrategia |
 |WHERE c.estado and ed.estado and e.estado |
 |group by cd.id_campaña, c.nombre, c.estado order by count(ed.id_estrategia)|
-|
 |Combo box Filtro:|
 |select e.id_estrategia,e.nombre_estrategia, count(ed.id_deudor) as contar, e.estado |
 |from estrategia e |
