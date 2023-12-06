@@ -1401,33 +1401,17 @@ AND deuda.monto_total BETWEEN 2000 AND 12000;|
 |Combo box Filtro:|
 |select e.id_estrategia,e.nombre_estrategia, count(ed.id_deudor) as contar, e.estado from estrategia e inner join estrategia_deudor ed on e.id_estrategia =ed.id_estrategia where e.estado and ed.id_deudor in ( 	select id_deudor from deuda where id_deuda in(	select cd.id_deuda from campaña_deuda cd inner join campaña c on c.id_campaña = cd.id_campaña WHERE c.estado and c.id_campaña= <1> )  group by e.id_estrategia,e.nombre_estrategia order by e.id_estrategia ;|
 |3.	Carga de datos |
-|SELECT  D.id_deudor,D.Nombres,D.ApellPat,D.ApellMat, De.monto_total, De.monto_capital, De.monto_total*(1-C.descuento/100) AS monto_descuento, De.origen, AGE(De.fecha_venc) as tiempo, C.descuento FROM Deudor D  inner join Deuda De on D.id_deudor = De.id_deudor inner join campaña_deuda C on De.id_deuda = C.id_deuda WHERE D.id_deudor in (Select   ed.id_deudor from estrategia_deudor ed where ed.id_estrategia = <2> and ed.estado) and C.id_campaña= <1>  ORDER BY C.descuento DESC LIMIT 1;|
-|          |
-|SELECT numero, mej_est_con, estado|
-|FROM Telefono|
-|WHERE id_deudor = <3> ;|
-|--------------------|----------|
+|SELECT  D.id_deudor,D.Nombres,D.ApellPat,D.ApellMat, De.monto_total, De.monto_capital, De.monto_total*(1-C.descuento/100) AS monto_descuento, De.origen, AGE(De.fecha_venc) as tiempo, C.descuento FROM Deudor D  inner join Deuda De on D.id_deudor = De.id_deudor inner join campaña_deuda C on De.id_deuda = C.id_deuda WHERE D.id_deudor in (Select   ed.id_deudor from estrategia_deudor ed where ed.id_estrategia = <2> and ed.estado) and C.id_campaña= <1>  ORDER BY C.descuento DESC LIMIT 1;																			|
+|SELECT numero, mej_est_con, estado FROM Telefono WHERE id_deudor = <3> ;																		|
 |4.	Botón “Registrar Gestión”: Registra la respuesta recibida del Deudor|
-|INSERT INTO respuesta (id_respuesta, id_deudor, id_empleado, tipo_contacto, descripcion_contacto, detalle, fecha_gestión |
-|VALUES (nextval('seq_respuesta_id'), <3>, id_empleado , <4>, <5>, <6>, CURRENT_DATE)|
-|--------------------|----------|
+|INSERT INTO respuesta (id_respuesta, id_deudor, id_empleado, tipo_contacto, descripcion_contacto, detalle, fecha_gestión VALUES (nextval('seq_respuesta_id'), <3>, id_empleado , <4>, <5>, <6>, CURRENT_DATE)		|
 |En caso de dar click En pago, se registrará un pago:|
-|SELECT a.id_acuerdo FROM acuerdo  a|
-|INNER JOIN respuesta r|
-|ON a.id_respuesta = r.id_respuesta|
-|WHERE a.estado=1 AND a.tipo_acuerdo=’prom’ AND r.id_deudor=<3>|
-|--------------------|----------|
-|INSERT INTO pago (id_deudor, id_empleado, id_acuerdo, fecha_pago, monto, num_cuota)|
-|VALUES (<3>, id_empleado, id_acuerdo, CURRENT_DATE, <9> , <10>);|
-|--------------------|----------|
+|SELECT a.id_acuerdo FROM acuerdo  a INNER JOIN respuesta r ON a.id_respuesta = r.id_respuesta WHERE a.estado=1 AND a.tipo_acuerdo=’prom’ AND r.id_deudor=<3>								|
+|INSERT INTO pago (id_deudor, id_empleado, id_acuerdo, fecha_pago, monto, num_cuota) VALUES (<3>, id_empleado, id_acuerdo, CURRENT_DATE, <9> , <10>);|
 |Select id_respuesta from respuesta order by id_respuesta desc limit 1;|
-|--------------------|----------|
-|INSERT INTO acuerdo (id_respuesta, id_empleado, tipo_acuerdo, monto, fecha_generacion,fecha_pactada, descripcion)|
-|VALUES (id_respuesta, id_empleado,  <’prom’ o ‘excep’>, (<7> o <8>),  CURRENT_DATE, <11>, <6>);|
-|--------------------|----------|
-|UPDATE estrategia_deudor|
-|SET estado=0|
-|WHERE id_estrategia = <2> AND id_deudor = <3>;|
+|INSERT INTO acuerdo (id_respuesta, id_empleado, tipo_acuerdo, monto, fecha_generacion,fecha_pactada, descripcion) VALUES (id_respuesta, id_empleado,  <’prom’ o ‘excep’>, (<7> o <8>),  CURRENT_DATE, <11>, <6>);|
+
+|UPDATE estrategia_deudor SET estado=0 WHERE id_estrategia = <2> AND id_deudor = <3>;|
 
 ### Módulo de validación
 
