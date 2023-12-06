@@ -1631,7 +1631,7 @@ CREATE (p)-[:REALIZADO_POR]->(d);
 7. Relacion entre pago y deuda, siempre y cuando este en pagado.
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/97325341/4efc9cf5-8b97-4527-9688-20a190e59bf0)
 
-// Relación entre Pago y Deuda (cuando el pago está "pagado")
+Relación entre Pago y Deuda (cuando el pago está "pagado")
 MATCH (p:Pago {estado: 'Pagado'}), (d:Deuda)
 WHERE p.id_deudor = d.id_deudor
 CREATE (p)-[:CORRESPONDE_A]->(d);
