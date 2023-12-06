@@ -1394,9 +1394,7 @@ AND deuda.monto_total BETWEEN 2000 AND 12000;|
 |![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966974/8395b35a-8326-474e-b65f-e7ee9067ffb2)|
 |Sentencia SQL|
 |Eventos:|
-Eventos:
 |1.	Opción  “Gestión Unitaria”: Es una opción para visualizar y registrar la respuesta del deudor ante una gestión del ejecutor.|
-|
 |2.	Carga de página|
 |
 |Combo box Campaña:|
