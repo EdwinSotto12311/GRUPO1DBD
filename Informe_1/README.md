@@ -372,7 +372,7 @@ Registra la finalización del proceso de cobranza para el deudor y genera un rep
 ### REQ-05: Gestion tecnologica masiva
 
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/97325341/b8af911c-5936-447c-942d-166372af5ceb)
-![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/97325341/62c5b36f-f842-4b16-a170-37beb24167b8)
+![Gestion Tecnologica pantalla](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/3a771e4b-5be6-4496-91b6-b9086d2f4b9f)
 ![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/97325341/3a06504e-4b8b-4dd1-9a76-88b0a8f147fe)
 
 ### REQ-06: Gestión telefónica por deudor
