@@ -1396,41 +1396,41 @@ AND deuda.monto_total BETWEEN 2000 AND 12000;|
 |Eventos:|
 Eventos:
 |1.	Opción  “Gestión Unitaria”: Es una opción para visualizar y registrar la respuesta del deudor ante una gestión del ejecutor.|
-
-|2.	Carga de página
-
-Combo box Campaña:
-select cd.id_campaña,c.nombre,count(ed.id_estrategia) as contar,c.estado  
-from campaña_deuda cd  
-inner join campaña c 
-on c.id_campaña = cd.id_campaña 
-inner join deuda d 
-on d.id_deuda= cd.id_deuda 
-inner join deudor dr 
-on dr.id_deudor=d.id_deudor 
-inner join estrategia_deudor ed 
-on ed.id_deudor=dr.id_deudor 
-inner join estrategia e 
-on e.id_estrategia=ed.id_estrategia 
-WHERE c.estado and ed.estado and e.estado 
-group by cd.id_campaña, c.nombre, c.estado order by count(ed.id_estrategia)
-
-Combo box Filtro:
-select e.id_estrategia,e.nombre_estrategia, count(ed.id_deudor) as contar, e.estado 
-from estrategia e 
-inner join estrategia_deudor ed 
-on e.id_estrategia =ed.id_estrategia 
-where e.estado and ed.id_deudor in 
-( 
-	select id_deudor from deuda where id_deuda in(
-	select cd.id_deuda 
-	from campaña_deuda cd 
-	inner join campaña c 
-	on c.id_campaña = cd.id_campaña 
-	WHERE c.estado and c.id_campaña= <1>
-	) 
-) group by e.id_estrategia,e.nombre_estrategia  
-order by e.id_estrategia ;|
+|
+|2.	Carga de página|
+|
+|Combo box Campaña:|
+|select cd.id_campaña,c.nombre,count(ed.id_estrategia) as contar,c.estado  |
+|from campaña_deuda cd | 
+|inner join campaña c |
+|on c.id_campaña = cd.id_campaña |
+|inner join deuda d |
+|on d.id_deuda= cd.id_deuda |
+|inner join deudor dr |
+|on dr.id_deudor=d.id_deudor |
+|inner join estrategia_deudor ed |
+|on ed.id_deudor=dr.id_deudor |
+|inner join estrategia e |
+|on e.id_estrategia=ed.id_estrategia |
+|WHERE c.estado and ed.estado and e.estado |
+|group by cd.id_campaña, c.nombre, c.estado order by count(ed.id_estrategia)|
+|
+|Combo box Filtro:|
+|select e.id_estrategia,e.nombre_estrategia, count(ed.id_deudor) as contar, e.estado |
+|from estrategia e |
+|inner join estrategia_deudor ed |
+|on e.id_estrategia =ed.id_estrategia| 
+|where e.estado and ed.id_deudor in |
+|( |
+|	select id_deudor from deuda where id_deuda in(|
+|	select cd.id_deuda |
+|	from campaña_deuda cd |
+|	inner join campaña c |
+|	on c.id_campaña = cd.id_campaña |
+|	WHERE c.estado and c.id_campaña= <1>|
+|	) |
+|) group by e.id_estrategia,e.nombre_estrategia|  
+|order by e.id_estrategia ;|
 
 
 
