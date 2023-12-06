@@ -1337,6 +1337,27 @@ es.tipo_gestion = <3>
 AND c.id_campaña = <1>
 AND ed.id_estrategia = <2>;|
 
+| Codigo Requerimiento | REQ-05                 |
+|-------------|------------------------|
+| Codigo Interfaz         | GUI-005-02       |
+| Imagen Interfaz                                  |
+|![Gestion Tecnologica pantalla2](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/90528509/5b6d6ff6-82ad-4067-bb8c-7cf40ca882ae)|
+| Sentencias SQL                                  |
+| 1. Boton aplicar: 
+SELECT 
+(COUNT(CASE WHEN a.estado = 'Logrado' THEN 1 END)::FLOAT / COUNT(*)) * 100 AS porcentaje_logro, 
+(c.fecha_fin - CURRENT_DATE) AS dias_restantes, 
+COUNT(*) AS cantidad_mensajes_enviados 
+FROM Acuerdo a 
+JOIN Respuesta r ON a.id_respuesta = r.id_respuesta 
+JOIN Mensajes m ON r.id_mensaje = m.id_mensaje 
+JOIN Campaña c ON m.id_campaña = c.id_campaña 
+WHERE m.id_campaña = '<1>'   
+AND m.id_estrategia = '<2>';|
+
+
+
+
 
 | Codigo Requerimiento | REQ-05                 |
 |-------------|------------------------|
@@ -1352,20 +1373,15 @@ EXTRACT(YEAR FROM AGE(NOW(), d.fecha_nac)) AS Edad,
 EXTRACT(YEAR FROM AGE(NOW(), deuda.fecha_venc)) AS Antiguedad_Deuda,
 deuda.monto_total AS Monto_Total,
 estrategia.tipo_gestion AS Tipo_Gestion
-FROM
-Deudor d
-JOIN
-estrategia_deudor ed ON d.id_deudor = ed.id_deudor
-JOIN
-Estrategia estrategia ON ed.id_estrategia = estrategia.id_estrategia
-JOIN
-Deuda deuda ON d.id_deudor = deuda.id_deudor
+FROM Deudor d
+JOIN estrategia_deudor ed ON d.id_deudor = ed.id_deudor
+JOIN Estrategia estrategia ON ed.id_estrategia = estrategia.id_estrategia
+JOIN Deuda deuda ON d.id_deudor = deuda.id_deudor
 WHERE
 EXTRACT(YEAR FROM AGE(NOW(), d.fecha_nac)) BETWEEN 25 AND 45
 AND EXTRACT(YEAR FROM AGE(NOW(), deuda.fecha_venc)) <= 2
 AND d.distrito IN ('Lima', 'Callao', 'Arequipa', 'Tumbes')
 AND deuda.monto_total BETWEEN 2000 AND 12000;|
-
 
 ### Módulo de validación
 
