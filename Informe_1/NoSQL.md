@@ -157,3 +157,17 @@ MATCH (n)
 RETURN n;
 10. CUANDO SE REALIZE EL POBLAMIENTO CORRECTO DE DATOS, SE DEBERIA VER ASI:
 ![orientada a grafos](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/76ca31f1-6cd2-4031-828d-5bbc6cfed9e8)
+
+### Realización de consulta
+Esta consulta ayuda en el módulo de generación de reporte del empleado
+![image](https://github.com/EdwinSotto12311/GRUPO1DBD/assets/144966920/cd77de23-fe1d-48b6-9c64-067fa0239351)
+
+MATCH (e:Empleado {DNI: "valor colocado en la consulta"})-[:ACUERDO_EMPLEADO]->(a:Acuerdo)<-[:ACUERDO_DEUDOR]-(d:Deudor),
+      (d)-[:DEUDOR_PAGO]->(p:Pago {estado: 'PAGADO'}),
+      (d)-[:DEUDA_PAGO]->(de:Deuda)
+RETURN e.DNI AS DNI EMPLEADO, d.DNI AS DNI DEUDOR, a.id_acuerdo AS ID ACUERDO, p.id_pago AS ID PAGO, p.fecha_pago AS FECHA PAGO, p.monto AS MONTO PAGO
+
+
+
+
+
